@@ -1,0 +1,16 @@
+// Primary Colors === */
+$green:		#25A549;
+$blue:		#28317D;
+$lt_green:	#8DC63F;
+$white:		#FFFFFF;
+$grey:		#4A4746;
+$off_grey:	#F0F0F0;
+
+// Secondar Colors === */
+
+
+// Fonts === */
+@mixin fact-light{font-family:"factoria",sans-serif;font-style:normal;font-weight:300;}
+@mixin fact-light-it{font-family:"factoria",sans-serif;font-style:italic;font-weight:300;}
+@mixin fact-bold{font-family:"factoria",sans-serif;font-style:normal;font-weight:700;}
+@mixin fact-black{font-family:"factoria",sans-serif;font-style:normal;font-weight:800;}

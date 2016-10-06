@@ -1,0 +1,61 @@
+/* ================== */
+/* === BASE ========= */
+/* ================== */
+
+/* ================== */
+/* === HEADER ======= */
+/* ================== */
+
+header{
+	@include bp(sm-tablet){
+		svg{width:200px;height:auto;}
+		nav{display:none;}
+	}
+}
+
+/* ================== */
+/* === LAYOUT ======= */
+/* ================== */
+
+/* ================== */
+/* === MODULES ====== */
+/* ================== */
+
+.intro{
+	@include bp(mobile){
+		p{max-width:100%;}
+	}
+}
+
+.three-col-icon{
+	@include bp(mobile){
+		.column{border-right:none;margin-bottom:40px;border-bottom:1px solid $lt_green;padding-bottom:40px;
+			h2,p{min-height:auto;}
+			&:nth-child(n+4){margin-bottom:0px;border-bottom:none;}
+		}
+	}
+}
+
+.background-img-text{
+	@include bp(sm-tablet){text-align:center;
+		.text{margin:0 auto;background-color:rgba(255,255,255,.7);padding:20px;
+			p{max-width:100%;}
+		}
+	}
+}
+
+/* ================== */
+/* === FOOTER ======= */
+/* ================== */
+
+footer{
+	@include bp(sm-tablet){
+		.social a{width:30px;height:30px;}
+		nav{margin-left:0px;margin-top:10px;width:85%;
+			ul{top:auto;@include transform(none);}
+			li{display:block;padding:20px 0;border-bottom:1px solid $white;
+				&:last-of-type{border-bottom:none;}
+			}
+		}
+	}
+}

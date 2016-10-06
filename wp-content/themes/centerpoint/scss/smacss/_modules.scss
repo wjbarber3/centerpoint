@@ -1,0 +1,81 @@
+/* ==================== */
+/* === TOP BANNER ===== */
+/* ==================== */
+
+.top-banner{background-color:$green;padding:10px 0;text-align:center;
+	h1{font-weight:300;letter-spacing:2px;color:$white;}
+}
+
+/* ==================== */
+/* === SLIDER ===== */
+/* ==================== */
+
+#slider{position:relative;width:100vw;overflow:hidden;
+	ul{width:10000px;transition:all .5s ease-in-out;
+		&.no-transition{transition:none;}
+	}
+	li{display:inline-block;float:left;width:100vw;
+		img{width:100%;height:auto;display:block;}
+	}
+	.control{position:absolute;top:0;bottom:0;margin:auto;width:30px;height:67px;
+		i{color:$white;font-size:90px;@include vert-align(50%,-50%);}
+	}
+	.next{right:25px;}
+	.prev{left:25px;}
+}
+
+/* ==================== */
+/* === INTRO ===== */
+/* ==================== */
+
+.intro{padding:30px 0;text-align:center;background-color:$off_grey;
+	p{max-width:80%;margin:0 auto;}
+}
+
+/* ============================ */
+/* === 3 COLUMN ICON GRID ===== */
+/* ============================ */
+
+.three-col-icon{background-color:$white;padding:40px 0;text-align:center;
+	h1{margin-bottom:45px;}
+	.column{border-right:1px solid $lt_green;text-align:center;
+		h2{max-width:75%;margin:0 auto 15px;;text-transform:uppercase;min-height:50px;}
+		&:nth-child(n+4){border-right:none;}
+		img{margin-bottom:10px;}
+		p{min-height:111px;max-width:85%;margin:0 auto 15px;}
+	}
+}
+
+/* ============================ */
+/* === INLINE VIDEO ===== */
+/* ============================ */
+
+.inline-video{padding:40px 0;background-color:$green;}
+
+/* ================================ */
+/* === BACKGROUND IMG W/ TEXT ===== */
+/* ================================ */
+
+.background-img-text{background:url('../img/story-bg.png') no-repeat;padding:60px 0;background-size:cover;
+	.text{margin-left:40%;}
+	h1{margin-bottom:30px;}
+	p{max-width:80%;margin-bottom:20px;}
+}
+
+/* ====================== */
+/* === TWITTER FEED ===== */
+/* ====================== */
+
+.twitter-feed{background:url('../img/feed-bg.png') no-repeat;padding:30px 0;background-size:cover;text-align:center;overflow:hidden;
+	.icon-head{color:$white;font-size:24px;margin-bottom:15px;}
+	.control{position:absolute;top:0;bottom:0;margin:auto;width:20px;height:40px;z-index:1;
+		i{font-size:40px;color:$white;}
+	}
+	ul{width:10000px;position:relative;display:block;height:auto;transition:all .3s ease-in-out;
+		&.no-transition{transition:none;}
+	}
+	li{display:inline-block;float:left;width:100vw;}
+	.prev{left:0px;}
+	.next{right:0px;}
+	p,a{color:$white;margin-bottom:5px;line-height:30px;}
+}
