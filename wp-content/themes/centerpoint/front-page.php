@@ -2,21 +2,25 @@
 
 <?php $theme = get_template_directory_uri(); ?>
 
-<div class="top-banner">
-	<h1>Success. Every Student. Every teacher.</h1>
-</div><!--end top-banner-->
-
 <div id="slider">
 	<a href="#" class="control next"><i class="fa fa-angle-right"></i></a>
 	<a href="#" class="control prev"><i class="fa fa-angle-left"></i></a>	
 	<ul>
-		<li><img src="<?php echo $theme . '/img/slides/slide-1.jpg'; ?>" alt=""></li>
+		<li><img src="<?php echo $theme . '/img/slides/slide-1.jpg'; ?>" alt="">
+			<div class="slide-overlay">	
+				<img src="<?php echo $theme . '/img/previ-learn.png'; ?>" width="160">
+				<h1>Make a Measurable Difference for Your Students, Grades 2–8</h1>
+				<p>Introducing Previ Learn™ English Language Arts/Literacy &amp; Mathematics &amp; Diagnostic Tools</p>
+				<a class="main-btn" href=""><i class="main-btn-icon fa fa-chevron-right"></i>Learn More</a>
+			</div><!--end slide-overlay-->
+		</li>
 		<li><img src="<?php echo $theme . '/img/slides/slide-2.jpg'; ?>" alt=""></li>
 	</ul>
 </div><!--end slider-->
 
 <div class="intro">
 	<div class="main-wrap">
+		<h1>Success. Every Student. Every teacher.</h1>
 		<p>CenterPoint Education Solutions is a non-profit organization committed to creating high-quality, innovative solutions to empower educators and improve learning for all students. Founded and led by veteran educators and assessment experts, CenterPoint’s customized solutions connect standards, curriculum, assessments, and instructional practice to support teaching and learning.</p>
 	</div><!--end main-wrap-->
 </div><!--end intro-->
@@ -67,9 +71,9 @@
 		<a href="#" class="control prev"><i class="fa fa-angle-left"></i></a>
 	</div><!--end main-wrap-->
 	<ul>
-		<li class="active"><a href="#">"Md. principal Stacy Gray describes the ways the #PARCC score reports help parents and students alike:<br>http://bsun.md/1SeOlJ4</a></li>
-		<li><a href="#">"Md. principal Stacy Gray describes the ways the #PARCC score reports help parents and students alike:<br>http://bsun.md/1SeOlJ4</a></li>
-		<li><a href="#">"Md. principal Stacy Gray describes the ways the #PARCC score reports help parents and students alike:<br>http://bsun.md/1SeOlJ4</a></li>
+		<li class="active"><a href="#"><p>"Md. principal Stacy Gray describes the ways the #PARCC score reports help parents and students alike:<br>http://bsun.md/1SeOlJ4</p></a></li>
+		<li><a href="#"><p>"Md. principal Stacy Gray describes the ways the #PARCC score reports help parents and students alike:<br>http://bsun.md/1SeOlJ4</p></a></li>
+		<li><a href="#"><p>"Md. principal Stacy Gray describes the ways the #PARCC score reports help parents and students alike:<br>http://bsun.md/1SeOlJ4</p></a></li>
 	</ul>
 </div><!--end twitter-feed-->
 

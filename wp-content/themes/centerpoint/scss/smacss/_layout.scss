@@ -2,7 +2,7 @@
 /* === HEADER ======= */
 /* ================== */
 
-header{height:100px;background-color:$white;
+header{height:100px;background-color:$white;border-bottom:10px solid $green;
 	svg,nav{@include vert-align(50%,-50%);}
 	svg:hover{opacity:.8;}
 	nav{float:right;

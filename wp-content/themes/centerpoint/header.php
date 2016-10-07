@@ -27,8 +27,9 @@
         </a>
         <nav>
             <ul>
-                <li><a href="" title="">Company</a></li>
-                <li><a href="" title="">Products/Services</a></li>
+                <li><a href="" title="">Who We Are</a></li>
+                <li><a href="" title="">How We Work</a></li>
+                <li><a href="" title="">What We Provide</a></li>
                 <li><a href="" title="">Contact</a></li>
             </ul>
         </nav>

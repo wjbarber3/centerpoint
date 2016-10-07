@@ -44,6 +44,15 @@ header{
 	}
 }
 
+.twitter-feed{
+	@include bp(mobile){position:relative;
+		.next{right:10px;}
+		.prev{left:10px;}
+		.main-wrap{position:initial;}
+		li p{max-width:70%;}
+	}
+}
+
 /* ================== */
 /* === FOOTER ======= */
 /* ================== */
