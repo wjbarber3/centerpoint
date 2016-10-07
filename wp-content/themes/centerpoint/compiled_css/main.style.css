@@ -1912,16 +1912,22 @@ footer .fineprint a:hover {
   display: inline-block;
   float: left;
   width: 100vw;
+  transition: all .2s ease-in-out;
+  opacity: 0;
 }
 /* line 78, ../scss/smacss/_modules.scss */
+.twitter-feed li.active {
+  opacity: 1;
+}
+/* line 80, ../scss/smacss/_modules.scss */
 .twitter-feed .prev {
   left: 0px;
 }
-/* line 79, ../scss/smacss/_modules.scss */
+/* line 81, ../scss/smacss/_modules.scss */
 .twitter-feed .next {
   right: 0px;
 }
-/* line 80, ../scss/smacss/_modules.scss */
+/* line 82, ../scss/smacss/_modules.scss */
 .twitter-feed p, .twitter-feed a {
   color: #FFFFFF;
   margin-bottom: 5px;

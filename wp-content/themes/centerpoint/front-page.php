@@ -67,7 +67,7 @@
 		<a href="#" class="control prev"><i class="fa fa-angle-left"></i></a>
 	</div><!--end main-wrap-->
 	<ul>
-		<li><a href="#">"Md. principal Stacy Gray describes the ways the #PARCC score reports help parents and students alike:<br>http://bsun.md/1SeOlJ4</a></li>
+		<li class="active"><a href="#">"Md. principal Stacy Gray describes the ways the #PARCC score reports help parents and students alike:<br>http://bsun.md/1SeOlJ4</a></li>
 		<li><a href="#">"Md. principal Stacy Gray describes the ways the #PARCC score reports help parents and students alike:<br>http://bsun.md/1SeOlJ4</a></li>
 		<li><a href="#">"Md. principal Stacy Gray describes the ways the #PARCC score reports help parents and students alike:<br>http://bsun.md/1SeOlJ4</a></li>
 	</ul>

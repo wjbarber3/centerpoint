@@ -46,6 +46,7 @@ Feed = {
     },
     slideRight: function(e) {
         e.preventDefault();
+        jQuery(".twitter-feed ul li.active").removeClass("active").next().addClass("active");
         jQuery(this.tweetWrap).removeClass("no-transition");
         jQuery(this.tweet).first().clone().appendTo(this.tweetWrap);
         jQuery(this.tweetWrap).css("marginLeft", "-100vw");

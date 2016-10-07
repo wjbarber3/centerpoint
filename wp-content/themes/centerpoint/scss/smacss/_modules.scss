@@ -74,7 +74,9 @@
 	ul{width:10000px;position:relative;display:block;height:auto;transition:all .3s ease-in-out;
 		&.no-transition{transition:none;}
 	}
-	li{display:inline-block;float:left;width:100vw;}
+	li{display:inline-block;float:left;width:100vw;transition:all .2s ease-in-out;opacity:0;
+		&.active{opacity:1;}
+	}
 	.prev{left:0px;}
 	.next{right:0px;}
 	p,a{color:$white;margin-bottom:5px;line-height:30px;}
