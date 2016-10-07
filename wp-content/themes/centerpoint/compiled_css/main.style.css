@@ -1718,38 +1718,47 @@ footer .fineprint a:hover {
   color: #FFFFFF;
 }
 
+/* ========================= */
+/* === FEATURED IMAGES ===== */
+/* ========================= */
+/* line 13, ../scss/smacss/_modules.scss */
+.featured-image img {
+  width: 100%;
+  height: auto;
+}
+
 /* ==================== */
 /* === SLIDER ===== */
 /* ==================== */
-/* line 13, ../scss/smacss/_modules.scss */
+/* line 19, ../scss/smacss/_modules.scss */
 #slider {
   position: relative;
   width: 100vw;
   overflow: hidden;
 }
-/* line 14, ../scss/smacss/_modules.scss */
+/* line 20, ../scss/smacss/_modules.scss */
 #slider ul {
   width: 10000px;
   transition: all .5s ease-in-out;
 }
-/* line 15, ../scss/smacss/_modules.scss */
+/* line 21, ../scss/smacss/_modules.scss */
 #slider ul.no-transition {
   transition: none;
 }
-/* line 17, ../scss/smacss/_modules.scss */
+/* line 23, ../scss/smacss/_modules.scss */
 #slider li {
   display: inline-block;
   float: left;
   width: 100vw;
   position: relative;
 }
-/* line 18, ../scss/smacss/_modules.scss */
+/* line 24, ../scss/smacss/_modules.scss */
 #slider li img {
   width: 100%;
   height: auto;
   display: block;
 }
-/* line 20, ../scss/smacss/_modules.scss */
+/* line 26, ../scss/smacss/_modules.scss */
 #slider .slide-overlay {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.8);
@@ -1761,20 +1770,20 @@ footer .fineprint a:hover {
   padding: 25px;
   max-width: 31%;
 }
-/* line 21, ../scss/smacss/_modules.scss */
+/* line 27, ../scss/smacss/_modules.scss */
 #slider .slide-overlay img {
   max-width: 160px;
   margin-bottom: 20px;
 }
-/* line 22, ../scss/smacss/_modules.scss */
+/* line 28, ../scss/smacss/_modules.scss */
 #slider .slide-overlay h1 {
   margin-bottom: 10px;
 }
-/* line 23, ../scss/smacss/_modules.scss */
+/* line 29, ../scss/smacss/_modules.scss */
 #slider .slide-overlay p {
   margin-bottom: 20px;
 }
-/* line 25, ../scss/smacss/_modules.scss */
+/* line 31, ../scss/smacss/_modules.scss */
 #slider .control {
   position: absolute;
   top: 0;
@@ -1784,7 +1793,7 @@ footer .fineprint a:hover {
   height: 67px;
   z-index: 1;
 }
-/* line 26, ../scss/smacss/_modules.scss */
+/* line 32, ../scss/smacss/_modules.scss */
 #slider .control i {
   color: #FFFFFF;
   font-size: 90px;
@@ -1795,11 +1804,11 @@ footer .fineprint a:hover {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 28, ../scss/smacss/_modules.scss */
+/* line 34, ../scss/smacss/_modules.scss */
 #slider .next {
   right: 25px;
 }
-/* line 29, ../scss/smacss/_modules.scss */
+/* line 35, ../scss/smacss/_modules.scss */
 #slider .prev {
   left: 25px;
 }
@@ -1807,18 +1816,18 @@ footer .fineprint a:hover {
 /* ==================== */
 /* === INTRO ===== */
 /* ==================== */
-/* line 36, ../scss/smacss/_modules.scss */
+/* line 42, ../scss/smacss/_modules.scss */
 .intro {
   padding: 30px 0;
   text-align: center;
   background-color: #F0F0F0;
 }
-/* line 37, ../scss/smacss/_modules.scss */
+/* line 43, ../scss/smacss/_modules.scss */
 .intro h1 {
   color: #25A549;
   margin-bottom: 20px;
 }
-/* line 38, ../scss/smacss/_modules.scss */
+/* line 44, ../scss/smacss/_modules.scss */
 .intro p {
   max-width: 80%;
   margin: 0 auto;
@@ -1827,37 +1836,37 @@ footer .fineprint a:hover {
 /* ============================ */
 /* === 3 COLUMN ICON GRID ===== */
 /* ============================ */
-/* line 45, ../scss/smacss/_modules.scss */
+/* line 51, ../scss/smacss/_modules.scss */
 .three-col-icon {
   background-color: #FFFFFF;
   padding: 40px 0;
   text-align: center;
 }
-/* line 46, ../scss/smacss/_modules.scss */
+/* line 52, ../scss/smacss/_modules.scss */
 .three-col-icon h1 {
   margin-bottom: 45px;
 }
-/* line 47, ../scss/smacss/_modules.scss */
+/* line 53, ../scss/smacss/_modules.scss */
 .three-col-icon .column {
   border-right: 1px solid #8DC63F;
   text-align: center;
 }
-/* line 48, ../scss/smacss/_modules.scss */
+/* line 54, ../scss/smacss/_modules.scss */
 .three-col-icon .column h2 {
   max-width: 75%;
   margin: 0 auto 15px;
   text-transform: uppercase;
   min-height: 50px;
 }
-/* line 49, ../scss/smacss/_modules.scss */
+/* line 55, ../scss/smacss/_modules.scss */
 .three-col-icon .column:nth-child(n+4) {
   border-right: none;
 }
-/* line 50, ../scss/smacss/_modules.scss */
+/* line 56, ../scss/smacss/_modules.scss */
 .three-col-icon .column img {
   margin-bottom: 10px;
 }
-/* line 51, ../scss/smacss/_modules.scss */
+/* line 57, ../scss/smacss/_modules.scss */
 .three-col-icon .column p {
   min-height: 111px;
   max-width: 85%;
@@ -1867,7 +1876,7 @@ footer .fineprint a:hover {
 /* ============================ */
 /* === INLINE VIDEO ===== */
 /* ============================ */
-/* line 59, ../scss/smacss/_modules.scss */
+/* line 65, ../scss/smacss/_modules.scss */
 .inline-video {
   padding: 40px 0;
   background-color: #25A549;
@@ -1876,21 +1885,21 @@ footer .fineprint a:hover {
 /* ================================ */
 /* === BACKGROUND IMG W/ TEXT ===== */
 /* ================================ */
-/* line 65, ../scss/smacss/_modules.scss */
+/* line 71, ../scss/smacss/_modules.scss */
 .background-img-text {
   background: url("../img/story-bg.png") no-repeat;
   padding: 60px 0;
   background-size: cover;
 }
-/* line 66, ../scss/smacss/_modules.scss */
+/* line 72, ../scss/smacss/_modules.scss */
 .background-img-text .text {
   margin-left: 40%;
 }
-/* line 67, ../scss/smacss/_modules.scss */
+/* line 73, ../scss/smacss/_modules.scss */
 .background-img-text h1 {
   margin-bottom: 30px;
 }
-/* line 68, ../scss/smacss/_modules.scss */
+/* line 74, ../scss/smacss/_modules.scss */
 .background-img-text p {
   max-width: 80%;
   margin-bottom: 20px;
@@ -1899,7 +1908,7 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === TWITTER FEED ===== */
 /* ====================== */
-/* line 75, ../scss/smacss/_modules.scss */
+/* line 81, ../scss/smacss/_modules.scss */
 .twitter-feed {
   background: url("../img/feed-bg.png") no-repeat;
   padding: 30px 0;
@@ -1907,13 +1916,13 @@ footer .fineprint a:hover {
   text-align: center;
   overflow: hidden;
 }
-/* line 76, ../scss/smacss/_modules.scss */
+/* line 82, ../scss/smacss/_modules.scss */
 .twitter-feed .icon-head {
   color: #FFFFFF;
   font-size: 24px;
   margin-bottom: 15px;
 }
-/* line 77, ../scss/smacss/_modules.scss */
+/* line 83, ../scss/smacss/_modules.scss */
 .twitter-feed .control {
   position: absolute;
   top: 0;
@@ -1923,12 +1932,12 @@ footer .fineprint a:hover {
   height: 40px;
   z-index: 1;
 }
-/* line 78, ../scss/smacss/_modules.scss */
+/* line 84, ../scss/smacss/_modules.scss */
 .twitter-feed .control i {
   font-size: 40px;
   color: #FFFFFF;
 }
-/* line 80, ../scss/smacss/_modules.scss */
+/* line 86, ../scss/smacss/_modules.scss */
 .twitter-feed ul {
   width: 10000px;
   position: relative;
@@ -1936,11 +1945,11 @@ footer .fineprint a:hover {
   height: auto;
   transition: all .3s ease-in-out;
 }
-/* line 81, ../scss/smacss/_modules.scss */
+/* line 87, ../scss/smacss/_modules.scss */
 .twitter-feed ul.no-transition {
   transition: none;
 }
-/* line 83, ../scss/smacss/_modules.scss */
+/* line 89, ../scss/smacss/_modules.scss */
 .twitter-feed li {
   display: inline-block;
   float: left;
@@ -1948,26 +1957,26 @@ footer .fineprint a:hover {
   transition: all .2s ease-in-out;
   opacity: 0;
 }
-/* line 84, ../scss/smacss/_modules.scss */
+/* line 90, ../scss/smacss/_modules.scss */
 .twitter-feed li.active {
   opacity: 1;
 }
-/* line 85, ../scss/smacss/_modules.scss */
+/* line 91, ../scss/smacss/_modules.scss */
 .twitter-feed li p {
   font-size: 16px;
   line-height: 24px;
   max-width: 80%;
   margin: 0 auto;
 }
-/* line 87, ../scss/smacss/_modules.scss */
+/* line 93, ../scss/smacss/_modules.scss */
 .twitter-feed .prev {
   left: 0px;
 }
-/* line 88, ../scss/smacss/_modules.scss */
+/* line 94, ../scss/smacss/_modules.scss */
 .twitter-feed .next {
   right: 0px;
 }
-/* line 89, ../scss/smacss/_modules.scss */
+/* line 95, ../scss/smacss/_modules.scss */
 .twitter-feed p, .twitter-feed a {
   color: #FFFFFF;
   margin-bottom: 5px;
