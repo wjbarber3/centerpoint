@@ -1,14 +1,14 @@
 <?php
 
 //---------------------------------------------------//
-//----BASIC WORDPRESS SUPPORT-----//
+//---- BASIC WORDPRESS SUPPORT ----------------------//
 //---------------------------------------------------//
 
 // Featured Images
 add_theme_support( 'post-thumbnails' );
 
 //---------------------------------------------------//
-//----ENQUEUE SCRIPTS AND STYLES-----//
+//---- ENQUEUE SCRIPTS AND STYLES -------------------//
 //---------------------------------------------------//
 
 function metromont_scripts() {
@@ -19,7 +19,7 @@ function metromont_scripts() {
 add_action( 'wp_enqueue_scripts', 'metromont_scripts' );	
 
 //---------------------------------------------------//
-//----PAGE SLUG BODY CLASS-----//
+//---- PAGE SLUG BODY CLASS -------------------------//
 //---------------------------------------------------//
 
 function add_slug_body_class( $classes ) {
@@ -33,7 +33,7 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 //---------------------------------------------------//
-//---- CUSTOMIZE DASHBOARD WELCOME -----//
+//---- CUSTOMIZE DASHBOARD WELCOME ------------------//
 //---------------------------------------------------//
 
 // example custom dashboard widget
@@ -53,72 +53,96 @@ add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
 
 
 //---------------------------------------------------//
-//----'FIELD LABEL' VISIBILITY FOR GRAVITY FORMS-----//
+//---- 'FIELD LABEL' VISIBILITY FOR GRAVITY FORMS ----//
 //---------------------------------------------------//
 
 // add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 
 //---------------------------------------------------//
-//----REGISTER CUSTOM POST TYPES-----//
-//---------------------------------------------------//
+//---- REGISTER CUSTOM POST TYPES ------------------//
+//--------------------------------------------------//
 
-// Register Employees Custom Post Type
 function employees_custom_post_type() {
-
-	$labels = array(
-		'name'                  => 'Employees',
-		'singular_name'         => 'Employee',
-		'menu_name'             => 'Employees',
-		'name_admin_bar'        => 'Employee',
-		'archives'              => 'Item Archives',
-		'parent_item_colon'     => 'Parent Item:',
-		'all_items'             => 'All Items',
-		'add_new_item'          => 'Add New Item',
-		'add_new'               => 'Add New',
-		'new_item'              => 'New Item',
-		'edit_item'             => 'Edit Item',
-		'update_item'           => 'Update Item',
-		'view_item'             => 'View Item',
-		'search_items'          => 'Search Item',
-		'not_found'             => 'Not found',
-		'not_found_in_trash'    => 'Not found in Trash',
-		'featured_image'        => 'Featured Image',
-		'set_featured_image'    => 'Set featured image',
-		'remove_featured_image' => 'Remove featured image',
-		'use_featured_image'    => 'Use as featured image',
-		'insert_into_item'      => 'Insert into item',
-		'uploaded_to_this_item' => 'Uploaded to this item',
-		'items_list'            => 'Items list',
-		'items_list_navigation' => 'Items list navigation',
-		'filter_items_list'     => 'Filter items list',
-	);
-	$args = array(
-		'label'                 => 'Employee',
-		'description'           => 'A List of CenterPoint Employees categorized by role',
-		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
-		'hierarchical'          => true,
-		'public'                => true,
-		'show_ui'               => true,
-		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'show_in_admin_bar'     => true,
-		'show_in_nav_menus'     => true,
-		'can_export'            => true,
-		'has_archive'           => true,		
-		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
-	);
-	register_post_type( 'post_type', $args );
-
+  $labels = [
+    'name'               => _x( 'Employees', 'post type general name' ),
+    'singular_name'      => _x( 'Employee', 'post type singular name' ),
+    'add_new'            => _x( 'Add New Employee', '' ),
+    'add_new_item'       => __( 'Add New Employee' ),
+    'edit_item'          => __( 'Edit Employee' ),
+    'new_item'           => __( 'New Employee' ),
+    'all_items'          => __( 'All Employees' ),
+    'view_item'          => __( 'View Employee' ),
+    'search_items'       => __( 'Search Employees' ),
+    'not_found'          => __( 'No products found' ),
+    'not_found_in_trash' => __( 'No products found in the Trash' ), 
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Employees',
+ ];
+  $args = [
+    'labels'        => $labels,
+    'description'   => 'Holds our employee information',
+    'public'        => true,
+    'menu_position' => 5,
+    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'has_archive'   => true,
+  ];
+  register_post_type( 'employee', $args ); 
 }
-add_action( 'init', 'employees_custom_post_type', 0 );
+add_action( 'init', 'employees_custom_post_type' );
 
-//---------------------------------------------------//
+function products_custom_post_type() {
+  $labels = [
+    'name'               => _x( 'Products', 'post type general name' ),
+    'singular_name'      => _x( 'Product', 'post type singular name' ),
+    'add_new'            => _x( 'Add New Product', '' ),
+    'add_new_item'       => __( 'Add New Product' ),
+    'edit_item'          => __( 'Edit Product' ),
+    'new_item'           => __( 'New Product' ),
+    'all_items'          => __( 'All Products' ),
+    'view_item'          => __( 'View Product' ),
+    'search_items'       => __( 'Search Products' ),
+    'not_found'          => __( 'No products found' ),
+    'not_found_in_trash' => __( 'No products found in the Trash' ), 
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Products',
+ ];
+  $args = [
+    'labels'        => $labels,
+    'description'   => 'Holds our product information',
+    'public'        => true,
+    'menu_position' => 5,
+    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'has_archive'   => true,
+  ];
+  register_post_type( 'product', $args ); 
+}
+add_action( 'init', 'products_custom_post_type' );
+
+//-----------------------------------//
 //----REGISTER CUSTOM TAXONOMIES-----//
-//---------------------------------------------------//
+//-----------------------------------//
+
+function my_taxonomies_employee() {
+  $labels = array(
+    'name'              => _x( 'Employee Categories', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Employee Category', 'taxonomy singular name' ),
+    'search_items'      => __( 'Search Employee Categories' ),
+    'all_items'         => __( 'All Employee Categories' ),
+    'parent_item'       => __( 'Parent Employee Category' ),
+    'parent_item_colon' => __( 'Parent Product Category:' ),
+    'edit_item'         => __( 'Edit Employee Category' ), 
+    'update_item'       => __( 'Update Employee Category' ),
+    'add_new_item'      => __( 'Add New Employee Category' ),
+    'new_item_name'     => __( 'New Employee Category' ),
+    'menu_name'         => __( 'Employee Categories' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+  );
+  register_taxonomy( 'employee_category', 'employee', $args );
+}
+add_action( 'init', 'my_taxonomies_employee', 0 );
 
 //-------------------------------------//
 //---- ADVANCED CUSTOM FIELDS ---------//
