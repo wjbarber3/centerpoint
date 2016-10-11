@@ -61,7 +61,56 @@ Feed = {
 
 }
 
+Team = {
+    teamList: '.team-list',
+    listTrigger: 'a.list-trigger',
+    triggerIcon: 'a.list-trigger i',
+    init: function() {
+        jQuery(this.listTrigger).click(this.showList.bind(this));
+    },
+    showList: function(e) {
+        e.preventDefault();
+        jQuery(this.triggerIcon).removeClass("fa-minus-circle");
+        var target = jQuery(e.target),
+            clickedTrigger = target.closest(this.listTrigger);
+            siblingList = clickedTrigger.next();
+        if (clickedTrigger.hasClass("open")) {
+            siblingList.slideUp("fast");
+            clickedTrigger.removeClass("open");
+        } else {
+            clickedTrigger.addClass("open");
+            jQuery(this.listTrigger).not(clickedTrigger).removeClass("open");
+            siblingList.slideDown("fast");
+            jQuery("a.list-trigger.open i").addClass("fa-minus-circle");
+        }
+    }
+}
+
+AjaxPost = {
+    postTrigger: '.post-trigger',
+    ajaxModal: '#post-modal',
+    loader: '<i class="fa fa-spin fa-spinner"></i>',
+    overlay: '#full-overlay',
+    init: function() {
+        jQuery(this.postTrigger).click(this.loadPost.bind(this));
+        jQuery.ajaxSetup({cache:false});
+    },
+    loadPost: function(e) {
+        e.preventDefault();
+        var target = jQuery(e.target),
+            targetLink = target.closest(this.postTrigger);
+            targetID = targetLink.data("id");
+        jQuery(this.ajaxModal).load("/employee/" + targetID);
+        jQuery(this.ajaxModal).addClass("active").append(this.loader);
+        jQuery(this.overlay).fadeIn();
+        jQuery(this.ajaxModal).fadeIn();
+        return false;
+    }
+}
+
 jQuery(document).ready(function() {
     Slider.init();
     Feed.init();
+    Team.init();
+    AjaxPost.init();
 })

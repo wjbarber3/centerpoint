@@ -85,6 +85,7 @@ function employees_custom_post_type() {
     'menu_position' => 5,
     'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
     'has_archive'   => true,
+    'rewrite' => [ 'slug' => 'employee' ]
   ];
   register_post_type( 'employee', $args ); 
 }
@@ -117,6 +118,31 @@ function products_custom_post_type() {
   register_post_type( 'product', $args ); 
 }
 add_action( 'init', 'products_custom_post_type' );
+
+//---------------------------------------//
+//---- REWRITE EMPLOYEE PERMALINKS -----//
+//-------------------------------------//
+
+// Rewrite permalink structure
+function employee_rewrite() {
+    global $wp_rewrite;
+    $queryarg = 'post_type=employee&p=';
+    $wp_rewrite->add_rewrite_tag( '%cpt_id%', '([^/]+)', $queryarg );
+    $wp_rewrite->add_permastruct( 'employee', '/employee/%cpt_id%/', false );
+}
+add_action( 'init', 'employee_rewrite' );
+
+function employee_permalink( $post_link, $id = 0, $leavename ) {
+    global $wp_rewrite;
+    $post = &get_post( $id );
+    if ( is_wp_error( $post ) )
+        return $post;
+        $newlink = $wp_rewrite->get_extra_permastruct( 'employee' );
+        $newlink = str_replace( '%cpt_id%', $post->ID, $newlink );
+        $newlink = home_url( user_trailingslashit( $newlink ) );
+    return $newlink;
+}
+add_filter('post_type_link', 'employee_permalink', 1, 3);
 
 //-----------------------------------//
 //----REGISTER CUSTOM TAXONOMIES-----//

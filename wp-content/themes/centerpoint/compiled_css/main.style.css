@@ -1725,6 +1725,7 @@ footer .fineprint a:hover {
 .featured-image img {
   width: 100%;
   height: auto;
+  margin-bottom: 40px;
 }
 
 /* ==================== */
@@ -1981,6 +1982,182 @@ footer .fineprint a:hover {
   color: #FFFFFF;
   margin-bottom: 5px;
   line-height: 30px;
+}
+
+/* ====================== */
+/* === TEAM MEMBERS ===== */
+/* ====================== */
+/* line 103, ../scss/smacss/_modules.scss */
+.team-members a {
+  display: block;
+  width: 100%;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #25A549;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 32px;
+}
+/* line 104, ../scss/smacss/_modules.scss */
+.team-members a i {
+  margin-left: 8px;
+}
+/* line 105, ../scss/smacss/_modules.scss */
+.team-members a.open {
+  background-color: #FFFFFF;
+  color: #25A549;
+  border-top: 4px solid #25A549;
+}
+/* line 107, ../scss/smacss/_modules.scss */
+.team-members .team-list {
+  display: none;
+}
+
+/* ====================== */
+/* === AJAX MODALS ===== */
+/* ====================== */
+/* line 114, ../scss/smacss/_modules.scss */
+#post-modal {
+  position: fixed;
+  width: 90vw;
+  height: 90vh;
+  background: white;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s ease-in-out;
+}
+/* line 115, ../scss/smacss/_modules.scss */
+#post-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ====================== */
+/* === DARK OVERLAYS ==== */
+/* ====================== */
+/* line 122, ../scss/smacss/_modules.scss */
+#full-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  display: none;
+}
+
+/* ====================== */
+/* === COMPANY TOP ==== */
+/* ====================== */
+/* line 128, ../scss/smacss/_modules.scss */
+.company-top {
+  margin-bottom: 60px;
+}
+/* line 129, ../scss/smacss/_modules.scss */
+.company-top .jump-links {
+  padding-right: 30px;
+}
+/* line 130, ../scss/smacss/_modules.scss */
+.company-top .jump-links nav {
+  display: block;
+  margin-bottom: 30px;
+}
+/* line 131, ../scss/smacss/_modules.scss */
+.company-top .jump-links nav li {
+  display: inline-block;
+}
+/* line 132, ../scss/smacss/_modules.scss */
+.company-top .jump-links nav li:last-of-type a {
+  padding-right: 0px;
+}
+/* line 134, ../scss/smacss/_modules.scss */
+.company-top .jump-links nav a {
+  padding-right: 30px;
+  color: #28317D;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 800;
+  display: block;
+}
+/* line 135, ../scss/smacss/_modules.scss */
+.company-top .jump-links nav a:hover {
+  color: #25A549;
+}
+/* line 139, ../scss/smacss/_modules.scss */
+.company-top p {
+  color: #4A4746;
+}
+/* line 140, ../scss/smacss/_modules.scss */
+.company-top p + p {
+  margin-top: 20px;
+}
+/* line 142, ../scss/smacss/_modules.scss */
+.company-top .quicklinks {
+  border-left: 1px solid #25A549;
+  padding-left: 30px;
+}
+/* line 143, ../scss/smacss/_modules.scss */
+.company-top .quicklinks h3 {
+  font-size: 18px;
+  color: #25A549;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+/* line 144, ../scss/smacss/_modules.scss */
+.company-top .quicklinks li {
+  margin-bottom: 12px;
+}
+/* line 145, ../scss/smacss/_modules.scss */
+.company-top .quicklinks a {
+  color: #28317D;
+  font-weight: 800;
+  line-height: 22px;
+}
+/* line 146, ../scss/smacss/_modules.scss */
+.company-top .quicklinks a:hover {
+  color: #25A549;
+}
+
+/* ====================== */
+/* === VALUES ==== */
+/* ====================== */
+/* line 156, ../scss/smacss/_modules.scss */
+#values * {
+  text-align: center;
+}
+/* line 157, ../scss/smacss/_modules.scss */
+#values h1 {
+  color: #25A549;
+  margin-bottom: 45px;
+}
+/* line 158, ../scss/smacss/_modules.scss */
+#values h2 {
+  border-top: 1px solid #25A549;
+  border-bottom: 1px solid #25A549;
+  padding: 10px 0;
+  max-width: 75%;
+  margin: 0 auto;
+  color: #28317D;
+  font-family: "Georgia", serif;
+  margin-bottom: 20px;
+}
+/* line 159, ../scss/smacss/_modules.scss */
+#values p {
+  max-width: 75%;
+  margin: 0 auto;
+  min-height: 140px;
+  margin-bottom: 20px;
 }
 
 /* ================== */
