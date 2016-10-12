@@ -99,27 +99,40 @@
 /* === TEAM MEMBERS ===== */
 /* ====================== */
 
-.team-members{
-	a{display:block;width:100%;color:$white;text-align:center;background-color:$green;padding:5px 0;margin-bottom:5px;font-weight:300;font-size:32px;
-		i{margin-left:8px;}
+#team-members{
+	.list-trigger{display:block;width:100%;color:$white;text-align:center;background-color:$green;padding:5px 0;margin-bottom:5px;font-weight:300;font-size:32px;
+		i{margin-left:8px;font-size:22px;vertical-align:middle;}
 		&.open{background-color:$white;color:$green;border-top:4px solid $green;}
 	}
-	.team-list{display:none;}
+	.team-list{display:none;margin-top:30px;
+		h2{font-weight:800;color:$blue;}
+		p{color:$blue;font-size:14px;line-height:24px;
+			span{color:$green;text-transform:uppercase;}
+		}
+		a{transition:none;
+			&:hover{opacity:.8;
+				p,h2{color:$green;}
+			}
+		}
+	}
 }
 
 /* ====================== */
 /* === AJAX MODALS ===== */
 /* ====================== */
 
-#post-modal{position:fixed;width:90vw;height:90vh;background:white;z-index:2;top:0;bottom:0;left:0;right:0;margin:auto;opacity:0;visibility:hidden;transition:all .2s ease-in-out;
+#post-modal{position:fixed;width:60vw;height:80vh;background:white;z-index:2;top:0;bottom:0;left:0;right:0;margin:auto;opacity:0;visibility:hidden;transition:all .2s ease-in-out;padding:45px;
 	&.active{opacity:1;visibility:visible;}
+	.fa-close{position:absolute;top:15px;right:15px;font-size:16px;color:$white;border-radius:20px;background-color:$grey;transition:all .2s ease-in-out;width:20px;height:20px;text-align:center;line-height:20px;cursor:pointer;opacity:.9;
+		&:hover{@include transform(scale(1.2));opacity:1;}
+	}
 }
 
 /* ====================== */
 /* === DARK OVERLAYS ==== */
 /* ====================== */
 
-#full-overlay{position:fixed;width:100vw;height:100vh;background-color:rgba($black, .8);top:0;bottom:0;left:0;right:0;margin:auto;z-index:1;display:none;}
+#full-overlay{position:fixed;width:100vw;height:100vh;background-color:rgba($black, .7);top:0;bottom:0;left:0;right:0;margin:auto;z-index:1;display:none;}
 
 /* ====================== */
 /* === COMPANY TOP ==== */
@@ -155,6 +168,6 @@
 #values{
 	*{text-align:center;}
 	h1{color:$green;margin-bottom:45px;}
-	h2{border-top:1px solid $green;border-bottom:1px solid $green;padding:10px 0;max-width:75%;margin:0 auto;color:$blue;font-family:"Georgia", serif;margin-bottom:20px;}
+	h2{border-top:1px solid $green;border-bottom:1px solid $green;padding:10px 0;max-width:75%;margin:0 auto;color:$blue;font-family:"Georgia", serif;margin-bottom:20px;text-transform:uppercase;font-size:20px;}
 	p{max-width:75%;margin:0 auto;min-height:140px;margin-bottom:20px;}
 }

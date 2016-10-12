@@ -91,20 +91,29 @@ AjaxPost = {
     ajaxModal: '#post-modal',
     loader: '<i class="fa fa-spin fa-spinner"></i>',
     overlay: '#full-overlay',
+    closeTrigger: '#post-modal .close',
+    body: 'body',
     init: function() {
         jQuery(this.postTrigger).click(this.loadPost.bind(this));
         jQuery.ajaxSetup({cache:false});
+        jQuery(this.body).on("click", this.closeTrigger, this.closePost.bind(this));
     },
     loadPost: function(e) {
         e.preventDefault();
         var target = jQuery(e.target),
             targetLink = target.closest(this.postTrigger);
             targetID = targetLink.data("id");
-        jQuery(this.ajaxModal).load("/employee/" + targetID);
         jQuery(this.ajaxModal).addClass("active").append(this.loader);
+        jQuery(this.ajaxModal).load("/employee/" + targetID);
         jQuery(this.overlay).fadeIn();
-        jQuery(this.ajaxModal).fadeIn();
+        jQuery(this.ajaxModal).show();
         return false;
+    },
+    closePost: function() {
+
+        jQuery(this.overlay).fadeOut();
+        jQuery(this.ajaxModal).hide();
+        jQuery(this.ajaxModal).empty();
     }
 }
 

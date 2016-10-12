@@ -17,60 +17,56 @@ $thumb_url = $thumb_url_array[0];
 <div id="post-modal"></div>
 
 <div class="main-wrap">
+
+	<?php while ( have_posts() ) : the_post(); ?>
 	
-	<div class="company-top row">
-		<div class="col-sm-8 jump-links">
-			<nav>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Team</a></li>
-				<li><a href="#">Board Members</a></li>
-				<li><a href="#">Advisors</a></li>
-			</nav>
-			<p>CenterPoint Education Solutions is committed to creating high-quality, innovative solutions to empower educators and to improve learning for all students. Equity and access for all students are at the “center point” of our work. CenterPoint’s customized solutions connect standards, curriculum, assessments, and instructional practice to support teaching and learning.</p>
-			<p>The CenterPoint team is made up of classroom educators, former school and district leaders, curriculum and assessment experts, and policy specialists, all having deep technical and operational experience to best serve our clients’ needs. Our work is guided by our educator-focused, student-centered mission: Success. Every Student. Every teacher. </p>
-		</div><!--end column-->
-		<div class="col-sm-4 quicklinks">
-			<h3>QuickLinks</h3>
-			<ul>
-				<li><a href="">Diagnostic Assessments: Previ Learn</a></li>
-				<li><a href="">Teacher Resources: Previ PlC</a></li>
-				<li><a href="">Professional Learning: Previ Proed</a></li>
-				<li><a href="">Custom Assessment Services: Assessment, Reporting, Analytics</a></li>
-			</ul>
-		</div><!--end column-->
-	</div><!--end company-top-->
+		<div class="company-top row">
+			<div class="col-sm-8 jump-links">
+				<nav>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#team-list">Team</a></li>
+					<li><a href="#board-list">Board Members</a></li>
+					<li><a href="#advisor-list">Advisors</a></li>
+				</nav>
+				<?php echo the_content(); ?>
+			</div><!--end column-->
 
-	<div id="values" class="row">
-		<h1>CenterPoint Education Solutions Core Values</h1>
-		<div class="col-sm-4 value">
-			<h2>Inspiration</h2>
-			<p>CenterPoint believes that every student has potential and inspired educators can unlock the potential</p>
-		</div><!--end value-->
-		<div class="col-sm-4 value">
-			<h2>Inspiration</h2>
-			<p>CenterPoint believes that every student has potential and inspired educators can unlock the potential</p>
-		</div><!--end value-->
-		<div class="col-sm-4 value">
-			<h2>Inspiration</h2>
-			<p>CenterPoint believes that every student has potential and inspired educators can unlock the potential</p>
-		</div><!--end value-->
-		<div class="col-sm-4 value">
-			<h2>Inspiration</h2>
-			<p>CenterPoint believes that every student has potential and inspired educators can unlock the potential</p>
-		</div><!--end value-->
-		<div class="col-sm-4 value">
-			<h2>Inspiration</h2>
-			<p>CenterPoint believes that every student has potential and inspired educators can unlock the potential</p>
-		</div><!--end value-->
-		<div class="col-sm-4 value">
-			<h2>Inspiration</h2>
-			<p>CenterPoint believes in replacing time-consuming test preparation with high-quality classroom-based assessments so that educators can immediately pinpoint strengths and areas of improvement in their students throughout the school year. </p>
-		</div><!--end value-->
-	</div><!--end company-values-->
+			<!-- ACF QUICKLINKS -->
+			<?php if(have_rows('quick_links')): ?>
+				<div class="col-sm-4 quicklinks">
+					<h3>QuickLinks</h3>
+					<ul>
+						<?php while(have_rows('quick_links')) : the_row(); ?>
+							<li><a href="<?php the_sub_field('quicklink_link'); ?>"><?php the_sub_field('quicklink_text'); ?></a></li>
+						<?php endwhile; ?>
+					</ul>
+				</div><!--end column-->
+			<?php endif; ?>
 
-	<div class="team-members">
+		</div><!--end company-top-->
 
-		<!-- Loop through Team Members -->
+		<!-- ACF VALUES -->
+		<?php if(have_rows('values')): ?>
+			<div id="values" class="row">
+				<h1>CenterPoint Education Solutions Core Values</h1>
+				<?php while(have_rows('values')) : the_row(); ?>
+					<div class="col-sm-4 value">
+						<h2><?php the_sub_field('value_headline'); ?></h2>
+						<p><?php the_sub_field('value_description'); ?></p>
+					</div><!--end value-->
+				<?php endwhile; ?>
+			</div><!--end company-values-->
+		<?php endif; ?>
+
+	<?php endwhile; ?>
+
+	<?php wp_reset_query(); ?>
+
+	<div id="team-members">
+
+		<!--=====================================-->
+		<!--==== LOOP THROUGH TEAM CATEGORY =====-->
+		<!--=====================================-->
 		<?php 
 			$team = new WP_Query( [
 			'post_type' => 'employee', 
@@ -80,24 +76,24 @@ $thumb_url = $thumb_url_array[0];
 			'order' => 'DESC'
 			]);
 		?>
-
-		<a class="list-trigger" href="#">Team<i class="fa fa-plus-circle"></i></a>
+		<a id="team-list" class="list-trigger" href="#">Team<i class="fa fa-plus-circle"></i></a>
 		<div class="team-list">
 			<?php while ( $team->have_posts() ) : $team->the_post(); ?>
-				<div class="col-sm-4">
+				<div class="col-sm-3">
 					<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
-						<h3><?php echo the_title(); ?></h3>
 						<?php echo the_post_thumbnail( $size, $attr ); ?>
-						<?php echo the_excerpt(); ?>
+						<h2><?php echo the_title(); ?></h2>
+						<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
 					</a>
 				</div><!--end team-list-->
 			<?php endwhile; ?>
 			<div class="clearfix"></div>
 		</div><!--end team-list-->
-
 		<?php wp_reset_query(); ?>
 
-		<!-- Loop through Board Members -->
+		<!--=============================================-->
+		<!--==== LOOP THROUGH BOARD MEMBER CATEGORY =====-->
+		<!--=============================================-->
 		<?php 
 			$boards = new WP_Query( [
 			'post_type' => 'employee', 
@@ -107,24 +103,24 @@ $thumb_url = $thumb_url_array[0];
 			'order' => 'DESC'
 			]);
 		?>
-		
-		<a class="list-trigger" href="#">Board Members<i class="fa fa-plus-circle"></i></a>
+		<a id="board-list" class="list-trigger" href="#">Board Members<i class="fa fa-plus-circle"></i></a>
 		<div class="team-list">
 			<?php while ( $boards->have_posts() ) : $boards->the_post(); ?>
-				<div class="col-sm-4">
+				<div class="col-sm-3">
 					<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
-						<h3><?php echo the_title(); ?></h3>
 						<?php echo the_post_thumbnail( $size, $attr ); ?>
-						<?php echo the_excerpt(); ?>
+						<h2><?php echo the_title(); ?></h2>
+						<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
 					</a>
 				</div><!--end team-list-->
 			<?php endwhile; ?>
 			<div class="clearfix"></div>
 		</div><!--end team-list-->
-
 		<?php wp_reset_query(); ?>
 
-		<!-- Loop through Advisors -->
+		<!--========================================-->
+		<!--==== LOOP THROUGH ADVISOR CATEGORY =====-->
+		<!--========================================-->
 		<?php 
 			$advisors = new WP_Query( [
 			'post_type' => 'employee', 
@@ -134,20 +130,19 @@ $thumb_url = $thumb_url_array[0];
 			'order' => 'DESC'
 			]);
 		?>
-		<a class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
+		<a id="advisor-list" class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
 		<div class="team-list">
 			<?php while ( $advisors->have_posts() ) : $advisors->the_post(); ?>
-				<div class="col-sm-4">
+				<div class="col-sm-3">
 					<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
-						<h3><?php echo the_title(); ?></h3>
 						<?php echo the_post_thumbnail( $size, $attr ); ?>
-						<?php echo the_excerpt(); ?>
+						<h2><?php echo the_title(); ?></h2>
+						<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
 					</a>
 				</div><!--end team-list-->
 			<?php endwhile; ?>
 			<div class="clearfix"></div>
 		</div><!--end team-list-->
-
 		<?php wp_reset_query(); ?>
 
 	</div><!--end team-members-->

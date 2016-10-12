@@ -1988,7 +1988,7 @@ footer .fineprint a:hover {
 /* === TEAM MEMBERS ===== */
 /* ====================== */
 /* line 103, ../scss/smacss/_modules.scss */
-.team-members a {
+#team-members .list-trigger {
   display: block;
   width: 100%;
   color: #FFFFFF;
@@ -2000,28 +2000,59 @@ footer .fineprint a:hover {
   font-size: 32px;
 }
 /* line 104, ../scss/smacss/_modules.scss */
-.team-members a i {
+#team-members .list-trigger i {
   margin-left: 8px;
+  font-size: 22px;
+  vertical-align: middle;
 }
 /* line 105, ../scss/smacss/_modules.scss */
-.team-members a.open {
+#team-members .list-trigger.open {
   background-color: #FFFFFF;
   color: #25A549;
   border-top: 4px solid #25A549;
 }
 /* line 107, ../scss/smacss/_modules.scss */
-.team-members .team-list {
+#team-members .team-list {
   display: none;
+  margin-top: 30px;
+}
+/* line 108, ../scss/smacss/_modules.scss */
+#team-members .team-list h2 {
+  font-weight: 800;
+  color: #28317D;
+}
+/* line 109, ../scss/smacss/_modules.scss */
+#team-members .team-list p {
+  color: #28317D;
+  font-size: 14px;
+  line-height: 24px;
+}
+/* line 110, ../scss/smacss/_modules.scss */
+#team-members .team-list p span {
+  color: #25A549;
+  text-transform: uppercase;
+}
+/* line 112, ../scss/smacss/_modules.scss */
+#team-members .team-list a {
+  transition: none;
+}
+/* line 113, ../scss/smacss/_modules.scss */
+#team-members .team-list a:hover {
+  opacity: .8;
+}
+/* line 114, ../scss/smacss/_modules.scss */
+#team-members .team-list a:hover p, #team-members .team-list a:hover h2 {
+  color: #25A549;
 }
 
 /* ====================== */
 /* === AJAX MODALS ===== */
 /* ====================== */
-/* line 114, ../scss/smacss/_modules.scss */
+/* line 124, ../scss/smacss/_modules.scss */
 #post-modal {
   position: fixed;
-  width: 90vw;
-  height: 90vh;
+  width: 60vw;
+  height: 80vh;
   background: white;
   z-index: 2;
   top: 0;
@@ -2032,22 +2063,48 @@ footer .fineprint a:hover {
   opacity: 0;
   visibility: hidden;
   transition: all .2s ease-in-out;
+  padding: 45px;
 }
-/* line 115, ../scss/smacss/_modules.scss */
+/* line 125, ../scss/smacss/_modules.scss */
 #post-modal.active {
   opacity: 1;
   visibility: visible;
+}
+/* line 126, ../scss/smacss/_modules.scss */
+#post-modal .fa-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 16px;
+  color: #FFFFFF;
+  border-radius: 20px;
+  background-color: #4A4746;
+  transition: all .2s ease-in-out;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  opacity: .9;
+}
+/* line 127, ../scss/smacss/_modules.scss */
+#post-modal .fa-close:hover {
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  opacity: 1;
 }
 
 /* ====================== */
 /* === DARK OVERLAYS ==== */
 /* ====================== */
-/* line 122, ../scss/smacss/_modules.scss */
+/* line 135, ../scss/smacss/_modules.scss */
 #full-overlay {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   bottom: 0;
   left: 0;
@@ -2060,28 +2117,28 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === COMPANY TOP ==== */
 /* ====================== */
-/* line 128, ../scss/smacss/_modules.scss */
+/* line 141, ../scss/smacss/_modules.scss */
 .company-top {
   margin-bottom: 60px;
 }
-/* line 129, ../scss/smacss/_modules.scss */
+/* line 142, ../scss/smacss/_modules.scss */
 .company-top .jump-links {
   padding-right: 30px;
 }
-/* line 130, ../scss/smacss/_modules.scss */
+/* line 143, ../scss/smacss/_modules.scss */
 .company-top .jump-links nav {
   display: block;
   margin-bottom: 30px;
 }
-/* line 131, ../scss/smacss/_modules.scss */
+/* line 144, ../scss/smacss/_modules.scss */
 .company-top .jump-links nav li {
   display: inline-block;
 }
-/* line 132, ../scss/smacss/_modules.scss */
+/* line 145, ../scss/smacss/_modules.scss */
 .company-top .jump-links nav li:last-of-type a {
   padding-right: 0px;
 }
-/* line 134, ../scss/smacss/_modules.scss */
+/* line 147, ../scss/smacss/_modules.scss */
 .company-top .jump-links nav a {
   padding-right: 30px;
   color: #28317D;
@@ -2090,41 +2147,41 @@ footer .fineprint a:hover {
   font-weight: 800;
   display: block;
 }
-/* line 135, ../scss/smacss/_modules.scss */
+/* line 148, ../scss/smacss/_modules.scss */
 .company-top .jump-links nav a:hover {
   color: #25A549;
 }
-/* line 139, ../scss/smacss/_modules.scss */
+/* line 152, ../scss/smacss/_modules.scss */
 .company-top p {
   color: #4A4746;
 }
-/* line 140, ../scss/smacss/_modules.scss */
+/* line 153, ../scss/smacss/_modules.scss */
 .company-top p + p {
   margin-top: 20px;
 }
-/* line 142, ../scss/smacss/_modules.scss */
+/* line 155, ../scss/smacss/_modules.scss */
 .company-top .quicklinks {
   border-left: 1px solid #25A549;
   padding-left: 30px;
 }
-/* line 143, ../scss/smacss/_modules.scss */
+/* line 156, ../scss/smacss/_modules.scss */
 .company-top .quicklinks h3 {
   font-size: 18px;
   color: #25A549;
   font-weight: 300;
   margin-bottom: 30px;
 }
-/* line 144, ../scss/smacss/_modules.scss */
+/* line 157, ../scss/smacss/_modules.scss */
 .company-top .quicklinks li {
   margin-bottom: 12px;
 }
-/* line 145, ../scss/smacss/_modules.scss */
+/* line 158, ../scss/smacss/_modules.scss */
 .company-top .quicklinks a {
   color: #28317D;
   font-weight: 800;
   line-height: 22px;
 }
-/* line 146, ../scss/smacss/_modules.scss */
+/* line 159, ../scss/smacss/_modules.scss */
 .company-top .quicklinks a:hover {
   color: #25A549;
 }
@@ -2132,16 +2189,16 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === VALUES ==== */
 /* ====================== */
-/* line 156, ../scss/smacss/_modules.scss */
+/* line 169, ../scss/smacss/_modules.scss */
 #values * {
   text-align: center;
 }
-/* line 157, ../scss/smacss/_modules.scss */
+/* line 170, ../scss/smacss/_modules.scss */
 #values h1 {
   color: #25A549;
   margin-bottom: 45px;
 }
-/* line 158, ../scss/smacss/_modules.scss */
+/* line 171, ../scss/smacss/_modules.scss */
 #values h2 {
   border-top: 1px solid #25A549;
   border-bottom: 1px solid #25A549;
@@ -2151,8 +2208,10 @@ footer .fineprint a:hover {
   color: #28317D;
   font-family: "Georgia", serif;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
 }
-/* line 159, ../scss/smacss/_modules.scss */
+/* line 172, ../scss/smacss/_modules.scss */
 #values p {
   max-width: 75%;
   margin: 0 auto;

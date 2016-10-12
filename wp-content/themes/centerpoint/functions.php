@@ -83,7 +83,7 @@ function employees_custom_post_type() {
     'description'   => 'Holds our employee information',
     'public'        => true,
     'menu_position' => 5,
-    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'supports'      => array( 'title', 'editor', 'thumbnail' ),
     'has_archive'   => true,
     'rewrite' => [ 'slug' => 'employee' ]
   ];
@@ -173,4 +173,156 @@ add_action( 'init', 'my_taxonomies_employee', 0 );
 //-------------------------------------//
 //---- ADVANCED CUSTOM FIELDS ---------//
 //-------------------------------------//
+
+if(function_exists("register_field_group")) {
+  register_field_group([
+    'id' => 'acf_company-fields',
+    'title' => 'Company Fields',
+    'fields' => [
+      [
+        'key' => 'field_57fd53b56bb88',
+        'label' => 'Quick Links',
+        'name' => 'quick_links',
+        'type' => 'repeater',
+        'instructions' => 'Use this section to add quick links to the right side of the page. You can add between 1-4 QuickLinks.',
+        'required' => 1,
+        'sub_fields' => [
+          [
+            'key' => 'field_57fd54326bb89',
+            'label' => 'QuickLink Text',
+            'name' => 'quicklink_text',
+            'type' => 'text',
+            'instructions' => 'Add the actual copy for the link',
+            'required' => 1,
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => 'Link Text',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => 70,
+          ],
+          [
+            'key' => 'field_57fd54a76bb8a',
+            'label' => 'QuickLink Link',
+            'name' => 'quicklink_link',
+            'type' => 'page_link',
+            'instructions' => 'Add the page that this QuickLink will direct to.',
+            'required' => 1,
+            'column_width' => '',
+            'post_type' => [
+              0 => 'all',
+            ],
+            'allow_null' => 0,
+            'multiple' => 0,
+          ],
+        ],
+        'row_min' => '1',
+        'row_limit' => '4',
+        'layout' => 'row',
+        'button_label' => 'Add QuickLink',
+      ],
+      [
+        'key' => 'field_33aa44b56cb88',
+        'label' => 'Values',
+        'name' => 'values',
+        'type' => 'repeater',
+        'instructions' => 'Use this section to add Company values.',
+        'required' => 1,
+        'sub_fields' => [
+          [
+            'key' => 'field_33aa44b56cb89',
+            'label' => 'Value Headline',
+            'name' => 'value_headline',
+            'type' => 'text',
+            'instructions' => 'Add the value headline. Max characters = 20',
+            'required' => 1,
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => 'Headline',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => 20,
+          ],
+          [
+            'key' => 'field_33aa44b56cb90',
+            'label' => 'Value Description',
+            'name' => 'value_description',
+            'type' => 'text',
+            'instructions' => 'Add the value description. Max characters = 240',
+            'required' => 1,
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => 'Description (max 240 characters)',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => 240,
+          ],
+        ],
+        'row_min' => '3',
+        'row_limit' => '6',
+        'layout' => 'row',
+        'button_label' => 'Add Value',
+      ],
+    ],
+    'location' => [
+      [
+        [
+          'param' => 'page_template',
+          'operator' => '==',
+          'value' => 'template-company.php',
+          'order_no' => 0,
+          'group_no' => 0,
+        ],
+      ],
+    ],
+    'options' => [
+      'position' => 'normal',
+      'layout' => 'no_box',
+      'hide_on_screen' => [
+      ],
+    ],
+    'menu_order' => 0,
+  ]);
+  register_field_group([
+    'id' => 'acf_employee-fields',
+    'title' => 'Employee Fields',
+    'fields' => [
+      [
+        'key' => 'field_57fd750d49775',
+        'label' => 'Employee Title',
+        'name' => 'employee_title',
+        'type' => 'text',
+        'instructions' => 'Add the position/title of the employee.',
+        'required' => 1,
+        'default_value' => '',
+        'placeholder' => 'Employee Title',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'html',
+        'maxlength' => '',
+      ],
+    ],
+    'location' => [
+      [
+        [
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'employee',
+          'order_no' => 0,
+          'group_no' => 0,
+        ],
+      ],
+    ],
+    'options' => [
+      'position' => 'normal',
+      'layout' => 'no_box',
+      'hide_on_screen' => [
+      ],
+    ],
+    'menu_order' => 0,
+  ]);
+}
 
