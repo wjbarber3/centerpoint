@@ -2,6 +2,10 @@
 /* === BASE ========= */
 /* ================== */
 
+@include bp(mobile){
+	h1{font-size:24px;line-height:32px;}
+}
+
 /* ================== */
 /* === HEADER ======= */
 /* ================== */
@@ -21,7 +25,13 @@ header{
 /* === MODULES ====== */
 /* ================== */
 
-.intro{
+.slider{
+	@include bp(tablet){
+		.slide-overlay{display:none;}
+	}
+}
+
+.full-text{
 	@include bp(mobile){
 		p{max-width:100%;}
 	}
@@ -50,6 +60,50 @@ header{
 		.prev{left:10px;}
 		.main-wrap{position:initial;}
 		li p{max-width:70%;}
+	}
+}
+
+#team-members{
+	@include bp(mobile){
+		.list-trigger{font-size:18px;}
+		.team-list{
+			img{float:left;width:35%;height:auto;margin-right:20px;}
+			.employee{padding:0 0 30px;overflow:auto;margin-bottom:30px;border-bottom:1px solid $grey;}
+			h2{font-size:16px;}
+			p{font-size:13px;line-height:20px;}
+		}
+	}
+}
+
+#post-modal{
+	@include bp(tablet){width:90vw;height:90vh;}
+	@include bp(mobile){padding:30px;
+		img{float:none;margin:0 0 15px 0;}
+	}
+}
+
+.company-top{
+	@include bp(mobile){text-align:center;
+		.jump-links{padding-right:0.9375rem;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid $grey;margin-bottom:30px;
+			nav{overflow-x:scroll;white-space:nowrap;
+				a{padding-right:15px;font-size:12px;}
+			}
+		}
+		.quicklinks{padding-bottom:30px;border-bottom:1px solid $grey;border-left:none;}
+	}
+}
+
+#values{
+	@include bp(mobile){
+		h1{padding:0 15px;}
+		h2,p{max-width:100%;}
+		p{min-height:initial;margin-bottom:35px;}
+	}
+}
+
+.inline-video{
+	@include bp(mobile){
+		.vid-info{text-align:center;margin-bottom:20px;}
 	}
 }
 

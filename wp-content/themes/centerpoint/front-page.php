@@ -2,7 +2,7 @@
 
 <?php $theme = get_template_directory_uri(); ?>
 
-<div id="slider">
+<div class="slider">
 	<a href="#" class="control next"><i class="fa fa-angle-right"></i></a>
 	<a href="#" class="control prev"><i class="fa fa-angle-left"></i></a>	
 	<ul>
@@ -18,7 +18,7 @@
 	</ul>
 </div><!--end slider-->
 
-<div class="intro">
+<div class="full-text">
 	<div class="main-wrap">
 		<h1>Success. Every Student. Every teacher.</h1>
 		<p>CenterPoint Education Solutions is a non-profit organization committed to creating high-quality, innovative solutions to empower educators and improve learning for all students. Founded and led by veteran educators and assessment experts, CenterPoint’s customized solutions connect standards, curriculum, assessments, and instructional practice to support teaching and learning.</p>
@@ -51,6 +51,18 @@
 </div><!--end three-col-icon-->
 
 <div class="inline-video">
+	<div class="main-wrap">
+		<div class="col-md-6 vid-info">
+			<h1>A Welcome from Laura Slover</h1>
+			<h2>Centerpoint Education Solutions</h2>
+			<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+			<a class="main-btn" href=""><i class="main-btn-icon fa fa-chevron-right"></i>Read More</a>
+		</div><!--end vid-info-->
+		<div class="col-md-6 vid">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/y17l-hxFz1M" frameborder="0" allowfullscreen></iframe>
+		</div><!--end vid-->
+		<div class="clearfix"></div>
+	</div><!--end main-wrap-->
 </div><!--end inline-video-->
 
 <div class="background-img-text">

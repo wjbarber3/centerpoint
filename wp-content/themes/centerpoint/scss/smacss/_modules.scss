@@ -16,7 +16,7 @@
 /* === SLIDER ===== */
 /* ==================== */
 
-#slider{position:relative;width:100vw;overflow:hidden;
+.slider{position:relative;width:100vw;overflow:hidden;
 	ul{width:10000px;transition:all .5s ease-in-out;
 		&.no-transition{transition:none;}
 	}
@@ -36,10 +36,10 @@
 }
 
 /* ==================== */
-/* === INTRO ===== */
+/* === FULL TEXT ===== */
 /* ==================== */
 
-.intro{padding:30px 0;text-align:center;background-color:$off_grey;
+.full-text{padding:30px 0;text-align:center;background-color:$off_grey;
 	h1{color:$green;margin-bottom:20px;}
 	p{max-width:80%;margin:0 auto;}
 }
@@ -62,7 +62,17 @@
 /* === INLINE VIDEO ===== */
 /* ============================ */
 
-.inline-video{padding:40px 0;background-color:$green;}
+.inline-video{padding:40px 0;background-color:$green;
+	.main-btn:hover{color:$blue;
+		i{color:$blue;border-color:$blue;}
+	}
+	h1,h2,p,a,i{color:$white;}
+	i{border-color:$white;}
+	h1{margin-bottom:4px;}
+	h2,p{margin-bottom:15px;}
+	.vid iframe{width:100%;}
+	.vid-info{padding-top:20px;padding-bottom:20px;}
+}
 
 /* ================================ */
 /* === BACKGROUND IMG W/ TEXT ===== */
@@ -103,15 +113,20 @@
 	.list-trigger{display:block;width:100%;color:$white;text-align:center;background-color:$green;padding:5px 0;margin-bottom:5px;font-weight:300;font-size:32px;
 		i{margin-left:8px;font-size:22px;vertical-align:middle;}
 		&.open{background-color:$white;color:$green;border-top:4px solid $green;}
+		&:hover{opacity:.8;}
+		&:focus{outline:none;}
 	}
 	.team-list{display:none;margin-top:30px;
-		h2{font-weight:800;color:$blue;}
-		p{color:$blue;font-size:14px;line-height:24px;
+		.employee{padding-right:50px;}
+		h2{font-weight:800;color:$blue;margin:6px 0 4px;}
+		p{color:$blue;font-size:14px;line-height:22px;
 			span{color:$green;text-transform:uppercase;}
 		}
+		img{width:150px;height:200px;}
 		a{transition:none;
 			&:hover{opacity:.8;
 				p,h2{color:$green;}
+				span{text-decoration:underline;}
 			}
 		}
 	}
@@ -121,11 +136,15 @@
 /* === AJAX MODALS ===== */
 /* ====================== */
 
-#post-modal{position:fixed;width:60vw;height:80vh;background:white;z-index:2;top:0;bottom:0;left:0;right:0;margin:auto;opacity:0;visibility:hidden;transition:all .2s ease-in-out;padding:45px;
+#post-modal{position:fixed;width:60vw;height:80vh;background:white;z-index:2;top:0;bottom:0;left:0;right:0;margin:auto;opacity:0;visibility:hidden;transition:all .2s ease-in-out;padding:45px;overflow-y:scroll;
 	&.active{opacity:1;visibility:visible;}
 	.fa-close{position:absolute;top:15px;right:15px;font-size:16px;color:$white;border-radius:20px;background-color:$grey;transition:all .2s ease-in-out;width:20px;height:20px;text-align:center;line-height:20px;cursor:pointer;opacity:.9;
 		&:hover{@include transform(scale(1.2));opacity:1;}
 	}
+	img{float:right;margin:0 0 30px 30px;width:150px;height:200px;}
+	h2{text-transform:uppercase;font-size:20px;color:$blue;font-weight:800;margin-bottom:4px;}
+	p:first-of-type{font-size:16px;margin-bottom:10px;}
+	p + p{margin-top:10px;}
 }
 
 /* ====================== */
@@ -169,5 +188,5 @@
 	*{text-align:center;}
 	h1{color:$green;margin-bottom:45px;}
 	h2{border-top:1px solid $green;border-bottom:1px solid $green;padding:10px 0;max-width:75%;margin:0 auto;color:$blue;font-family:"Georgia", serif;margin-bottom:20px;text-transform:uppercase;font-size:20px;}
-	p{max-width:75%;margin:0 auto;min-height:140px;margin-bottom:20px;}
+	p{max-width:75%;margin:0 auto;min-height:160px;margin-bottom:20px;}
 }

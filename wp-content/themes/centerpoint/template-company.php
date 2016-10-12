@@ -27,6 +27,7 @@ $thumb_url = $thumb_url_array[0];
 					<li><a href="#team-list">Team</a></li>
 					<li><a href="#board-list">Board Members</a></li>
 					<li><a href="#advisor-list">Advisors</a></li>
+					<div class="clearfix"></div>
 				</nav>
 				<?php echo the_content(); ?>
 			</div><!--end column-->
@@ -50,7 +51,7 @@ $thumb_url = $thumb_url_array[0];
 			<div id="values" class="row">
 				<h1>CenterPoint Education Solutions Core Values</h1>
 				<?php while(have_rows('values')) : the_row(); ?>
-					<div class="col-sm-4 value">
+					<div class="col-lg-4 col-md-6 value">
 						<h2><?php the_sub_field('value_headline'); ?></h2>
 						<p><?php the_sub_field('value_description'); ?></p>
 					</div><!--end value-->
@@ -133,7 +134,7 @@ $thumb_url = $thumb_url_array[0];
 		<a id="advisor-list" class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
 		<div class="team-list">
 			<?php while ( $advisors->have_posts() ) : $advisors->the_post(); ?>
-				<div class="col-sm-3">
+				<div class="col-md-4 employee">
 					<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
 						<?php echo the_post_thumbnail( $size, $attr ); ?>
 						<h2><?php echo the_title(); ?></h2>

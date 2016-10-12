@@ -1,9 +1,9 @@
 Slider = {
-    slideWrap: "#slider ul",
-    slide: "#slider ul li",
-    prevTrigger: "#slider a.prev",
-    nextTrigger: "#slider a.next",
-    control: "#slider a.control",
+    slideWrap: ".slider ul",
+    slide: ".slider ul li",
+    prevTrigger: ".slider a.prev",
+    nextTrigger: ".slider a.next",
+    control: ".slider a.control",
     init: function() {
         jQuery(this.nextTrigger).click(this.moveRight.bind(this));
         jQuery(this.prevTrigger).click(this.moveLeft.bind(this));
@@ -15,9 +15,9 @@ Slider = {
         jQuery(this.slideWrap).css("marginLeft", "-100vw");
         jQuery(this.control).css("pointer-events", "none");
         setTimeout(function(){
-            jQuery("#slider ul").addClass("no-transition");
-            jQuery("#slider ul li").first().remove();
-            jQuery("#slider ul").css("marginLeft", "0px");
+            jQuery(".slider ul").addClass("no-transition");
+            jQuery(".slider ul li").first().remove();
+            jQuery(".slider ul").css("marginLeft", "0px");
             jQuery("a.control").css("pointer-events", "auto");
         }, 500);
     },
@@ -27,9 +27,9 @@ Slider = {
         jQuery(this.slide).last().clone().prependTo(this.slideWrap);
         jQuery(this.slideWrap).css("marginLeft", "100vw");
         setTimeout(function(){
-            jQuery('#slider ul').addClass('no-transition');
-            jQuery('#slider ul li').last().remove();
-            jQuery('#slider ul').css("marginLeft", "0px");
+            jQuery('.slider ul').addClass('no-transition');
+            jQuery('.slider ul li').last().remove();
+            jQuery('.slider ul').css("marginLeft", "0px");
             jQuery('a.control').css('pointer-events', 'auto');
         }, 500);
     }
@@ -58,7 +58,27 @@ Feed = {
             jQuery("a.control").css("pointer-events", "auto");
         }, 300);
     }
+}
 
+JumpLinks = {
+    jumpTrigger: '.jump-links nav a',
+    init: function() {
+        jQuery(this.jumpTrigger).click(this.jumpOpen.bind(this));
+    },
+    jumpOpen: function(e) {
+        e.preventDefault();
+        var target = jQuery(e.target),
+            targetJump = target.attr("href"),
+            matchingAccordion = jQuery(targetJump),
+            matchingList = matchingAccordion.next(),
+            offset = matchingAccordion.offset().top-20;
+        jQuery("html, body").animate({
+            scrollTop: offset
+        }, 500);
+        matchingList.slideDown("fast");
+        matchingAccordion.addClass("open");
+        matchingAccordion.children("i").addClass("fa-minus-circle");
+    }
 }
 
 Team = {
@@ -80,9 +100,14 @@ Team = {
         } else {
             clickedTrigger.addClass("open");
             jQuery(this.listTrigger).not(clickedTrigger).removeClass("open");
+            jQuery(this.teamList).not(siblingList).slideUp("fast");
             siblingList.slideDown("fast");
             jQuery("a.list-trigger.open i").addClass("fa-minus-circle");
         }
+        var offset = target.offset().top-20;
+        jQuery("html, body").animate({
+            scrollTop: offset
+        }, 500);
     }
 }
 
@@ -107,19 +132,20 @@ AjaxPost = {
         jQuery(this.ajaxModal).load("/employee/" + targetID);
         jQuery(this.overlay).fadeIn();
         jQuery(this.ajaxModal).show();
-        return false;
+        jQuery(this.body).css("overflow", "hidden");
     },
     closePost: function() {
-
         jQuery(this.overlay).fadeOut();
         jQuery(this.ajaxModal).hide();
         jQuery(this.ajaxModal).empty();
+        jQuery(this.body).css("overflow", "auto");
     }
 }
 
 jQuery(document).ready(function() {
     Slider.init();
     Feed.init();
+    JumpLinks.init();
     Team.init();
     AjaxPost.init();
 })
