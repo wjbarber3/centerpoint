@@ -23,13 +23,17 @@ Slider = {
     },
     moveLeft: function(e) {
         e.preventDefault();
-        jQuery(this.slideWrap).removeClass("no-transition");
+        jQuery(this.slideWrap).addClass('no-transition');
         jQuery(this.slide).last().clone().prependTo(this.slideWrap);
-        jQuery(this.slideWrap).css("marginLeft", "100vw");
+        jQuery(this.slideWrap).css("marginLeft", "-100vw");
+        jQuery(this.control).css("pointer-events", "none");
+        setTimeout(function () {
+            jQuery('.slider ul').removeClass("no-transition");
+            jQuery('.slider ul').css("marginLeft", "0px");
+        }, 10);
         setTimeout(function(){
             jQuery('.slider ul').addClass('no-transition');
             jQuery('.slider ul li').last().remove();
-            jQuery('.slider ul').css("marginLeft", "0px");
             jQuery('a.control').css('pointer-events', 'auto');
         }, 500);
     }
@@ -43,6 +47,7 @@ Feed = {
     control: ".twitter-feed a.control",
     init: function() {
         jQuery(this.nextTrigger).click(this.slideRight.bind(this));
+        jQuery(this.prevTrigger).click(this.slideLeft.bind(this));
     },
     slideRight: function(e) {
         e.preventDefault();
@@ -57,6 +62,24 @@ Feed = {
             jQuery(".twitter-feed ul").css("marginLeft", "0px");
             jQuery("a.control").css("pointer-events", "auto");
         }, 300);
+    },
+    slideLeft: function(e) {
+        e.preventDefault();
+        jQuery(this.tweet).removeClass("active").last().addClass("active");
+        jQuery(this.tweetWrap).addClass("no-transition");
+        jQuery(this.tweet).last().clone().prependTo(this.tweetWrap);
+        jQuery(this.tweetWrap).css("marginLeft", "-100vw");
+        jQuery(this.control).css("pointer-events", "none");
+        setTimeout(function () {
+            jQuery('.twitter-feed ul').removeClass("no-transition");
+            jQuery('.twitter-feed ul').css("marginLeft", "0px");
+        }, 10);
+        setTimeout(function(){
+            jQuery('.twitter-feed ul').addClass('no-transition');
+            jQuery('.twitter-feed ul li').last().remove();
+            jQuery('a.control').css('pointer-events', 'auto');
+        }, 300);
+
     }
 }
 

@@ -7,6 +7,24 @@
 <?php if( have_rows('flex_content') ): ?>
     <?php while ( have_rows('flex_content') ) : the_row(); ?>
 
+	<?php  if( get_row_layout() == 'slider' ): ?>
+    	<div class="slider">
+			<a href="#" class="control next"><i class="fa fa-angle-right"></i></a>
+			<a href="#" class="control prev"><i class="fa fa-angle-left"></i></a>	
+			<ul>
+				<li><img src="<?php echo $theme . '/img/slides/slide-1.jpg'; ?>" alt="">
+					<div class="slide-overlay">	
+						<img src="<?php echo $theme . '/img/previ-learn.png'; ?>" width="160">
+						<h1>Make a Measurable Difference for Your Students, Grades 2–8</h1>
+						<p>Introducing Previ Learn™ English Language Arts/Literacy &amp; Mathematics &amp; Diagnostic Tools</p>
+						<a class="main-btn" href=""><i class="main-btn-icon fa fa-chevron-right"></i>Learn More</a>
+					</div><!--end slide-overlay-->
+				</li>
+				<li><img src="<?php echo $theme . '/img/slides/slide-2.jpg'; ?>" alt=""></li>
+			</ul>
+		</div><!--end slider-->
+	<?php endif; ?>
+
 	<?php  if( get_row_layout() == 'full_width_text' ): ?>
 		<div class="full-text">
 			<div class="main-wrap">
