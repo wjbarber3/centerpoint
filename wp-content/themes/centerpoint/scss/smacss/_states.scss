@@ -3,7 +3,9 @@
 /* ================== */
 
 @include bp(mobile){
-	h1{font-size:24px;line-height:32px;}
+	h1{font-size:20px;line-height:28px;}
+	.mobile-only{display:block;}
+	.mobile-hide{display:none;}
 }
 
 /* ================== */
@@ -11,10 +13,24 @@
 /* ================== */
 
 header{
+	@include bp(tablet){
+		svg{width:250px;height:auto;}
+	}
 	@include bp(sm-tablet){
 		svg{width:200px;height:auto;}
-		nav{display:none;}
+		.menu-main-nav-container{display:none;position:absolute;top:80px;transform:none;background:white;right:-5%;z-index:1;padding:20px;
+			li{display:block;
+				&:last-child a{padding:10px 30px;}
+				ul{position:relative;top:0;display:block;border:none;background-color:transparent;
+					li:last-child a{border-right:none;padding:10px 20px;}
+					a{border:none;font-size:12px;color:$green;text-transform:none;}
+				}
+			}
+			a{text-align:center;padding:10px 30px;border-right:none;}
+		}
+		.mobile-menu-trigger{display:block;float:right;@include vert-align(50%,-50%);font-size:28px;color:$blue;cursor:pointer;}
 	}
+	@include bp(mobile){border-bottom:4px solid #25A549;height:80px;}
 }
 
 /* ================== */
@@ -29,6 +45,12 @@ header{
 	@include bp(tablet){
 		.slide-overlay{display:none;}
 	}
+	@include bp(mobile){
+		.control i{font-size:50px;}
+		.control{width:20px;height:30px;}
+		.next{right:8px;}
+		.prev{left:8px;}
+	}
 }
 
 .full-text{
@@ -40,8 +62,9 @@ header{
 .three-col-icon{
 	@include bp(mobile){
 		.column{border-right:none;margin-bottom:40px;border-bottom:1px solid $lt_green;padding-bottom:40px;
-			h2,p{min-height:auto;}
+			h2,p{min-height:auto;max-width:100%;}
 			&:nth-child(n+4){margin-bottom:0px;border-bottom:none;}
+			img{max-width:80px;}
 		}
 	}
 }
@@ -104,6 +127,23 @@ header{
 .inline-video{
 	@include bp(mobile){
 		.vid-info{text-align:center;margin-bottom:20px;}
+	}
+}
+
+.news-events{
+	@include bp(mobile){
+		.event{border-right:none;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid $grey;}
+		p{max-width:100%;}
+	}
+}
+
+.contact{
+	@include bp(mobile){
+		.featured-image img{margin-bottom:30px;}
+		.form-fields{border-right:none;margin-bottom:60px;}
+		.contact-info{padding-left:0.9375rem;
+			p{max-width:100%;}
+		}
 	}
 }
 

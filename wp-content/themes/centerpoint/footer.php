@@ -1,3 +1,5 @@
+</body>
+
 <footer>
 	<div class="main-wrap row">
 		<ul class="social">
@@ -11,7 +13,6 @@
 		<nav>
 			<ul>
 				<li><a href="#">News</a></li>
-				<li><a href="#">Careers</a></li>
 				<li><a href="#">Privacy Policy</a></li>
 				<li><a href="#">Contact Us</a></li>
 			</ul>	

@@ -96,13 +96,28 @@
 	ul{width:10000px;position:relative;display:block;height:auto;transition:all .3s ease-in-out;
 		&.no-transition{transition:none;}
 	}
-	li{display:inline-block;float:left;width:100vw;transition:all .2s ease-in-out;opacity:0;
-		&.active{opacity:1;}
+	li{display:inline-block;float:left;width:100vw;transition:all .2s ease-in-out;
+		// &.active{opacity:1;}
 		p{font-size:16px;line-height:24px;max-width:80%;margin:0 auto;	}
 	}
 	.prev{left:0px;}
 	.next{right:0px;}
 	p,a{color:$white;margin-bottom:5px;line-height:30px;}
+}
+
+/* ==================== */
+/* === NEWS/EVENTS ==== */
+/* ==================== */
+
+.news-events{text-align:center;padding:50px 0;
+	.event{border-right:1px solid $green;
+		&:nth-child(3){border-right:none;}
+	}
+	h2{text-transform:uppercase;margin-bottom:20px;}
+	strong{font-weight:bold;color:$blue;}
+	p{margin-top:0px;max-width:90%;margin:0 auto;}
+	.main-btn{display:block;margin-top:20px;}
+	.news-content{min-height:200px;}
 }
 
 /* ====================== */
@@ -189,4 +204,23 @@
 	h1{color:$green;margin-bottom:45px;}
 	h2{border-top:1px solid $green;border-bottom:1px solid $green;padding:10px 0;max-width:75%;margin:0 auto;color:$blue;font-family:"Georgia", serif;margin-bottom:20px;text-transform:uppercase;font-size:20px;}
 	p{max-width:75%;margin:0 auto;min-height:160px;margin-bottom:20px;}
+}
+
+/* ====================== */
+/* === CONTACT ==== */
+/* ====================== */
+
+.contact{
+	.featured-image img{margin-bottom:60px;}
+	h1,h2{color:$green;}
+	.form-fields{border-right:1px solid $green;
+		h1{text-transform:uppercase;}
+	}
+	.contact-info{padding-left:30px;
+		a{color:$blue;font-weight:bold;
+			&:hover{color:$green;}
+		}
+		p{max-width:80%;}
+	}
+	.info-block{margin-bottom:30px;}
 }

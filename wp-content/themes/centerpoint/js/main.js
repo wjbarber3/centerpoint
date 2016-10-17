@@ -1,3 +1,15 @@
+Header = {
+    mobileNavTrigger: 'header .mobile-menu-trigger',
+    mobileMenu: 'header .menu-main-nav-container',
+    init: function() {
+        jQuery(this.mobileNavTrigger).click(this.toggleMenu.bind(this));
+    },
+    toggleMenu: function() {
+        console.log("click");
+        jQuery(this.mobileMenu).toggle();
+    }
+}
+
 Slider = {
     slideWrap: ".slider ul",
     slide: ".slider ul li",
@@ -166,9 +178,24 @@ AjaxPost = {
 }
 
 jQuery(document).ready(function() {
+    Header.init();
     Slider.init();
     Feed.init();
     JumpLinks.init();
     Team.init();
     AjaxPost.init();
 })
+
+var configProfile = {
+  "profile": {"screenName": 'PARCCPlace'},
+  "domId": 'twitter-feed-list',
+  "maxTweets": 5,
+  "enableLinks": true, 
+  "showUser": false,
+  "showTime": false,
+  "showImages": false,
+  "lang": 'en',
+  "showRetweet": false,
+  "showInteraction": false
+};
+twitterFetcher.fetch(configProfile);

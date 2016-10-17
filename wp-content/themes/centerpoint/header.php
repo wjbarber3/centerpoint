@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html <?php language_attributes(); ?> >
 
 <head>
@@ -9,7 +10,6 @@
     <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon.png">
     <link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon-precomposed.png">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
     <?php wp_head(); ?>
 </head>
 
@@ -19,16 +19,8 @@
 
 <header>
     <div class="main-wrap">
-        <a class="logo" href="/">
-            <svg width="326" height="69"><use xlink:href="#logo"></use></svg>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="" title="">Who We Are</a></li>
-                <li><a href="" title="">How We Work</a></li>
-                <li><a href="" title="">What We Provide</a></li>
-                <li><a href="" title="">Contact</a></li>
-            </ul>
-        </nav>
+        <a class="logo" href="/"><svg width="326" height="69"><use xlink:href="#logo"></use></svg></a>
+        <?php wp_nav_menu(); ?>
+        <i class="mobile-menu-trigger fa fa-bars"></i>
     </div><!--end main-wrap-->
 </header>

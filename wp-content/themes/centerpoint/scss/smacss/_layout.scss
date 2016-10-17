@@ -2,24 +2,32 @@
 /* === HEADER ======= */
 /* ================== */
 
-header{height:100px;background-color:$white;border-bottom:10px solid $green;
-	svg,nav{@include vert-align(50%,-50%);}
+header{height:100px;background-color:$white;border-bottom:10px solid $green;position:relative;z-index:1;
+	svg,.menu-main-nav-container{@include vert-align(50%,-50%);}
 	svg:hover{opacity:.8;}
-	nav{float:right;
-		li{display:inline-block;height:100%;
+	.menu-main-nav-container{float:right;
+		li{display:inline-block;height:100%;position:relative;
 			&:last-child a{padding-right:0px;border-right:none;}
+			ul{display:none;position:absolute;top:19px;background-color:rgba($white, .9);padding:0;text-align:center;border:1px solid $blue;left:-5px;
+				li{width:100%;
+					&:last-child a{padding:20px;border-right:1px solid $blue;}
+				}
+				a{border-right:none;padding:20px;padding:10px 20px;border:1px solid $blue;}
+			}
+			&:hover ul{display:block;}
 		}
-		a{display:block;font-size:14px;padding:0 24px;font-weight:700;color:$blue;text-transform:uppercase;border-right:1px solid $lt_green;
+		a{display:block;font-size:14px;padding:0 24px 5px;font-weight:700;color:$blue;text-transform:uppercase;border-right:1px solid $lt_green;
 			&:hover{color:$green;}
 		}
 	}
+	.mobile-menu-trigger{display:none;}
 }
 
 /* ================== */
 /* === FOOTER ======= */
 /* ================== */
 
-footer{background-color:$grey;padding:30px 0;margin-top:20px;
+footer{background-color:$grey;padding:30px 0;
 	.main-wrap{text-align:center;}
 	.social{display:inline-block;width:auto;
 		li{display:inline-block;}

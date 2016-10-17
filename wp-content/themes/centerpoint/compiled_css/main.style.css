@@ -1480,25 +1480,30 @@ a {
   transition: all .2s ease-in-out;
 }
 
+/* line 11, ../scss/smacss/_base.scss */
+strong {
+  font-weight: bold;
+}
+
 /* ================== */
 /* === BUTTONS ====== */
 /* ================== */
-/* line 16, ../scss/smacss/_base.scss */
+/* line 17, ../scss/smacss/_base.scss */
 .main-btn {
   font-weight: 800;
   color: #28317D;
 }
-/* line 17, ../scss/smacss/_base.scss */
+/* line 18, ../scss/smacss/_base.scss */
 .main-btn:hover {
   color: #8DC63F;
 }
-/* line 18, ../scss/smacss/_base.scss */
+/* line 19, ../scss/smacss/_base.scss */
 .main-btn:hover i.main-btn-icon {
   color: #8DC63F;
   border-color: #8DC63F;
 }
 
-/* line 21, ../scss/smacss/_base.scss */
+/* line 22, ../scss/smacss/_base.scss */
 i.main-btn-icon {
   text-align: center;
   color: #28317D;
@@ -1517,17 +1522,17 @@ i.main-btn-icon {
 /* ================== */
 /* === OTHER BASE === */
 /* ================== */
-/* line 39, ../scss/smacss/_base.scss */
+/* line 40, ../scss/smacss/_base.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 40, ../scss/smacss/_base.scss */
+/* line 41, ../scss/smacss/_base.scss */
 svg {
   fill: white;
 }
 
-/* line 41, ../scss/smacss/_base.scss */
+/* line 42, ../scss/smacss/_base.scss */
 .main-wrap {
   width: 1200px;
   position: relative;
@@ -1537,14 +1542,24 @@ svg {
   min-width: 55%;
 }
 
-/* line 43, ../scss/smacss/_base.scss */
+/* line 44, ../scss/smacss/_base.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 44, ../scss/smacss/_base.scss */
+/* line 45, ../scss/smacss/_base.scss */
 .clearfix:after {
   clear: both;
+}
+
+/* line 47, ../scss/smacss/_base.scss */
+.mobile-only {
+  display: none;
+}
+
+/* line 48, ../scss/smacss/_base.scss */
+.mobile-hide {
+  display: block;
 }
 
 /* ================== */
@@ -1555,9 +1570,11 @@ header {
   height: 100px;
   background-color: #FFFFFF;
   border-bottom: 10px solid #25A549;
+  position: relative;
+  z-index: 1;
 }
 /* line 6, ../scss/smacss/_layout.scss */
-header svg, header nav {
+header svg, header .menu-main-nav-container {
   position: relative;
   top: 50%;
   -moz-transform: translateY(-50%);
@@ -1570,57 +1587,92 @@ header svg:hover {
   opacity: .8;
 }
 /* line 8, ../scss/smacss/_layout.scss */
-header nav {
+header .menu-main-nav-container {
   float: right;
 }
 /* line 9, ../scss/smacss/_layout.scss */
-header nav li {
+header .menu-main-nav-container li {
   display: inline-block;
   height: 100%;
+  position: relative;
 }
 /* line 10, ../scss/smacss/_layout.scss */
-header nav li:last-child a {
+header .menu-main-nav-container li:last-child a {
   padding-right: 0px;
   border-right: none;
 }
+/* line 11, ../scss/smacss/_layout.scss */
+header .menu-main-nav-container li ul {
+  display: none;
+  position: absolute;
+  top: 19px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0;
+  text-align: center;
+  border: 1px solid #28317D;
+  left: -5px;
+}
 /* line 12, ../scss/smacss/_layout.scss */
-header nav a {
+header .menu-main-nav-container li ul li {
+  width: 100%;
+}
+/* line 13, ../scss/smacss/_layout.scss */
+header .menu-main-nav-container li ul li:last-child a {
+  padding: 20px;
+  border-right: 1px solid #28317D;
+}
+/* line 15, ../scss/smacss/_layout.scss */
+header .menu-main-nav-container li ul a {
+  border-right: none;
+  padding: 20px;
+  padding: 10px 20px;
+  border: 1px solid #28317D;
+}
+/* line 17, ../scss/smacss/_layout.scss */
+header .menu-main-nav-container li:hover ul {
+  display: block;
+}
+/* line 19, ../scss/smacss/_layout.scss */
+header .menu-main-nav-container a {
   display: block;
   font-size: 14px;
-  padding: 0 24px;
+  padding: 0 24px 5px;
   font-weight: 700;
   color: #28317D;
   text-transform: uppercase;
   border-right: 1px solid #8DC63F;
 }
-/* line 13, ../scss/smacss/_layout.scss */
-header nav a:hover {
+/* line 20, ../scss/smacss/_layout.scss */
+header .menu-main-nav-container a:hover {
   color: #25A549;
+}
+/* line 23, ../scss/smacss/_layout.scss */
+header .mobile-menu-trigger {
+  display: none;
 }
 
 /* ================== */
 /* === FOOTER ======= */
 /* ================== */
-/* line 22, ../scss/smacss/_layout.scss */
+/* line 30, ../scss/smacss/_layout.scss */
 footer {
   background-color: #4A4746;
   padding: 30px 0;
-  margin-top: 20px;
 }
-/* line 23, ../scss/smacss/_layout.scss */
+/* line 31, ../scss/smacss/_layout.scss */
 footer .main-wrap {
   text-align: center;
 }
-/* line 24, ../scss/smacss/_layout.scss */
+/* line 32, ../scss/smacss/_layout.scss */
 footer .social {
   display: inline-block;
   width: auto;
 }
-/* line 25, ../scss/smacss/_layout.scss */
+/* line 33, ../scss/smacss/_layout.scss */
 footer .social li {
   display: inline-block;
 }
-/* line 26, ../scss/smacss/_layout.scss */
+/* line 34, ../scss/smacss/_layout.scss */
 footer .social a {
   display: block;
   width: 40px;
@@ -1630,7 +1682,7 @@ footer .social a {
   border-radius: 40px;
   margin-right: 10px;
 }
-/* line 27, ../scss/smacss/_layout.scss */
+/* line 35, ../scss/smacss/_layout.scss */
 footer .social a:hover {
   background-color: #FFFFFF;
   -moz-transform: translateY(-2px);
@@ -1638,11 +1690,11 @@ footer .social a:hover {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
-/* line 28, ../scss/smacss/_layout.scss */
+/* line 36, ../scss/smacss/_layout.scss */
 footer .social a:hover i {
   color: #8DC63F;
 }
-/* line 31, ../scss/smacss/_layout.scss */
+/* line 39, ../scss/smacss/_layout.scss */
 footer .social i {
   color: #FFFFFF;
   font-size: 20px;
@@ -1654,14 +1706,14 @@ footer .social i {
   transform: translateY(-50%);
   transition: all .2s ease-in-out;
 }
-/* line 33, ../scss/smacss/_layout.scss */
+/* line 41, ../scss/smacss/_layout.scss */
 footer nav {
   height: 40px;
   display: inline-block;
   width: auto;
   margin-left: 40px;
 }
-/* line 34, ../scss/smacss/_layout.scss */
+/* line 42, ../scss/smacss/_layout.scss */
 footer nav ul {
   position: relative;
   top: 50%;
@@ -1670,34 +1722,34 @@ footer nav ul {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 35, ../scss/smacss/_layout.scss */
+/* line 43, ../scss/smacss/_layout.scss */
 footer nav li {
   display: inline-block;
 }
-/* line 36, ../scss/smacss/_layout.scss */
+/* line 44, ../scss/smacss/_layout.scss */
 footer nav a {
   color: #FFFFFF;
   padding: 0 25px;
 }
-/* line 37, ../scss/smacss/_layout.scss */
+/* line 45, ../scss/smacss/_layout.scss */
 footer nav a:hover {
   color: #8DC63F;
 }
-/* line 40, ../scss/smacss/_layout.scss */
+/* line 48, ../scss/smacss/_layout.scss */
 footer .fineprint {
   color: #FFFFFF;
   margin-top: 25px;
 }
-/* line 41, ../scss/smacss/_layout.scss */
+/* line 49, ../scss/smacss/_layout.scss */
 footer .fineprint p:last-of-type {
   font-size: 10px;
 }
-/* line 42, ../scss/smacss/_layout.scss */
+/* line 50, ../scss/smacss/_layout.scss */
 footer .fineprint a {
   color: #FFFFFF;
   text-decoration: underline;
 }
-/* line 43, ../scss/smacss/_layout.scss */
+/* line 51, ../scss/smacss/_layout.scss */
 footer .fineprint a:hover {
   color: #8DC63F;
 }
@@ -1990,11 +2042,6 @@ footer .fineprint a:hover {
   float: left;
   width: 100vw;
   transition: all .2s ease-in-out;
-  opacity: 0;
-}
-/* line 100, ../scss/smacss/_modules.scss */
-.twitter-feed li.active {
-  opacity: 1;
 }
 /* line 101, ../scss/smacss/_modules.scss */
 .twitter-feed li p {
@@ -2018,10 +2065,52 @@ footer .fineprint a:hover {
   line-height: 30px;
 }
 
+/* ==================== */
+/* === NEWS/EVENTS ==== */
+/* ==================== */
+/* line 112, ../scss/smacss/_modules.scss */
+.news-events {
+  text-align: center;
+  padding: 50px 0;
+}
+/* line 113, ../scss/smacss/_modules.scss */
+.news-events .event {
+  border-right: 1px solid #25A549;
+}
+/* line 114, ../scss/smacss/_modules.scss */
+.news-events .event:nth-child(3) {
+  border-right: none;
+}
+/* line 116, ../scss/smacss/_modules.scss */
+.news-events h2 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+/* line 117, ../scss/smacss/_modules.scss */
+.news-events strong {
+  font-weight: bold;
+  color: #28317D;
+}
+/* line 118, ../scss/smacss/_modules.scss */
+.news-events p {
+  margin-top: 0px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+/* line 119, ../scss/smacss/_modules.scss */
+.news-events .main-btn {
+  display: block;
+  margin-top: 20px;
+}
+/* line 120, ../scss/smacss/_modules.scss */
+.news-events .news-content {
+  min-height: 200px;
+}
+
 /* ====================== */
 /* === TEAM MEMBERS ===== */
 /* ====================== */
-/* line 113, ../scss/smacss/_modules.scss */
+/* line 128, ../scss/smacss/_modules.scss */
 #team-members .list-trigger {
   display: block;
   width: 100%;
@@ -2033,70 +2122,70 @@ footer .fineprint a:hover {
   font-weight: 300;
   font-size: 32px;
 }
-/* line 114, ../scss/smacss/_modules.scss */
+/* line 129, ../scss/smacss/_modules.scss */
 #team-members .list-trigger i {
   margin-left: 8px;
   font-size: 22px;
   vertical-align: middle;
 }
-/* line 115, ../scss/smacss/_modules.scss */
+/* line 130, ../scss/smacss/_modules.scss */
 #team-members .list-trigger.open {
   background-color: #FFFFFF;
   color: #25A549;
   border-top: 4px solid #25A549;
 }
-/* line 116, ../scss/smacss/_modules.scss */
+/* line 131, ../scss/smacss/_modules.scss */
 #team-members .list-trigger:hover {
   opacity: .8;
 }
-/* line 117, ../scss/smacss/_modules.scss */
+/* line 132, ../scss/smacss/_modules.scss */
 #team-members .list-trigger:focus {
   outline: none;
 }
-/* line 119, ../scss/smacss/_modules.scss */
+/* line 134, ../scss/smacss/_modules.scss */
 #team-members .team-list {
   display: none;
   margin-top: 30px;
 }
-/* line 120, ../scss/smacss/_modules.scss */
+/* line 135, ../scss/smacss/_modules.scss */
 #team-members .team-list .employee {
   padding-right: 50px;
 }
-/* line 121, ../scss/smacss/_modules.scss */
+/* line 136, ../scss/smacss/_modules.scss */
 #team-members .team-list h2 {
   font-weight: 800;
   color: #28317D;
   margin: 6px 0 4px;
 }
-/* line 122, ../scss/smacss/_modules.scss */
+/* line 137, ../scss/smacss/_modules.scss */
 #team-members .team-list p {
   color: #28317D;
   font-size: 14px;
   line-height: 22px;
 }
-/* line 123, ../scss/smacss/_modules.scss */
+/* line 138, ../scss/smacss/_modules.scss */
 #team-members .team-list p span {
   color: #25A549;
   text-transform: uppercase;
 }
-/* line 125, ../scss/smacss/_modules.scss */
+/* line 140, ../scss/smacss/_modules.scss */
 #team-members .team-list img {
   width: 150px;
   height: 200px;
 }
-/* line 126, ../scss/smacss/_modules.scss */
+/* line 141, ../scss/smacss/_modules.scss */
 #team-members .team-list a {
   transition: none;
 }
-/* line 127, ../scss/smacss/_modules.scss */
+/* line 142, ../scss/smacss/_modules.scss */
 #team-members .team-list a:hover {
   opacity: .8;
 }
-/* line 128, ../scss/smacss/_modules.scss */
+/* line 143, ../scss/smacss/_modules.scss */
 #team-members .team-list a:hover p, #team-members .team-list a:hover h2 {
   color: #25A549;
 }
-/* line 129, ../scss/smacss/_modules.scss */
+/* line 144, ../scss/smacss/_modules.scss */
 #team-members .team-list a:hover span {
   text-decoration: underline;
 }
@@ -2104,7 +2193,7 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === AJAX MODALS ===== */
 /* ====================== */
-/* line 139, ../scss/smacss/_modules.scss */
+/* line 154, ../scss/smacss/_modules.scss */
 #post-modal {
   position: fixed;
   width: 60vw;
@@ -2122,12 +2211,12 @@ footer .fineprint a:hover {
   padding: 45px;
   overflow-y: scroll;
 }
-/* line 140, ../scss/smacss/_modules.scss */
+/* line 155, ../scss/smacss/_modules.scss */
 #post-modal.active {
   opacity: 1;
   visibility: visible;
 }
-/* line 141, ../scss/smacss/_modules.scss */
+/* line 156, ../scss/smacss/_modules.scss */
 #post-modal .fa-close {
   position: absolute;
   top: 15px;
@@ -2144,7 +2233,7 @@ footer .fineprint a:hover {
   cursor: pointer;
   opacity: .9;
 }
-/* line 142, ../scss/smacss/_modules.scss */
+/* line 157, ../scss/smacss/_modules.scss */
 #post-modal .fa-close:hover {
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -2152,14 +2241,14 @@ footer .fineprint a:hover {
   transform: scale(1.2);
   opacity: 1;
 }
-/* line 144, ../scss/smacss/_modules.scss */
+/* line 159, ../scss/smacss/_modules.scss */
 #post-modal img {
   float: right;
   margin: 0 0 30px 30px;
   width: 150px;
   height: 200px;
 }
-/* line 145, ../scss/smacss/_modules.scss */
+/* line 160, ../scss/smacss/_modules.scss */
 #post-modal h2 {
   text-transform: uppercase;
   font-size: 20px;
@@ -2167,12 +2256,12 @@ footer .fineprint a:hover {
   font-weight: 800;
   margin-bottom: 4px;
 }
-/* line 146, ../scss/smacss/_modules.scss */
+/* line 161, ../scss/smacss/_modules.scss */
 #post-modal p:first-of-type {
   font-size: 16px;
   margin-bottom: 10px;
 }
-/* line 147, ../scss/smacss/_modules.scss */
+/* line 162, ../scss/smacss/_modules.scss */
 #post-modal p + p {
   margin-top: 10px;
 }
@@ -2180,7 +2269,7 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === DARK OVERLAYS ==== */
 /* ====================== */
-/* line 154, ../scss/smacss/_modules.scss */
+/* line 169, ../scss/smacss/_modules.scss */
 #full-overlay {
   position: fixed;
   width: 100vw;
@@ -2198,28 +2287,28 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === COMPANY TOP ==== */
 /* ====================== */
-/* line 160, ../scss/smacss/_modules.scss */
+/* line 175, ../scss/smacss/_modules.scss */
 .company-top {
   margin-bottom: 60px;
 }
-/* line 161, ../scss/smacss/_modules.scss */
+/* line 176, ../scss/smacss/_modules.scss */
 .company-top .jump-links {
   padding-right: 30px;
 }
-/* line 162, ../scss/smacss/_modules.scss */
+/* line 177, ../scss/smacss/_modules.scss */
 .company-top .jump-links nav {
   display: block;
   margin-bottom: 30px;
 }
-/* line 163, ../scss/smacss/_modules.scss */
+/* line 178, ../scss/smacss/_modules.scss */
 .company-top .jump-links nav li {
   display: inline-block;
 }
-/* line 164, ../scss/smacss/_modules.scss */
+/* line 179, ../scss/smacss/_modules.scss */
 .company-top .jump-links nav li:last-of-type a {
   padding-right: 0px;
 }
-/* line 166, ../scss/smacss/_modules.scss */
+/* line 181, ../scss/smacss/_modules.scss */
 .company-top .jump-links nav a {
   padding-right: 30px;
   color: #28317D;
@@ -2228,41 +2317,41 @@ footer .fineprint a:hover {
   font-weight: 800;
   display: block;
 }
-/* line 167, ../scss/smacss/_modules.scss */
+/* line 182, ../scss/smacss/_modules.scss */
 .company-top .jump-links nav a:hover {
   color: #25A549;
 }
-/* line 171, ../scss/smacss/_modules.scss */
+/* line 186, ../scss/smacss/_modules.scss */
 .company-top p {
   color: #4A4746;
 }
-/* line 172, ../scss/smacss/_modules.scss */
+/* line 187, ../scss/smacss/_modules.scss */
 .company-top p + p {
   margin-top: 20px;
 }
-/* line 174, ../scss/smacss/_modules.scss */
+/* line 189, ../scss/smacss/_modules.scss */
 .company-top .quicklinks {
   border-left: 1px solid #25A549;
   padding-left: 30px;
 }
-/* line 175, ../scss/smacss/_modules.scss */
+/* line 190, ../scss/smacss/_modules.scss */
 .company-top .quicklinks h3 {
   font-size: 18px;
   color: #25A549;
   font-weight: 300;
   margin-bottom: 30px;
 }
-/* line 176, ../scss/smacss/_modules.scss */
+/* line 191, ../scss/smacss/_modules.scss */
 .company-top .quicklinks li {
   margin-bottom: 12px;
 }
-/* line 177, ../scss/smacss/_modules.scss */
+/* line 192, ../scss/smacss/_modules.scss */
 .company-top .quicklinks a {
   color: #28317D;
   font-weight: 800;
   line-height: 22px;
 }
-/* line 178, ../scss/smacss/_modules.scss */
+/* line 193, ../scss/smacss/_modules.scss */
 .company-top .quicklinks a:hover {
   color: #25A549;
 }
@@ -2270,16 +2359,16 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === VALUES ==== */
 /* ====================== */
-/* line 188, ../scss/smacss/_modules.scss */
+/* line 203, ../scss/smacss/_modules.scss */
 #values * {
   text-align: center;
 }
-/* line 189, ../scss/smacss/_modules.scss */
+/* line 204, ../scss/smacss/_modules.scss */
 #values h1 {
   color: #25A549;
   margin-bottom: 45px;
 }
-/* line 190, ../scss/smacss/_modules.scss */
+/* line 205, ../scss/smacss/_modules.scss */
 #values h2 {
   border-top: 1px solid #25A549;
   border-bottom: 1px solid #25A549;
@@ -2292,12 +2381,53 @@ footer .fineprint a:hover {
   text-transform: uppercase;
   font-size: 20px;
 }
-/* line 191, ../scss/smacss/_modules.scss */
+/* line 206, ../scss/smacss/_modules.scss */
 #values p {
   max-width: 75%;
   margin: 0 auto;
   min-height: 160px;
   margin-bottom: 20px;
+}
+
+/* ====================== */
+/* === CONTACT ==== */
+/* ====================== */
+/* line 214, ../scss/smacss/_modules.scss */
+.contact .featured-image img {
+  margin-bottom: 60px;
+}
+/* line 215, ../scss/smacss/_modules.scss */
+.contact h1, .contact h2 {
+  color: #25A549;
+}
+/* line 216, ../scss/smacss/_modules.scss */
+.contact .form-fields {
+  border-right: 1px solid #25A549;
+}
+/* line 217, ../scss/smacss/_modules.scss */
+.contact .form-fields h1 {
+  text-transform: uppercase;
+}
+/* line 219, ../scss/smacss/_modules.scss */
+.contact .contact-info {
+  padding-left: 30px;
+}
+/* line 220, ../scss/smacss/_modules.scss */
+.contact .contact-info a {
+  color: #28317D;
+  font-weight: bold;
+}
+/* line 221, ../scss/smacss/_modules.scss */
+.contact .contact-info a:hover {
+  color: #25A549;
+}
+/* line 223, ../scss/smacss/_modules.scss */
+.contact .contact-info p {
+  max-width: 80%;
+}
+/* line 225, ../scss/smacss/_modules.scss */
+.contact .info-block {
+  margin-bottom: 30px;
 }
 
 /* ================== */
@@ -2306,22 +2436,101 @@ footer .fineprint a:hover {
 @media (max-width: 767px) {
   /* line 6, ../scss/smacss/_states.scss */
   h1 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  /* line 7, ../scss/smacss/_states.scss */
+  .mobile-only {
+    display: block;
+  }
+
+  /* line 8, ../scss/smacss/_states.scss */
+  .mobile-hide {
+    display: none;
   }
 }
 /* ================== */
 /* === HEADER ======= */
 /* ================== */
+@media (max-width: 1024px) {
+  /* line 17, ../scss/smacss/_states.scss */
+  header svg {
+    width: 250px;
+    height: auto;
+  }
+}
 @media (max-width: 968px) {
-  /* line 15, ../scss/smacss/_states.scss */
+  /* line 20, ../scss/smacss/_states.scss */
   header svg {
     width: 200px;
     height: auto;
   }
-  /* line 16, ../scss/smacss/_states.scss */
-  header nav {
+  /* line 21, ../scss/smacss/_states.scss */
+  header .menu-main-nav-container {
     display: none;
+    position: absolute;
+    top: 80px;
+    transform: none;
+    background: white;
+    right: -5%;
+    z-index: 1;
+    padding: 20px;
+  }
+  /* line 22, ../scss/smacss/_states.scss */
+  header .menu-main-nav-container li {
+    display: block;
+  }
+  /* line 23, ../scss/smacss/_states.scss */
+  header .menu-main-nav-container li:last-child a {
+    padding: 10px 30px;
+  }
+  /* line 24, ../scss/smacss/_states.scss */
+  header .menu-main-nav-container li ul {
+    position: relative;
+    top: 0;
+    display: block;
+    border: none;
+    background-color: transparent;
+  }
+  /* line 25, ../scss/smacss/_states.scss */
+  header .menu-main-nav-container li ul li:last-child a {
+    border-right: none;
+    padding: 10px 20px;
+  }
+  /* line 26, ../scss/smacss/_states.scss */
+  header .menu-main-nav-container li ul a {
+    border: none;
+    font-size: 12px;
+    color: #25A549;
+    text-transform: none;
+  }
+  /* line 29, ../scss/smacss/_states.scss */
+  header .menu-main-nav-container a {
+    text-align: center;
+    padding: 10px 30px;
+    border-right: none;
+  }
+  /* line 31, ../scss/smacss/_states.scss */
+  header .mobile-menu-trigger {
+    display: block;
+    float: right;
+    position: relative;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: #28317D;
+    cursor: pointer;
+  }
+}
+@media (max-width: 767px) {
+  /* line 15, ../scss/smacss/_states.scss */
+  header {
+    border-bottom: 4px solid #25A549;
+    height: 80px;
   }
 }
 
@@ -2332,102 +2541,126 @@ footer .fineprint a:hover {
 /* === MODULES ====== */
 /* ================== */
 @media (max-width: 1024px) {
-  /* line 30, ../scss/smacss/_states.scss */
+  /* line 46, ../scss/smacss/_states.scss */
   .slider .slide-overlay {
     display: none;
   }
 }
+@media (max-width: 767px) {
+  /* line 49, ../scss/smacss/_states.scss */
+  .slider .control i {
+    font-size: 50px;
+  }
+  /* line 50, ../scss/smacss/_states.scss */
+  .slider .control {
+    width: 20px;
+    height: 30px;
+  }
+  /* line 51, ../scss/smacss/_states.scss */
+  .slider .next {
+    right: 8px;
+  }
+  /* line 52, ../scss/smacss/_states.scss */
+  .slider .prev {
+    left: 8px;
+  }
+}
 
 @media (max-width: 767px) {
-  /* line 36, ../scss/smacss/_states.scss */
+  /* line 58, ../scss/smacss/_states.scss */
   .full-text p {
     max-width: 100%;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 42, ../scss/smacss/_states.scss */
+  /* line 64, ../scss/smacss/_states.scss */
   .three-col-icon .column {
     border-right: none;
     margin-bottom: 40px;
     border-bottom: 1px solid #8DC63F;
     padding-bottom: 40px;
   }
-  /* line 43, ../scss/smacss/_states.scss */
+  /* line 65, ../scss/smacss/_states.scss */
   .three-col-icon .column h2, .three-col-icon .column p {
     min-height: auto;
+    max-width: 100%;
   }
-  /* line 44, ../scss/smacss/_states.scss */
+  /* line 66, ../scss/smacss/_states.scss */
   .three-col-icon .column:nth-child(n+4) {
     margin-bottom: 0px;
     border-bottom: none;
   }
+  /* line 67, ../scss/smacss/_states.scss */
+  .three-col-icon .column img {
+    max-width: 80px;
+  }
 }
 
 @media (max-width: 968px) {
-  /* line 49, ../scss/smacss/_states.scss */
+  /* line 72, ../scss/smacss/_states.scss */
   .background-img-text {
     text-align: center;
   }
-  /* line 51, ../scss/smacss/_states.scss */
+  /* line 74, ../scss/smacss/_states.scss */
   .background-img-text .text {
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
   }
-  /* line 52, ../scss/smacss/_states.scss */
+  /* line 75, ../scss/smacss/_states.scss */
   .background-img-text .text p {
     max-width: 100%;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 57, ../scss/smacss/_states.scss */
+  /* line 80, ../scss/smacss/_states.scss */
   .twitter-feed {
     position: relative;
   }
-  /* line 59, ../scss/smacss/_states.scss */
+  /* line 82, ../scss/smacss/_states.scss */
   .twitter-feed .next {
     right: 10px;
   }
-  /* line 60, ../scss/smacss/_states.scss */
+  /* line 83, ../scss/smacss/_states.scss */
   .twitter-feed .prev {
     left: 10px;
   }
-  /* line 61, ../scss/smacss/_states.scss */
+  /* line 84, ../scss/smacss/_states.scss */
   .twitter-feed .main-wrap {
     position: initial;
   }
-  /* line 62, ../scss/smacss/_states.scss */
+  /* line 85, ../scss/smacss/_states.scss */
   .twitter-feed li p {
     max-width: 70%;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 68, ../scss/smacss/_states.scss */
+  /* line 91, ../scss/smacss/_states.scss */
   #team-members .list-trigger {
     font-size: 18px;
   }
-  /* line 70, ../scss/smacss/_states.scss */
+  /* line 93, ../scss/smacss/_states.scss */
   #team-members .team-list img {
     float: left;
     width: 35%;
     height: auto;
     margin-right: 20px;
   }
-  /* line 71, ../scss/smacss/_states.scss */
+  /* line 94, ../scss/smacss/_states.scss */
   #team-members .team-list .employee {
     padding: 0 0 30px;
     overflow: auto;
     margin-bottom: 30px;
     border-bottom: 1px solid #4A4746;
   }
-  /* line 72, ../scss/smacss/_states.scss */
+  /* line 95, ../scss/smacss/_states.scss */
   #team-members .team-list h2 {
     font-size: 16px;
   }
-  /* line 73, ../scss/smacss/_states.scss */
+  /* line 96, ../scss/smacss/_states.scss */
   #team-members .team-list p {
     font-size: 13px;
     line-height: 20px;
@@ -2435,18 +2668,18 @@ footer .fineprint a:hover {
 }
 
 @media (max-width: 1024px) {
-  /* line 78, ../scss/smacss/_states.scss */
+  /* line 101, ../scss/smacss/_states.scss */
   #post-modal {
     width: 90vw;
     height: 90vh;
   }
 }
 @media (max-width: 767px) {
-  /* line 78, ../scss/smacss/_states.scss */
+  /* line 101, ../scss/smacss/_states.scss */
   #post-modal {
     padding: 30px;
   }
-  /* line 81, ../scss/smacss/_states.scss */
+  /* line 104, ../scss/smacss/_states.scss */
   #post-modal img {
     float: none;
     margin: 0 0 15px 0;
@@ -2454,11 +2687,11 @@ footer .fineprint a:hover {
 }
 
 @media (max-width: 767px) {
-  /* line 85, ../scss/smacss/_states.scss */
+  /* line 108, ../scss/smacss/_states.scss */
   .company-top {
     text-align: center;
   }
-  /* line 87, ../scss/smacss/_states.scss */
+  /* line 110, ../scss/smacss/_states.scss */
   .company-top .jump-links {
     padding-right: 0.9375rem;
     margin-bottom: 30px;
@@ -2466,17 +2699,17 @@ footer .fineprint a:hover {
     border-bottom: 1px solid #4A4746;
     margin-bottom: 30px;
   }
-  /* line 88, ../scss/smacss/_states.scss */
+  /* line 111, ../scss/smacss/_states.scss */
   .company-top .jump-links nav {
     overflow-x: scroll;
     white-space: nowrap;
   }
-  /* line 89, ../scss/smacss/_states.scss */
+  /* line 112, ../scss/smacss/_states.scss */
   .company-top .jump-links nav a {
     padding-right: 15px;
     font-size: 12px;
   }
-  /* line 92, ../scss/smacss/_states.scss */
+  /* line 115, ../scss/smacss/_states.scss */
   .company-top .quicklinks {
     padding-bottom: 30px;
     border-bottom: 1px solid #4A4746;
@@ -2485,15 +2718,15 @@ footer .fineprint a:hover {
 }
 
 @media (max-width: 767px) {
-  /* line 98, ../scss/smacss/_states.scss */
+  /* line 121, ../scss/smacss/_states.scss */
   #values h1 {
     padding: 0 15px;
   }
-  /* line 99, ../scss/smacss/_states.scss */
+  /* line 122, ../scss/smacss/_states.scss */
   #values h2, #values p {
     max-width: 100%;
   }
-  /* line 100, ../scss/smacss/_states.scss */
+  /* line 123, ../scss/smacss/_states.scss */
   #values p {
     min-height: initial;
     margin-bottom: 35px;
@@ -2501,10 +2734,44 @@ footer .fineprint a:hover {
 }
 
 @media (max-width: 767px) {
-  /* line 106, ../scss/smacss/_states.scss */
+  /* line 129, ../scss/smacss/_states.scss */
   .inline-video .vid-info {
     text-align: center;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 135, ../scss/smacss/_states.scss */
+  .news-events .event {
+    border-right: none;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #4A4746;
+  }
+  /* line 136, ../scss/smacss/_states.scss */
+  .news-events p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 142, ../scss/smacss/_states.scss */
+  .contact .featured-image img {
+    margin-bottom: 30px;
+  }
+  /* line 143, ../scss/smacss/_states.scss */
+  .contact .form-fields {
+    border-right: none;
+    margin-bottom: 60px;
+  }
+  /* line 144, ../scss/smacss/_states.scss */
+  .contact .contact-info {
+    padding-left: 0.9375rem;
+  }
+  /* line 145, ../scss/smacss/_states.scss */
+  .contact .contact-info p {
+    max-width: 100%;
   }
 }
 
@@ -2512,18 +2779,18 @@ footer .fineprint a:hover {
 /* === FOOTER ======= */
 /* ================== */
 @media (max-width: 968px) {
-  /* line 116, ../scss/smacss/_states.scss */
+  /* line 156, ../scss/smacss/_states.scss */
   footer .social a {
     width: 30px;
     height: 30px;
   }
-  /* line 117, ../scss/smacss/_states.scss */
+  /* line 157, ../scss/smacss/_states.scss */
   footer nav {
     margin-left: 0px;
     margin-top: 10px;
     width: 85%;
   }
-  /* line 118, ../scss/smacss/_states.scss */
+  /* line 158, ../scss/smacss/_states.scss */
   footer nav ul {
     top: auto;
     -moz-transform: none;
@@ -2531,13 +2798,13 @@ footer .fineprint a:hover {
     -webkit-transform: none;
     transform: none;
   }
-  /* line 119, ../scss/smacss/_states.scss */
+  /* line 159, ../scss/smacss/_states.scss */
   footer nav li {
     display: block;
     padding: 20px 0;
     border-bottom: 1px solid #FFFFFF;
   }
-  /* line 120, ../scss/smacss/_states.scss */
+  /* line 160, ../scss/smacss/_states.scss */
   footer nav li:last-of-type {
     border-bottom: none;
   }

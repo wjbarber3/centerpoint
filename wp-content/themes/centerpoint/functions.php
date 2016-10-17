@@ -11,12 +11,13 @@ add_theme_support( 'post-thumbnails' );
 //---- ENQUEUE SCRIPTS AND STYLES -------------------//
 //---------------------------------------------------//
 
-function metromont_scripts() {
+function centerpoint_scripts() {
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/compiled_css/main.style.css' , false, filemtime( get_template_directory() . '/compiled_css/main.style.css' ), 'screen' );
 	wp_enqueue_style( 'font_awesome', get_template_directory_uri() . '/font-awesome/font-awesome.min.css' , false, filemtime( get_template_directory() . '/font-awesome/font-awesome.min.css' ), 'screen' );
+  wp_enqueue_script( 'twitterFetcher', get_template_directory_uri() . '/js/twitterFetcher_min.js', array('jquery'), filemtime( get_template_directory() . '/js/twitterFetcher_min.js' ), false );
 	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array('jquery'), filemtime( get_template_directory() . '/js/main.js' ), false );
 }
-add_action( 'wp_enqueue_scripts', 'metromont_scripts' );	
+add_action( 'wp_enqueue_scripts', 'centerpoint_scripts' );	
 
 //---------------------------------------------------//
 //---- PAGE SLUG BODY CLASS -------------------------//
@@ -40,10 +41,10 @@ add_filter( 'body_class', 'add_slug_body_class' );
 function custom_dashboard_widget() {
 	echo "<p>Welcome to the admin section of your site</p>
 			<ol>
-				<li>Adding an entry to the Employees tab with automatically add that entry to the company page</li>
-				<li>The homepage is an example of our custom Page Builder template, you can build custom pages on the site and add any combinations of modules that you see on the homepage</li>
-				<li>Adding a product will generate that product on the Products page</li>
+        <li>The homepage is an example of our custom Page Builder template, you can build custom pages on the site and add any combinations of modules that you see on the homepage</li>
+				<li>Adding an entry to the Employees tab with automatically add that entry to the company page under the category that you choose.</li>
 				<li>You can add menu items under 'Appearance->Themes->Customize->Menus'</li>
+        <li>Add a New Page by navigating to the pages tab on the left.  You can choose a page template as you create a page. Choose 'modular' to build a page comprised of the modules seen on the homepage.  Choose Product to build with modules seen on the product page.</li>
 			</ol>";
 }
 function add_custom_dashboard_widget() {
@@ -266,6 +267,72 @@ if(function_exists("register_field_group")) {
         'layout' => 'table',
         'button_label' => 'Add Value',
       ],
+      [
+        'key' => 'field_57ffcec983596',
+        'label' => 'News',
+        'name' => 'news',
+        'type' => 'repeater',
+        'sub_fields' => [
+          [
+            'key' => 'field_57ffcf1283597',
+            'label' => 'News Headline',
+            'name' => 'news_headline',
+            'type' => 'text',
+            'instructions' => 'Add the headline to the news column. Max 30 chars.',
+            'required' => 1,
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => 'Headline',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => 30,
+          ],
+          [
+            'key' => 'field_57ffcf3383598',
+            'label' => 'News Content',
+            'name' => 'news_content',
+            'type' => 'wysiwyg',
+            'instructions' => 'Add the content to the news column.  Use the bold button for blue sub-headlines.',
+            'required' => 1,
+            'column_width' => '',
+            'default_value' => '',
+            'toolbar' => 'full',
+            'media_upload' => 'no',
+          ],
+          [
+            'key' => 'field_57ffcf4f83599',
+            'label' => 'News Link',
+            'name' => 'news_link',
+            'type' => 'page_link',
+            'instructions' => 'Choose the destination of the link',
+            'column_width' => '',
+            'post_type' => [
+              0 => 'all',
+            ],
+            'allow_null' => 0,
+            'multiple' => 0,
+          ],
+          [
+            'key' => 'field_57ffcf658359a',
+            'label' => 'News Link Text',
+            'name' => 'news_link_text',
+            'type' => 'text',
+            'instructions' => 'Add the text of the link. Max chars 40.',
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => 'Link Text',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => '',
+          ],
+        ],
+        'row_min' => 3,
+        'row_limit' => 3,
+        'layout' => 'row',
+        'button_label' => 'Add Row',
+      ],
     ],
     'location' => [
       [
@@ -356,7 +423,7 @@ if(function_exists("register_field_group")) {
                     'label' => 'Slide Image',
                     'name' => 'slide_image',
                     'type' => 'image',
-                    'instructions' => 'Add an image for this slide.',
+                    'instructions' => 'Add an image for this slide. Image size should be 1920 x 633',
                     'required' => 1,
                     'column_width' => '',
                     'save_format' => 'object',
@@ -506,7 +573,7 @@ if(function_exists("register_field_group")) {
                 'key' => 'field_57fe9b5d7a7d3',
                 'label' => 'Full Text Copy',
                 'name' => 'full_text_copy',
-                'type' => 'text',
+                'type' => 'textarea',
                 'instructions' => 'Add the copy to the module.',
                 'required' => 1,
                 'column_width' => '',
