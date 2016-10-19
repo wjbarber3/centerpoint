@@ -19,6 +19,7 @@ $thumb_url = $thumb_url_array[0];
 		<form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 			<input type=hidden name="oid" value="00D61000000db8f">
 			<input type=hidden name="retURL" value="http://www.centerpointeducation.org">
+			<input type=hidden id="lead_source" name="lead_source" value="Website">
 			 
 			<!-- ======================================================================== -->
 			<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
@@ -26,106 +27,147 @@ $thumb_url = $thumb_url_array[0];
 			<!--  <input type="hidden" name="debug" value=1>                              -->
 			<!--  <input type="hidden" name="debugEmail" value="abarr@parcconline.org">   -->
 			<!-- ======================================================================== -->
+
+			 <div class="form-group">
+			    <label for="first_name">First Name<span class="required">*</span></label>
+			    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="">
+			 </div>
 			 
-			<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+			 <div class="form-group">
+			    <label for="last_name">Last Name<span class="required">*</span></label>
+			    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="">
+			 </div>
 			 
-			<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+			<div class="form-group">
+			    <label for="title">Title<span class="required">*</span></label>
+			    <input type="text" class="form-control" id="title" name="title" placeholder="">
+			 </div>
+
+			 <div class="form-group">
+			    <label for="company">School or District<span class="required">*</span></label>
+			    <input type="text" class="form-control" id="company" name="company" placeholder="">
+			 </div>
+			
+			<div class="form-group">
+				<label for="country_code">Country</label>
+				<select class="form-control" id="country_code" name="country_code">
+					<option value="">--None--</option>
+					<option value="NZ">NZ</option>
+					<option value="US">US</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<label for="state_code">State/Province<span class="required">*</span></label>
+				<select  class="form-control" id="state_code" name="state_code">
+				<option value="">--None--</option>
+				<option value="AL">AL</option>
+				<option value="AK">AK</option>
+				<option value="AZ">AZ</option>
+				<option value="AR">AR</option>
+				<option value="CA">CA</option>
+				<option value="CO">CO</option>
+				<option value="CT">CT</option>
+				<option value="DE">DE</option>
+				<option value="DC">DC</option>
+				<option value="FL">FL</option>
+				<option value="GA">GA</option>
+				<option value="HI">HI</option>
+				<option value="ID">ID</option>
+				<option value="IL">IL</option>
+				<option value="IN">IN</option>
+				<option value="IA">IA</option>
+				<option value="KS">KS</option>
+				<option value="KY">KY</option>
+				<option value="LA">LA</option>
+				<option value="ME">ME</option>
+				<option value="MD">MD</option>
+				<option value="MA">MA</option>
+				<option value="MI">MI</option>
+				<option value="MN">MN</option>
+				<option value="MS">MS</option>
+				<option value="MO">MO</option>
+				<option value="MT">MT</option>
+				<option value="NE">NE</option>
+				<option value="NV">NV</option>
+				<option value="NH">NH</option>
+				<option value="NJ">NJ</option>
+				<option value="NM">NM</option>
+				<option value="NY">NY</option>
+				<option value="NC">NC</option>
+				<option value="ND">ND</option>
+				<option value="OH">OH</option>
+				<option value="OK">OK</option>
+				<option value="OR">OR</option>
+				<option value="PA">PA</option>
+				<option value="RI">RI</option>
+				<option value="SC">SC</option>
+				<option value="SD">SD</option>
+				<option value="TN">TN</option>
+				<option value="TX">TX</option>
+				<option value="UT">UT</option>
+				<option value="VT">VT</option>
+				<option value="VA">VA</option>
+				<option value="WA">WA</option>
+				<option value="WV">WV</option>
+				<option value="WI">WI</option>
+				<option value="WY">WY</option>
+				</select>
+			</div>
 			 
-			<label for="title">Title</label><input  id="title" maxlength="40" name="title" size="20" type="text" /><br>
-			 
-			<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
-			 
-			<label for="country_code">Country</label><select  id="country_code" name="country_code"><option value="">--None--</option><option value="NZ">NZ</option>
-			<option value="US">US</option>
-			</select><br>
-			 
-			<label for="state_code">State/Province</label><select  id="state_code" name="state_code"><option value="">--None--</option><option value="AL">AL</option>
-			<option value="AK">AK</option>
-			<option value="AZ">AZ</option>
-			<option value="AR">AR</option>
-			<option value="CA">CA</option>
-			<option value="CO">CO</option>
-			<option value="CT">CT</option>
-			<option value="DE">DE</option>
-			<option value="DC">DC</option>
-			<option value="FL">FL</option>
-			<option value="GA">GA</option>
-			<option value="HI">HI</option>
-			<option value="ID">ID</option>
-			<option value="IL">IL</option>
-			<option value="IN">IN</option>
-			<option value="IA">IA</option>
-			<option value="KS">KS</option>
-			<option value="KY">KY</option>
-			<option value="LA">LA</option>
-			<option value="ME">ME</option>
-			<option value="MD">MD</option>
-			<option value="MA">MA</option>
-			<option value="MI">MI</option>
-			<option value="MN">MN</option>
-			<option value="MS">MS</option>
-			<option value="MO">MO</option>
-			<option value="MT">MT</option>
-			<option value="NE">NE</option>
-			<option value="NV">NV</option>
-			<option value="NH">NH</option>
-			<option value="NJ">NJ</option>
-			<option value="NM">NM</option>
-			<option value="NY">NY</option>
-			<option value="NC">NC</option>
-			<option value="ND">ND</option>
-			<option value="OH">OH</option>
-			<option value="OK">OK</option>
-			<option value="OR">OR</option>
-			<option value="PA">PA</option>
-			<option value="RI">RI</option>
-			<option value="SC">SC</option>
-			<option value="SD">SD</option>
-			<option value="TN">TN</option>
-			<option value="TX">TX</option>
-			<option value="UT">UT</option>
-			<option value="VT">VT</option>
-			<option value="VA">VA</option>
-			<option value="WA">WA</option>
-			<option value="WV">WV</option>
-			<option value="WI">WI</option>
-			<option value="WY">WY</option>
-			</select><br>
-			 
-			<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-			 
-			<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
-			 
-			Phone:<input  id="00N6100000Gnsna" name="00N6100000Gnsna" type="checkbox" value="1" /><br>
-			 
-			Email:<input  id="00N6100000Gnsnf" name="00N6100000Gnsnf" type="checkbox" value="1" /><br>
-			 
-			Diagnostic Assessments: Previ Learn:<input  id="00N6100000GnsnB" name="00N6100000GnsnB" type="checkbox" value="1" /><br>
-			 
-			Professional Learning: Previ ProEd:<input  id="00N6100000GnsnG" name="00N6100000GnsnG" type="checkbox" value="1" /><br>
-			 
-			Instructional Resources: Previ PLC:<input  id="00N6100000GnsnL" name="00N6100000GnsnL" type="checkbox" value="1" /><br>
-			 
-			Custom Assessment Services:<input  id="00N6100000GnsnQ" name="00N6100000GnsnQ" type="checkbox" value="1" /><br>
-			 
-			Questions or Comments?:<input  id="00N6100000GnsnV" maxlength="255" name="00N6100000GnsnV" size="20" type="text" /><br>
-			 
-			<label for="lead_source">Lead Source</label><select  id="lead_source" name="lead_source"><option value="">--None--</option><option value="DEAP Inquiry">DEAP Inquiry</option>
-			<option value="DEAP Rostered">DEAP Rostered</option>
-			<option value="Email Campaign">Email Campaign</option>
-			<option value="Referral">Referral</option>
-			<option value="Conference/Presentation">Conference/Presentation</option>
-			<option value="Meeting">Meeting</option>
-			<option value="Newsletter">Newsletter</option>
-			<option value="Website">Website</option>
-			<option value="Word of mouth">Word of mouth</option>
-			<option value="Webinar">Webinar</option>
-			<option value="RFP">RFP</option>
-			<option value="Other">Other</option>
-			</select><br>
+			<div class="form-group">
+			    <label for="email">Email</label>
+			    <input type="email" class="form-control" id="email" name="email" placeholder="">
+			</div>
+
+			<div class="form-group">
+			    <label for="phone">Phone<span class="required">*</span></label>
+			    <input type="text" class="form-control" id="phone" name="phone" placeholder="">
+			</div>
+			
+			<div class="form-group">
+			Preferred Method of Contact:
+				<label class="checkbox-inline">
+					<input type="checkbox" id="00N6100000Gnsna" value="phone" name="00N6100000Gnsna">Phone
+				</label>
+				<label class="checkbox-inline">
+				 	<input type="checkbox" id="00N6100000Gnsnf" value="email" name="00N6100000Gnsnf">Email 
+				</label>
+			</div>
+
+			<div class="form-group">
+				<p>I would like to learn more about:</p>
+					<div class="checkbox">
+				       <label for="00N6100000GnsnB">
+				         <input id="00N6100000GnsnB" name="00N6100000GnsnB" type="checkbox" value="1"> Diagnostic Assessments: Previ Learn
+				       </label>
+				    </div>
+				    <div class="checkbox">
+				       <label for="00N6100000GnsnG">
+				         <input id="00N6100000GnsnG" name="00N6100000GnsnG" type="checkbox" value="1"> Professional Learning: Previ ProEd
+				       </label>
+				    </div>
+				    <div class="checkbox">
+				       <label for="00N6100000GnsnL">
+				         <input id="00N6100000GnsnL" name="00N6100000GnsnL" type="checkbox" value="1"> Instructional Resources: Previ PLC
+				       </label>
+				    </div>
+				    <div class="checkbox">
+				       <label for="00N6100000GnsnQ">
+				         <input id="00N6100000GnsnQ" name="00N6100000GnsnQ" type="checkbox" value="1"> Custom Assessment Services
+				       </label>
+				    </div>
+			</div>
+			
+			<div class="form-group">
+				<label for="00N6100000GnsnV">Questions or Comments?:</label>
+					<textarea class="form-control" rows="4" maxlength="255" id="00N6100000GnsnV" name="00N6100000GnsnV"></textarea>
+			</div>
 			 
 			<input type="submit" name="submit">
-			 
+			
+			<p><small><span class="required">*</span>Required</small></p>
+
 			</form>
 	</div><!--end form-fields-->
 

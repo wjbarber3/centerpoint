@@ -213,7 +213,7 @@
 .contact{
 	.featured-image img{margin-bottom:60px;}
 	h1,h2{color:$green;}
-	.form-fields{border-right:1px solid $green;
+	.form-fields{border-right:1px solid $green;margin-bottom: 20px;
 		h1{text-transform:uppercase;}
 	}
 	.contact-info{padding-left:30px;
@@ -223,4 +223,22 @@
 		p{max-width:80%;}
 	}
 	.info-block{margin-bottom:30px;}
+}
+
+/* ================== */
+/* === FORM ======= */
+/* ================== */
+
+form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;border: 0;vertical-align: baseline;margin-bottom: 30px;
+	p {text-transform: uppercase;font-size: 12px;line-height: 22px;
+		.small, small {font-size: 85%;}
+	}
+	.form-group {margin-bottom: 15px;text-transform: uppercase;font-size: 12px;line-height: 22px;}
+	.form-control {display: block;width: 100%;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;background-image: none;border: 1px solid #ccc;border-radius: 4px;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);box-shadow: inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;}
+	label {text-transform: uppercase;font-size: 12px;line-height: 22px;}
+	.required {color: red;}
+	.checkbox-inline, .radio-inline {position: relative;display: inline-block;padding-left: 20px;margin-bottom: 0;font-weight: 400;vertical-align: middle;cursor: pointer;}
+	.checkbox-inline input[type=checkbox] {position: absolute;margin-left: -16px;}
+	input[type=checkbox] {margin: 5px 0 0;margin-top: 1px\9;line-height: normal;}
+	button, html input[type=button], input[type=reset], input[type=submit] {-webkit-appearance: button;cursor: pointer;background-color: #28317D;color: #fff;text-transform: uppercase;font-size: 12px;padding: 12px 20px;border: none;margin-bottom: 10px;}
 }
