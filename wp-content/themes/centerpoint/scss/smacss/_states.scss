@@ -140,7 +140,7 @@ header{
 .contact{
 	@include bp(mobile){
 		.featured-image img{margin-bottom:30px;}
-		.form-fields{border-right:none;margin-bottom:60px;}
+		.form-fields{border-right:none;margin-bottom:60px;padding-right:0.9375rem;}
 		.contact-info{padding-left:0.9375rem;
 			p{max-width:100%;}
 		}
