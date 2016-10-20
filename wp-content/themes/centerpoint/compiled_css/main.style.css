@@ -1456,31 +1456,38 @@ h1 {
 }
 
 /* line 7, ../scss/smacss/_base.scss */
+h1.large {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 42px;
+}
+
+/* line 8, ../scss/smacss/_base.scss */
 h2 {
   font-size: 18px;
   line-height: 24px;
   font-weight: 300;
 }
 
-/* line 8, ../scss/smacss/_base.scss */
+/* line 9, ../scss/smacss/_base.scss */
 p {
   font-size: 14px;
   line-height: 22px;
   font-weight: 300;
 }
 
-/* line 9, ../scss/smacss/_base.scss */
+/* line 10, ../scss/smacss/_base.scss */
 ul, ol, li {
   list-style: none;
 }
 
-/* line 10, ../scss/smacss/_base.scss */
+/* line 11, ../scss/smacss/_base.scss */
 a {
   text-decoration: none;
   transition: all .2s ease-in-out;
 }
 
-/* line 11, ../scss/smacss/_base.scss */
+/* line 12, ../scss/smacss/_base.scss */
 strong {
   font-weight: bold;
 }
@@ -1488,22 +1495,22 @@ strong {
 /* ================== */
 /* === BUTTONS ====== */
 /* ================== */
-/* line 17, ../scss/smacss/_base.scss */
+/* line 18, ../scss/smacss/_base.scss */
 .main-btn {
   font-weight: 800;
   color: #28317D;
 }
-/* line 18, ../scss/smacss/_base.scss */
+/* line 19, ../scss/smacss/_base.scss */
 .main-btn:hover {
   color: #8DC63F;
 }
-/* line 19, ../scss/smacss/_base.scss */
+/* line 20, ../scss/smacss/_base.scss */
 .main-btn:hover i.main-btn-icon {
   color: #8DC63F;
   border-color: #8DC63F;
 }
 
-/* line 22, ../scss/smacss/_base.scss */
+/* line 23, ../scss/smacss/_base.scss */
 i.main-btn-icon {
   text-align: center;
   color: #28317D;
@@ -1519,17 +1526,17 @@ i.main-btn-icon {
 /* ================== */
 /* === OTHER BASE === */
 /* ================== */
-/* line 28, ../scss/smacss/_base.scss */
+/* line 29, ../scss/smacss/_base.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 29, ../scss/smacss/_base.scss */
+/* line 30, ../scss/smacss/_base.scss */
 svg {
   fill: white;
 }
 
-/* line 30, ../scss/smacss/_base.scss */
+/* line 31, ../scss/smacss/_base.scss */
 .main-wrap {
   width: 1200px;
   position: relative;
@@ -1539,22 +1546,22 @@ svg {
   min-width: 55%;
 }
 
-/* line 32, ../scss/smacss/_base.scss */
+/* line 33, ../scss/smacss/_base.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 33, ../scss/smacss/_base.scss */
+/* line 34, ../scss/smacss/_base.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 35, ../scss/smacss/_base.scss */
+/* line 36, ../scss/smacss/_base.scss */
 .mobile-only {
   display: none;
 }
 
-/* line 36, ../scss/smacss/_base.scss */
+/* line 37, ../scss/smacss/_base.scss */
 .mobile-hide {
   display: block;
 }
@@ -2393,41 +2400,55 @@ footer .fineprint a:hover {
 /* === CONTACT ==== */
 /* ====================== */
 /* line 214, ../scss/smacss/_modules.scss */
-.contact .featured-image img {
-  margin-bottom: 60px;
+.contact .contact-content {
+  background-image: url("../img/content-shadow-top-full.png");
+  background-position: center -6px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 80px;
 }
 /* line 215, ../scss/smacss/_modules.scss */
+.contact .featured-image img {
+  margin-bottom: 0px;
+  display: block;
+}
+/* line 216, ../scss/smacss/_modules.scss */
+.contact .full-text h1 {
+  line-height: 32px;
+  margin-bottom: 0;
+}
+/* line 217, ../scss/smacss/_modules.scss */
 .contact h1, .contact h2 {
   color: #25A549;
 }
-/* line 216, ../scss/smacss/_modules.scss */
+/* line 218, ../scss/smacss/_modules.scss */
 .contact .form-fields {
   border-right: 1px solid #25A549;
   margin-bottom: 20px;
   padding-right: 30px;
 }
-/* line 217, ../scss/smacss/_modules.scss */
+/* line 219, ../scss/smacss/_modules.scss */
 .contact .form-fields h1 {
   text-transform: uppercase;
 }
-/* line 219, ../scss/smacss/_modules.scss */
+/* line 221, ../scss/smacss/_modules.scss */
 .contact .contact-info {
   padding-left: 30px;
 }
-/* line 220, ../scss/smacss/_modules.scss */
+/* line 222, ../scss/smacss/_modules.scss */
 .contact .contact-info a {
   color: #28317D;
   font-weight: bold;
 }
-/* line 221, ../scss/smacss/_modules.scss */
+/* line 223, ../scss/smacss/_modules.scss */
 .contact .contact-info a:hover {
   color: #25A549;
 }
-/* line 223, ../scss/smacss/_modules.scss */
+/* line 225, ../scss/smacss/_modules.scss */
 .contact .contact-info p {
   max-width: 80%;
 }
-/* line 225, ../scss/smacss/_modules.scss */
+/* line 227, ../scss/smacss/_modules.scss */
 .contact .info-block {
   margin-bottom: 30px;
 }
@@ -2435,7 +2456,7 @@ footer .fineprint a:hover {
 /* ================== */
 /* === FORM ======= */
 /* ================== */
-/* line 232, ../scss/smacss/_modules.scss */
+/* line 234, ../scss/smacss/_modules.scss */
 form {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   margin: 0;
@@ -2444,24 +2465,24 @@ form {
   vertical-align: baseline;
   margin-bottom: 30px;
 }
-/* line 233, ../scss/smacss/_modules.scss */
+/* line 235, ../scss/smacss/_modules.scss */
 form p {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 234, ../scss/smacss/_modules.scss */
+/* line 236, ../scss/smacss/_modules.scss */
 form p .small, form p small {
   font-size: 85%;
 }
-/* line 236, ../scss/smacss/_modules.scss */
+/* line 238, ../scss/smacss/_modules.scss */
 form .form-group {
   margin-bottom: 15px;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 237, ../scss/smacss/_modules.scss */
+/* line 239, ../scss/smacss/_modules.scss */
 form .form-control {
   display: block;
   width: 100%;
@@ -2480,17 +2501,17 @@ form .form-control {
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
-/* line 238, ../scss/smacss/_modules.scss */
+/* line 240, ../scss/smacss/_modules.scss */
 form label {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 239, ../scss/smacss/_modules.scss */
+/* line 241, ../scss/smacss/_modules.scss */
 form .required {
   color: red;
 }
-/* line 240, ../scss/smacss/_modules.scss */
+/* line 242, ../scss/smacss/_modules.scss */
 form .checkbox-inline, form .radio-inline {
   position: relative;
   display: inline-block;
@@ -2500,18 +2521,18 @@ form .checkbox-inline, form .radio-inline {
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 241, ../scss/smacss/_modules.scss */
+/* line 243, ../scss/smacss/_modules.scss */
 form .checkbox-inline input[type=checkbox] {
   position: absolute;
   margin-left: -16px;
 }
-/* line 242, ../scss/smacss/_modules.scss */
+/* line 244, ../scss/smacss/_modules.scss */
 form input[type=checkbox] {
   margin: 5px 0 0;
   margin-top: 1px\9;
   line-height: normal;
 }
-/* line 243, ../scss/smacss/_modules.scss */
+/* line 245, ../scss/smacss/_modules.scss */
 form button, form html input[type=button], form input[type=reset], form input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
@@ -2851,14 +2872,14 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 
 @media (max-width: 767px) {
   /* line 142, ../scss/smacss/_states.scss */
-  .contact .featured-image img {
-    margin-bottom: 30px;
-  }
-  /* line 143, ../scss/smacss/_states.scss */
   .contact .form-fields {
     border-right: none;
     margin-bottom: 60px;
     padding-right: 0.9375rem;
+  }
+  /* line 143, ../scss/smacss/_states.scss */
+  .contact .contact-content {
+    padding-top: 30px;
   }
   /* line 144, ../scss/smacss/_states.scss */
   .contact .contact-info {

@@ -33,7 +33,7 @@
 	<?php  if( get_row_layout() == 'full_width_text' ): ?>
 		<div class="full-text">
 			<div class="main-wrap">
-				<h1><?php the_sub_field('full_text_headline'); ?></h1>
+				<h1 class="large"><?php the_sub_field('full_text_headline'); ?></h1>
 				<p><?php the_sub_field('full_text_copy'); ?></p>
 			</div><!--end main-wrap-->
 		</div><!--end intro-->

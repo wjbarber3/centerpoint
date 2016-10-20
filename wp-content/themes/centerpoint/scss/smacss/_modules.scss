@@ -211,7 +211,9 @@
 /* ====================== */
 
 .contact{
-	.featured-image img{margin-bottom:60px;}
+	.contact-content{background-image:url('../img/content-shadow-top-full.png');background-position:center -6px;background-size:contain;background-repeat:no-repeat;padding-top:80px;}
+	.featured-image img{margin-bottom:0px;display:block;}
+	.full-text h1{line-height:32px;margin-bottom:0;}
 	h1,h2{color:$green;}
 	.form-fields{border-right:1px solid $green;margin-bottom: 20px;padding-right:30px;
 		h1{text-transform:uppercase;}

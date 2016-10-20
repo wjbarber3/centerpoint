@@ -12,6 +12,14 @@ $thumb_url = $thumb_url_array[0];
 	</div><!--end featured-image-->
 <?php endif; ?>
 
+<div class="full-text">
+	<div class="main-wrap">
+		<h1 class="large">Get In Touch</h1>
+	</div><!--end main-wrap-->
+</div><!--end intro-->
+
+<div class="contact-content">
+
 <div class="main-wrap">
 
 	<div class="form-fields col-md-6">
@@ -194,5 +202,7 @@ $thumb_url = $thumb_url_array[0];
 	<div class="clearfix"></div>
 
 </div><!--end main-wrap-->
+
+</div><!--end contact-content-->
 
 <?php get_footer(); ?>
