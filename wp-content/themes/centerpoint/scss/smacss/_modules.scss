@@ -10,7 +10,7 @@
 /* === FEATURED IMAGES ===== */
 /* ========================= */
 
-.featured-image img{width:100%;height:auto;margin-bottom:40px;}
+.featured-image img{width:100%;height:auto;display:block;}
 
 /* ==================== */
 /* === SLIDER ===== */
@@ -40,7 +40,7 @@
 /* ==================== */
 
 .full-text{padding:30px 0;text-align:center;background-color:$cream;
-	h1{color:$green;margin-bottom:20px;}
+	h1{color:$green;margin-bottom:5px;}
 	p{max-width:80%;margin:0 auto;}
 }
 
@@ -48,7 +48,7 @@
 /* === 3 COLUMN ICON GRID ===== */
 /* ============================ */
 
-.three-col-icon{background-color:$white;padding:40px 0;text-align:center;background-image:url('../img/content-shadow-top-full.png');background-position:center -6px;background-size:contain;background-repeat:no-repeat;
+.three-col-icon{background-color:$white;padding:40px 0;text-align:center;
 	h1{margin-bottom:45px;}
 	.column{border-right:1px solid $lt_green;text-align:center;
 		h2{max-width:75%;margin:0 auto 15px;;text-transform:uppercase;min-height:50px;}
@@ -169,20 +169,25 @@
 #full-overlay{position:fixed;width:100vw;height:100vh;background-color:rgba($black, .7);top:0;bottom:0;left:0;right:0;margin:auto;z-index:1;display:none;}
 
 /* ====================== */
+/* === JUMP LINKS ==== */
+/* ====================== */
+
+.jump-links{width:100%;text-align:center;padding:30px 0;
+	nav{display:block;
+		li{display:inline-block;
+			&:last-of-type a{padding-right:0px;border-right:none;}
+		}
+		a{padding:20px;color:$blue;font-size:16px;text-transform:uppercase;font-weight:800;display:block;border-right:1px solid $green;
+			&:hover{color:$green;}
+		}
+	}
+}
+
+/* ====================== */
 /* === COMPANY TOP ==== */
 /* ====================== */
 
-.company-top{margin-bottom:60px;
-	.jump-links{padding-right:30px;
-		nav{display:block;margin-bottom:30px;
-			li{display:inline-block;
-				&:last-of-type a{padding-right:0px;}
-			}
-			a{padding-right:30px;color:$blue;font-size:16px;text-transform:uppercase;font-weight:800;display:block;
-				&:hover{color:$green;}
-			}
-		}
-	}
+.company-top{margin-bottom:60px;background-color:$cream;padding:60px 0;
 	p{color:$grey;
 		+ p{margin-top:20px;}
 	}

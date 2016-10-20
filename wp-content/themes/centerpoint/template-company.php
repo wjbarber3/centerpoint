@@ -18,34 +18,41 @@ $thumb_url = $thumb_url_array[0];
 
 <div id="post-modal"></div>
 
-<div class="main-wrap">
+<div class="full-text">
+	<h1 class="large"><?php echo the_title(); ?></h1>
+</div><!--end full-text-->
 
 	<?php while ( have_posts() ) : the_post(); ?>
+
+		<div class="jump-links has-shadow">
+			<nav>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#team-list">Team</a></li>
+				<li><a href="#board-list">Board Members</a></li>
+				<li><a href="#advisor-list">Advisors</a></li>
+				<div class="clearfix"></div>
+			</nav>
+		</div>
 	
-		<div class="company-top row">
-			<div class="col-sm-8 jump-links">
-				<nav>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#team-list">Team</a></li>
-					<li><a href="#board-list">Board Members</a></li>
-					<li><a href="#advisor-list">Advisors</a></li>
-					<div class="clearfix"></div>
-				</nav>
-				<?php echo the_content(); ?>
-			</div><!--end column-->
-
-			<!-- ACF QUICKLINKS -->
-			<?php if(have_rows('quick_links')): ?>
-				<div class="col-sm-4 quicklinks">
-					<h3>QuickLinks</h3>
-					<ul>
-						<?php while(have_rows('quick_links')) : the_row(); ?>
-							<li><a href="<?php the_sub_field('quicklink_link'); ?>"><?php the_sub_field('quicklink_text'); ?></a></li>
-						<?php endwhile; ?>
-					</ul>
+		<div class="company-top row has-shadow">
+			<div class="main-wrap">
+				<div class="col-sm-8">
+					<?php echo the_content(); ?>
 				</div><!--end column-->
-			<?php endif; ?>
 
+				<!-- ACF QUICKLINKS -->
+				<?php if(have_rows('quick_links')): ?>
+					<div class="col-sm-4 quicklinks">
+						<h3>QuickLinks</h3>
+						<ul>
+							<?php while(have_rows('quick_links')) : the_row(); ?>
+								<li><a href="<?php the_sub_field('quicklink_link'); ?>"><?php the_sub_field('quicklink_text'); ?></a></li>
+							<?php endwhile; ?>
+						</ul>
+					</div><!--end column-->
+				<?php endif; ?>
+
+			</div><!--end main-wrap-->
 		</div><!--end company-top-->
 
 		<!-- ACF VALUES -->
@@ -164,7 +171,5 @@ $thumb_url = $thumb_url_array[0];
 			<div class="clearfix"></div>
 		</div><!--end news-events-->
 	<?php endwhile; ?>
-
-</div><!--end main-wrap-->
 
 <?php get_footer(); ?>

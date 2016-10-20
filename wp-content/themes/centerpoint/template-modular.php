@@ -40,7 +40,7 @@
 	<?php endif; ?>
 
 	<?php  if( get_row_layout() == 'three_column_icon_grid' ): ?>
-		<div class="three-col-icon">
+		<div class="three-col-icon has-shadow">
 			<div class="main-wrap">
 				<h1><?php the_sub_field('icon_grid_headline'); ?></h1>
 				<?php if(have_rows('column')): ?>

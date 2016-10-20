@@ -1566,6 +1566,15 @@ svg {
   display: block;
 }
 
+/* line 38, ../scss/smacss/_base.scss */
+.has-shadow {
+  background-image: url("../img/content-shadow-top-full.png");
+  background-position: center -6px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 30px 0;
+}
+
 /* ================== */
 /* === HEADER ======= */
 /* ================== */
@@ -1781,7 +1790,7 @@ footer .fineprint a:hover {
 .featured-image img {
   width: 100%;
   height: auto;
-  margin-bottom: 40px;
+  display: block;
 }
 
 /* ==================== */
@@ -1882,7 +1891,7 @@ footer .fineprint a:hover {
 /* line 43, ../scss/smacss/_modules.scss */
 .full-text h1 {
   color: #25A549;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 /* line 44, ../scss/smacss/_modules.scss */
 .full-text p {
@@ -1898,10 +1907,6 @@ footer .fineprint a:hover {
   background-color: #FFFFFF;
   padding: 40px 0;
   text-align: center;
-  background-image: url("../img/content-shadow-top-full.png");
-  background-position: center -6px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 /* line 52, ../scss/smacss/_modules.scss */
 .three-col-icon h1 {
@@ -2292,73 +2297,82 @@ footer .fineprint a:hover {
 }
 
 /* ====================== */
-/* === COMPANY TOP ==== */
+/* === JUMP LINKS ==== */
 /* ====================== */
 /* line 175, ../scss/smacss/_modules.scss */
-.company-top {
-  margin-bottom: 60px;
+.jump-links {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
 }
 /* line 176, ../scss/smacss/_modules.scss */
-.company-top .jump-links {
-  padding-right: 30px;
+.jump-links nav {
+  display: block;
 }
 /* line 177, ../scss/smacss/_modules.scss */
-.company-top .jump-links nav {
-  display: block;
-  margin-bottom: 30px;
-}
-/* line 178, ../scss/smacss/_modules.scss */
-.company-top .jump-links nav li {
+.jump-links nav li {
   display: inline-block;
 }
-/* line 179, ../scss/smacss/_modules.scss */
-.company-top .jump-links nav li:last-of-type a {
+/* line 178, ../scss/smacss/_modules.scss */
+.jump-links nav li:last-of-type a {
   padding-right: 0px;
+  border-right: none;
 }
-/* line 181, ../scss/smacss/_modules.scss */
-.company-top .jump-links nav a {
-  padding-right: 30px;
+/* line 180, ../scss/smacss/_modules.scss */
+.jump-links nav a {
+  padding: 20px;
   color: #28317D;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 800;
   display: block;
+  border-right: 1px solid #25A549;
 }
-/* line 182, ../scss/smacss/_modules.scss */
-.company-top .jump-links nav a:hover {
+/* line 181, ../scss/smacss/_modules.scss */
+.jump-links nav a:hover {
   color: #25A549;
 }
-/* line 186, ../scss/smacss/_modules.scss */
+
+/* ====================== */
+/* === COMPANY TOP ==== */
+/* ====================== */
+/* line 190, ../scss/smacss/_modules.scss */
+.company-top {
+  margin-bottom: 60px;
+  background-color: #F2F0EB;
+  padding: 60px 0;
+}
+/* line 191, ../scss/smacss/_modules.scss */
 .company-top p {
   color: #4A4746;
 }
-/* line 187, ../scss/smacss/_modules.scss */
+/* line 192, ../scss/smacss/_modules.scss */
 .company-top p + p {
   margin-top: 20px;
 }
-/* line 189, ../scss/smacss/_modules.scss */
+/* line 194, ../scss/smacss/_modules.scss */
 .company-top .quicklinks {
   border-left: 1px solid #25A549;
   padding-left: 30px;
 }
-/* line 190, ../scss/smacss/_modules.scss */
+/* line 195, ../scss/smacss/_modules.scss */
 .company-top .quicklinks h3 {
   font-size: 18px;
   color: #25A549;
   font-weight: 300;
   margin-bottom: 30px;
 }
-/* line 191, ../scss/smacss/_modules.scss */
+/* line 196, ../scss/smacss/_modules.scss */
 .company-top .quicklinks li {
   margin-bottom: 12px;
 }
-/* line 192, ../scss/smacss/_modules.scss */
+/* line 197, ../scss/smacss/_modules.scss */
 .company-top .quicklinks a {
   color: #28317D;
   font-weight: 800;
   line-height: 22px;
 }
-/* line 193, ../scss/smacss/_modules.scss */
+/* line 198, ../scss/smacss/_modules.scss */
 .company-top .quicklinks a:hover {
   color: #25A549;
 }
@@ -2366,16 +2380,16 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === VALUES ==== */
 /* ====================== */
-/* line 203, ../scss/smacss/_modules.scss */
+/* line 208, ../scss/smacss/_modules.scss */
 #values * {
   text-align: center;
 }
-/* line 204, ../scss/smacss/_modules.scss */
+/* line 209, ../scss/smacss/_modules.scss */
 #values h1 {
   color: #25A549;
   margin-bottom: 45px;
 }
-/* line 205, ../scss/smacss/_modules.scss */
+/* line 210, ../scss/smacss/_modules.scss */
 #values h2 {
   border-top: 1px solid #25A549;
   border-bottom: 1px solid #25A549;
@@ -2388,7 +2402,7 @@ footer .fineprint a:hover {
   text-transform: uppercase;
   font-size: 20px;
 }
-/* line 206, ../scss/smacss/_modules.scss */
+/* line 211, ../scss/smacss/_modules.scss */
 #values p {
   max-width: 75%;
   margin: 0 auto;
@@ -2399,7 +2413,7 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === CONTACT ==== */
 /* ====================== */
-/* line 214, ../scss/smacss/_modules.scss */
+/* line 219, ../scss/smacss/_modules.scss */
 .contact .contact-content {
   background-image: url("../img/content-shadow-top-full.png");
   background-position: center -6px;
@@ -2407,48 +2421,48 @@ footer .fineprint a:hover {
   background-repeat: no-repeat;
   padding-top: 80px;
 }
-/* line 215, ../scss/smacss/_modules.scss */
+/* line 220, ../scss/smacss/_modules.scss */
 .contact .featured-image img {
   margin-bottom: 0px;
   display: block;
 }
-/* line 216, ../scss/smacss/_modules.scss */
+/* line 221, ../scss/smacss/_modules.scss */
 .contact .full-text h1 {
   line-height: 32px;
   margin-bottom: 0;
 }
-/* line 217, ../scss/smacss/_modules.scss */
+/* line 222, ../scss/smacss/_modules.scss */
 .contact h1, .contact h2 {
   color: #25A549;
 }
-/* line 218, ../scss/smacss/_modules.scss */
+/* line 223, ../scss/smacss/_modules.scss */
 .contact .form-fields {
   border-right: 1px solid #25A549;
   margin-bottom: 20px;
   padding-right: 30px;
 }
-/* line 219, ../scss/smacss/_modules.scss */
+/* line 224, ../scss/smacss/_modules.scss */
 .contact .form-fields h1 {
   text-transform: uppercase;
 }
-/* line 221, ../scss/smacss/_modules.scss */
+/* line 226, ../scss/smacss/_modules.scss */
 .contact .contact-info {
   padding-left: 30px;
 }
-/* line 222, ../scss/smacss/_modules.scss */
+/* line 227, ../scss/smacss/_modules.scss */
 .contact .contact-info a {
   color: #28317D;
   font-weight: bold;
 }
-/* line 223, ../scss/smacss/_modules.scss */
+/* line 228, ../scss/smacss/_modules.scss */
 .contact .contact-info a:hover {
   color: #25A549;
 }
-/* line 225, ../scss/smacss/_modules.scss */
+/* line 230, ../scss/smacss/_modules.scss */
 .contact .contact-info p {
   max-width: 80%;
 }
-/* line 227, ../scss/smacss/_modules.scss */
+/* line 232, ../scss/smacss/_modules.scss */
 .contact .info-block {
   margin-bottom: 30px;
 }
@@ -2456,7 +2470,7 @@ footer .fineprint a:hover {
 /* ================== */
 /* === FORM ======= */
 /* ================== */
-/* line 234, ../scss/smacss/_modules.scss */
+/* line 239, ../scss/smacss/_modules.scss */
 form {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   margin: 0;
@@ -2465,24 +2479,24 @@ form {
   vertical-align: baseline;
   margin-bottom: 30px;
 }
-/* line 235, ../scss/smacss/_modules.scss */
+/* line 240, ../scss/smacss/_modules.scss */
 form p {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 236, ../scss/smacss/_modules.scss */
+/* line 241, ../scss/smacss/_modules.scss */
 form p .small, form p small {
   font-size: 85%;
 }
-/* line 238, ../scss/smacss/_modules.scss */
+/* line 243, ../scss/smacss/_modules.scss */
 form .form-group {
   margin-bottom: 15px;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 239, ../scss/smacss/_modules.scss */
+/* line 244, ../scss/smacss/_modules.scss */
 form .form-control {
   display: block;
   width: 100%;
@@ -2501,17 +2515,17 @@ form .form-control {
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
-/* line 240, ../scss/smacss/_modules.scss */
+/* line 245, ../scss/smacss/_modules.scss */
 form label {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 241, ../scss/smacss/_modules.scss */
+/* line 246, ../scss/smacss/_modules.scss */
 form .required {
   color: red;
 }
-/* line 242, ../scss/smacss/_modules.scss */
+/* line 247, ../scss/smacss/_modules.scss */
 form .checkbox-inline, form .radio-inline {
   position: relative;
   display: inline-block;
@@ -2521,18 +2535,18 @@ form .checkbox-inline, form .radio-inline {
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 243, ../scss/smacss/_modules.scss */
+/* line 248, ../scss/smacss/_modules.scss */
 form .checkbox-inline input[type=checkbox] {
   position: absolute;
   margin-left: -16px;
 }
-/* line 244, ../scss/smacss/_modules.scss */
+/* line 249, ../scss/smacss/_modules.scss */
 form input[type=checkbox] {
   margin: 5px 0 0;
   margin-top: 1px\9;
   line-height: normal;
 }
-/* line 245, ../scss/smacss/_modules.scss */
+/* line 250, ../scss/smacss/_modules.scss */
 form button, form html input[type=button], form input[type=reset], form input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
