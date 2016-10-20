@@ -39,7 +39,7 @@
 /* === FULL TEXT ===== */
 /* ==================== */
 
-.full-text{padding:30px 0;text-align:center;background-color:$off_grey;
+.full-text{padding:30px 0;text-align:center;background-color:$cream;
 	h1{color:$green;margin-bottom:20px;}
 	p{max-width:80%;margin:0 auto;}
 }
@@ -48,7 +48,7 @@
 /* === 3 COLUMN ICON GRID ===== */
 /* ============================ */
 
-.three-col-icon{background-color:$white;padding:40px 0;text-align:center;
+.three-col-icon{background-color:$white;padding:40px 0;text-align:center;background-image:url('../img/content-shadow-top-full.png');background-position:center -6px;background-size:contain;background-repeat:no-repeat;
 	h1{margin-bottom:45px;}
 	.column{border-right:1px solid $lt_green;text-align:center;
 		h2{max-width:75%;margin:0 auto 15px;;text-transform:uppercase;min-height:50px;}
@@ -78,7 +78,7 @@
 /* === BACKGROUND IMG W/ TEXT ===== */
 /* ================================ */
 
-.background-img-text{background:url('../img/story-bg.png') no-repeat;padding:60px 0;background-size:cover;
+.background-img-text{padding:60px 0;background-size:cover;
 	.text{margin-left:40%;}
 	h1{margin-bottom:30px;}
 	p{max-width:80%;margin-bottom:20px;}

@@ -81,7 +81,7 @@
 	<?php endif; ?>
 
 	<?php  if( get_row_layout() == 'background_image_with_text' ): ?>
-		<div class="background-img-text" style="background-image:<?php the_sub_field('background_image'); ?>">
+		<div class="background-img-text" style="background-image: url('<?php echo get_sub_field('background_image')['url']; ?>')">
 			<div class="main-wrap">
 				<div class="text">
 					<h1><?php the_sub_field('background_image_headline'); ?></h1>
