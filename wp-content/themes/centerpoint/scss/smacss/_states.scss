@@ -106,7 +106,7 @@ header{
 	}
 }
 
-.jump-links{
+.jump-links, .services-links{
 	@include bp(mobile){padding-right:0.9375rem;padding-bottom:30px;
 		nav{overflow-x:scroll;white-space:nowrap;
 			a{padding-right:15px;font-size:12px;padding:7px;font-size:12px;border-right:none;}

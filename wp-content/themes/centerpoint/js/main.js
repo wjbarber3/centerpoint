@@ -177,6 +177,19 @@ AjaxPost = {
     }
 }
 
+ServicesSlider = {
+    servicesTrigger: '.services-links a',
+    servicesSlide: '.content-area li',
+    servicesTitle: '.title-area h2',
+    init: function() {
+        jQuery(this.servicesTrigger).click(this.updateSlide);
+    },
+    updateSlide: function(e) {
+        e.preventDefault();
+        console.log('click');
+    }
+}
+
 jQuery(document).ready(function() {
     Header.init();
     Slider.init();
@@ -184,6 +197,7 @@ jQuery(document).ready(function() {
     JumpLinks.init();
     Team.init();
     AjaxPost.init();
+    ServicesSlider.init();
 })
 
 var configProfile = {
