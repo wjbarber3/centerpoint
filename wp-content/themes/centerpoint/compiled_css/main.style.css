@@ -1572,7 +1572,6 @@ svg {
   background-position: center -6px;
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 30px 0;
 }
 
 /* ================== */
@@ -2346,6 +2345,8 @@ footer .fineprint a:hover {
   background-color: #F2F0EB;
   padding-top: 60px;
   padding-bottom: 50px;
+  margin-right: 0;
+  margin-left: 0;
 }
 /* line 191, ../scss/smacss/_modules.scss */
 .company-top p {
@@ -2388,6 +2389,8 @@ footer .fineprint a:hover {
 /* line 207, ../scss/smacss/_modules.scss */
 .values {
   padding: 60px 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 /* line 208, ../scss/smacss/_modules.scss */
 .values * {
@@ -2418,11 +2421,29 @@ footer .fineprint a:hover {
   min-height: 160px;
   margin-bottom: 20px;
 }
+/* line 212, ../scss/smacss/_modules.scss */
+.values.green-background {
+  background-color: #25A549;
+}
+/* line 213, ../scss/smacss/_modules.scss */
+.values.green-background h1 {
+  color: #FFFFFF;
+}
+/* line 214, ../scss/smacss/_modules.scss */
+.values.green-background h2 {
+  color: #FFFFFF;
+  border-color: #28317D;
+}
+/* line 215, ../scss/smacss/_modules.scss */
+.values.green-background p {
+  color: #FFFFFF;
+  min-height: 100px;
+}
 
 /* ====================== */
 /* === CONTACT ==== */
 /* ====================== */
-/* line 222, ../scss/smacss/_modules.scss */
+/* line 224, ../scss/smacss/_modules.scss */
 .contact .contact-content {
   background-image: url("../img/content-shadow-top-full.png");
   background-position: center -6px;
@@ -2430,48 +2451,48 @@ footer .fineprint a:hover {
   background-repeat: no-repeat;
   padding-top: 80px;
 }
-/* line 223, ../scss/smacss/_modules.scss */
+/* line 225, ../scss/smacss/_modules.scss */
 .contact .featured-image img {
   margin-bottom: 0px;
   display: block;
 }
-/* line 224, ../scss/smacss/_modules.scss */
+/* line 226, ../scss/smacss/_modules.scss */
 .contact .full-text h1 {
   line-height: 32px;
   margin-bottom: 0;
 }
-/* line 225, ../scss/smacss/_modules.scss */
+/* line 227, ../scss/smacss/_modules.scss */
 .contact h1, .contact h2 {
   color: #25A549;
 }
-/* line 226, ../scss/smacss/_modules.scss */
+/* line 228, ../scss/smacss/_modules.scss */
 .contact .form-fields {
   border-right: 1px solid #25A549;
   margin-bottom: 20px;
   padding-right: 30px;
 }
-/* line 227, ../scss/smacss/_modules.scss */
+/* line 229, ../scss/smacss/_modules.scss */
 .contact .form-fields h1 {
   text-transform: uppercase;
 }
-/* line 229, ../scss/smacss/_modules.scss */
+/* line 231, ../scss/smacss/_modules.scss */
 .contact .contact-info {
   padding-left: 30px;
 }
-/* line 230, ../scss/smacss/_modules.scss */
+/* line 232, ../scss/smacss/_modules.scss */
 .contact .contact-info a {
   color: #28317D;
   font-weight: bold;
 }
-/* line 231, ../scss/smacss/_modules.scss */
+/* line 233, ../scss/smacss/_modules.scss */
 .contact .contact-info a:hover {
   color: #25A549;
 }
-/* line 233, ../scss/smacss/_modules.scss */
+/* line 235, ../scss/smacss/_modules.scss */
 .contact .contact-info p {
   max-width: 80%;
 }
-/* line 235, ../scss/smacss/_modules.scss */
+/* line 237, ../scss/smacss/_modules.scss */
 .contact .info-block {
   margin-bottom: 30px;
 }
@@ -2479,7 +2500,7 @@ footer .fineprint a:hover {
 /* ================== */
 /* === FORM ======= */
 /* ================== */
-/* line 242, ../scss/smacss/_modules.scss */
+/* line 244, ../scss/smacss/_modules.scss */
 form {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   margin: 0;
@@ -2488,24 +2509,24 @@ form {
   vertical-align: baseline;
   margin-bottom: 30px;
 }
-/* line 243, ../scss/smacss/_modules.scss */
+/* line 245, ../scss/smacss/_modules.scss */
 form p {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 244, ../scss/smacss/_modules.scss */
+/* line 246, ../scss/smacss/_modules.scss */
 form p .small, form p small {
   font-size: 85%;
 }
-/* line 246, ../scss/smacss/_modules.scss */
+/* line 248, ../scss/smacss/_modules.scss */
 form .form-group {
   margin-bottom: 15px;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 247, ../scss/smacss/_modules.scss */
+/* line 249, ../scss/smacss/_modules.scss */
 form .form-control {
   display: block;
   width: 100%;
@@ -2524,17 +2545,17 @@ form .form-control {
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
-/* line 248, ../scss/smacss/_modules.scss */
+/* line 250, ../scss/smacss/_modules.scss */
 form label {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 249, ../scss/smacss/_modules.scss */
+/* line 251, ../scss/smacss/_modules.scss */
 form .required {
   color: red;
 }
-/* line 250, ../scss/smacss/_modules.scss */
+/* line 252, ../scss/smacss/_modules.scss */
 form .checkbox-inline, form .radio-inline {
   position: relative;
   display: inline-block;
@@ -2544,18 +2565,18 @@ form .checkbox-inline, form .radio-inline {
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 251, ../scss/smacss/_modules.scss */
+/* line 253, ../scss/smacss/_modules.scss */
 form .checkbox-inline input[type=checkbox] {
   position: absolute;
   margin-left: -16px;
 }
-/* line 252, ../scss/smacss/_modules.scss */
+/* line 254, ../scss/smacss/_modules.scss */
 form input[type=checkbox] {
   margin: 5px 0 0;
   margin-top: 1px\9;
   line-height: normal;
 }
-/* line 253, ../scss/smacss/_modules.scss */
+/* line 255, ../scss/smacss/_modules.scss */
 form button, form html input[type=button], form input[type=reset], form input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
@@ -2891,10 +2912,14 @@ form button, form html input[type=button], form input[type=reset], form input[ty
     min-height: initial;
     margin-bottom: 35px;
   }
+  /* line 129, ../scss/smacss/_states.scss */
+  .values.green-background p {
+    min-height: auto;
+  }
 }
 
 @media (max-width: 767px) {
-  /* line 134, ../scss/smacss/_states.scss */
+  /* line 135, ../scss/smacss/_states.scss */
   .inline-video .vid-info {
     text-align: center;
     margin-bottom: 20px;
@@ -2902,39 +2927,39 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 }
 
 @media (max-width: 767px) {
-  /* line 140, ../scss/smacss/_states.scss */
+  /* line 141, ../scss/smacss/_states.scss */
   .news-events .event {
     border-right: none;
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #4A4746;
   }
-  /* line 141, ../scss/smacss/_states.scss */
+  /* line 142, ../scss/smacss/_states.scss */
   .news-events p {
     max-width: 100%;
   }
-  /* line 142, ../scss/smacss/_states.scss */
+  /* line 143, ../scss/smacss/_states.scss */
   .news-events .news-content {
     min-height: auto;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 148, ../scss/smacss/_states.scss */
+  /* line 149, ../scss/smacss/_states.scss */
   .contact .form-fields {
     border-right: none;
     margin-bottom: 60px;
     padding-right: 0.9375rem;
   }
-  /* line 149, ../scss/smacss/_states.scss */
+  /* line 150, ../scss/smacss/_states.scss */
   .contact .contact-content {
     padding-top: 30px;
   }
-  /* line 150, ../scss/smacss/_states.scss */
+  /* line 151, ../scss/smacss/_states.scss */
   .contact .contact-info {
     padding-left: 0.9375rem;
   }
-  /* line 151, ../scss/smacss/_states.scss */
+  /* line 152, ../scss/smacss/_states.scss */
   .contact .contact-info p {
     max-width: 100%;
   }
@@ -2944,18 +2969,18 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* === FOOTER ======= */
 /* ================== */
 @media (max-width: 968px) {
-  /* line 162, ../scss/smacss/_states.scss */
+  /* line 163, ../scss/smacss/_states.scss */
   footer .social a {
     width: 30px;
     height: 30px;
   }
-  /* line 163, ../scss/smacss/_states.scss */
+  /* line 164, ../scss/smacss/_states.scss */
   footer nav {
     margin-left: 0px;
     margin-top: 10px;
     width: 85%;
   }
-  /* line 164, ../scss/smacss/_states.scss */
+  /* line 165, ../scss/smacss/_states.scss */
   footer nav ul {
     top: auto;
     -moz-transform: none;
@@ -2963,13 +2988,13 @@ form button, form html input[type=button], form input[type=reset], form input[ty
     -webkit-transform: none;
     transform: none;
   }
-  /* line 165, ../scss/smacss/_states.scss */
+  /* line 166, ../scss/smacss/_states.scss */
   footer nav li {
     display: block;
     padding: 20px 0;
     border-bottom: 1px solid #FFFFFF;
   }
-  /* line 166, ../scss/smacss/_states.scss */
+  /* line 167, ../scss/smacss/_states.scss */
   footer nav li:last-of-type {
     border-bottom: none;
   }

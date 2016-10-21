@@ -56,10 +56,25 @@ $thumb_url = $thumb_url_array[0];
 		</div><!--end company-top-->
 
 		<!-- ACF VALUES -->
+		<?php if(have_rows('guiding_principles')): ?>
+			<div class="values row has-shadow green-background">
+				<div class="main-wrap">
+					<h1 class="large">CenterPoint Guiding Principles</h1>
+					<?php while(have_rows('guiding_principles')) : the_row(); ?>
+						<div class="col-lg-4 col-md-6 value">
+							<h2><?php the_sub_field('principle_headline'); ?></h2>
+							<p><?php the_sub_field('principle_description'); ?></p>
+						</div><!--end value-->
+					<?php endwhile; ?>
+				</div><!--end main-wrap-->
+			</div><!--end company-values-->
+		<?php endif; ?>
+
+		<!-- ACF VALUES -->
 		<?php if(have_rows('values')): ?>
 			<div class="values row has-shadow">
 				<div class="main-wrap">
-					<h1>CenterPoint Education Solutions Core Values</h1>
+					<h1 class="large">CenterPoint Values</h1>
 					<?php while(have_rows('values')) : the_row(); ?>
 						<div class="col-lg-4 col-md-6 value">
 							<h2><?php the_sub_field('value_headline'); ?></h2>

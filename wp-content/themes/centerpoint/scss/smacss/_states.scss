@@ -126,6 +126,7 @@ header{
 		h1{padding:0 15px;}
 		h2,p{max-width:100%;}
 		p{min-height:initial;margin-bottom:35px;}
+		&.green-background p{min-height:auto;}
 	}
 }
 
