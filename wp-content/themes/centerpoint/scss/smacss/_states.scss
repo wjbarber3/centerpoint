@@ -4,6 +4,7 @@
 
 @include bp(mobile){
 	h1{font-size:20px;line-height:28px;}
+	h1.large{font-size:28px;}
 	.mobile-only{display:block;}
 	.mobile-hide{display:none;}
 }
@@ -54,7 +55,7 @@ header{
 }
 
 .full-text{
-	@include bp(mobile){
+	@include bp(mobile){padding:20px 0;
 		p{max-width:100%;}
 	}
 }
@@ -105,19 +106,23 @@ header{
 	}
 }
 
-.company-top{
-	@include bp(mobile){text-align:center;
-		.jump-links{padding-right:0.9375rem;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid $grey;margin-bottom:30px;
-			nav{overflow-x:scroll;white-space:nowrap;
-				a{padding-right:15px;font-size:12px;}
-			}
+.jump-links{
+	@include bp(mobile){padding-right:0.9375rem;padding-bottom:30px;
+		nav{overflow-x:scroll;white-space:nowrap;
+			a{padding-right:15px;font-size:12px;padding:7px;font-size:12px;border-right:none;}
 		}
-		.quicklinks{padding-bottom:30px;border-bottom:1px solid $grey;border-left:none;}
 	}
 }
 
-#values{
-	@include bp(mobile){
+.company-top{
+	@include bp(mobile){text-align:center;margin-right:0;margin-left:0;
+		.quicklinks{border-left:none;}
+		.main-content{margin-bottom:30px;}
+	}
+}
+
+.values{
+	@include bp(mobile){padding:30px 0 0;margin-right:0;margin-left:0;
 		h1{padding:0 15px;}
 		h2,p{max-width:100%;}
 		p{min-height:initial;margin-bottom:35px;}
@@ -134,6 +139,7 @@ header{
 	@include bp(mobile){
 		.event{border-right:none;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid $grey;}
 		p{max-width:100%;}
+		.news-content{min-height:auto;}
 	}
 }
 

@@ -36,7 +36,7 @@ $thumb_url = $thumb_url_array[0];
 	
 		<div class="company-top row has-shadow">
 			<div class="main-wrap">
-				<div class="col-sm-8">
+				<div class="col-sm-8 main-content">
 					<?php echo the_content(); ?>
 				</div><!--end column-->
 
@@ -57,14 +57,16 @@ $thumb_url = $thumb_url_array[0];
 
 		<!-- ACF VALUES -->
 		<?php if(have_rows('values')): ?>
-			<div id="values" class="row">
-				<h1>CenterPoint Education Solutions Core Values</h1>
-				<?php while(have_rows('values')) : the_row(); ?>
-					<div class="col-lg-4 col-md-6 value">
-						<h2><?php the_sub_field('value_headline'); ?></h2>
-						<p><?php the_sub_field('value_description'); ?></p>
-					</div><!--end value-->
-				<?php endwhile; ?>
+			<div class="values row has-shadow">
+				<div class="main-wrap">
+					<h1>CenterPoint Education Solutions Core Values</h1>
+					<?php while(have_rows('values')) : the_row(); ?>
+						<div class="col-lg-4 col-md-6 value">
+							<h2><?php the_sub_field('value_headline'); ?></h2>
+							<p><?php the_sub_field('value_description'); ?></p>
+						</div><!--end value-->
+					<?php endwhile; ?>
+				</div><!--end main-wrap-->
 			</div><!--end company-values-->
 		<?php endif; ?>
 
@@ -72,103 +74,109 @@ $thumb_url = $thumb_url_array[0];
 
 	<?php wp_reset_query(); ?>
 
-	<div id="team-members">
+	<div id="team-members" class="has-shadow">
 
-		<!--=====================================-->
-		<!--==== LOOP THROUGH TEAM CATEGORY =====-->
-		<!--=====================================-->
-		<?php 
-			$team = new WP_Query( [
-			'post_type' => 'employee', 
-			'employee_category' => 'team',
-			'posts_per_page' => 20,
-			'orderby' => 'date',
-			'order' => 'DESC'
-			]);
-		?>
-		<a id="team-list" class="list-trigger" href="#">Team<i class="fa fa-plus-circle"></i></a>
-		<div class="team-list">
-			<?php while ( $team->have_posts() ) : $team->the_post(); ?>
-				<div class="col-sm-3">
-					<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
-						<?php echo the_post_thumbnail( $size, $attr ); ?>
-						<h2><?php echo the_title(); ?></h2>
-						<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
-					</a>
-				</div><!--end team-list-->
-			<?php endwhile; ?>
-			<div class="clearfix"></div>
-		</div><!--end team-list-->
-		<?php wp_reset_query(); ?>
+		<div class="main-wrap">
 
-		<!--=============================================-->
-		<!--==== LOOP THROUGH BOARD MEMBER CATEGORY =====-->
-		<!--=============================================-->
-		<?php 
-			$boards = new WP_Query( [
-			'post_type' => 'employee', 
-			'employee_category' => 'board-member',
-			'posts_per_page' => 20,
-			'orderby' => 'date',
-			'order' => 'DESC'
-			]);
-		?>
-		<a id="board-list" class="list-trigger" href="#">Board Members<i class="fa fa-plus-circle"></i></a>
-		<div class="team-list">
-			<?php while ( $boards->have_posts() ) : $boards->the_post(); ?>
-				<div class="col-sm-3">
-					<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
-						<?php echo the_post_thumbnail( $size, $attr ); ?>
-						<h2><?php echo the_title(); ?></h2>
-						<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
-					</a>
-				</div><!--end team-list-->
-			<?php endwhile; ?>
-			<div class="clearfix"></div>
-		</div><!--end team-list-->
-		<?php wp_reset_query(); ?>
+			<!--=====================================-->
+			<!--==== LOOP THROUGH TEAM CATEGORY =====-->
+			<!--=====================================-->
+			<?php 
+				$team = new WP_Query( [
+				'post_type' => 'employee', 
+				'employee_category' => 'team',
+				'posts_per_page' => 20,
+				'orderby' => 'date',
+				'order' => 'DESC'
+				]);
+			?>
+			<a id="team-list" class="list-trigger" href="#">Team<i class="fa fa-plus-circle"></i></a>
+			<div class="team-list">
+				<?php while ( $team->have_posts() ) : $team->the_post(); ?>
+					<div class="col-sm-3">
+						<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
+							<?php echo the_post_thumbnail( $size, $attr ); ?>
+							<h2><?php echo the_title(); ?></h2>
+							<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
+						</a>
+					</div><!--end team-list-->
+				<?php endwhile; ?>
+				<div class="clearfix"></div>
+			</div><!--end team-list-->
+			<?php wp_reset_query(); ?>
 
-		<!--========================================-->
-		<!--==== LOOP THROUGH ADVISOR CATEGORY =====-->
-		<!--========================================-->
-		<?php 
-			$advisors = new WP_Query( [
-			'post_type' => 'employee', 
-			'employee_category' => 'advisor',
-			'posts_per_page' => 20,
-			'orderby' => 'date',
-			'order' => 'DESC'
-			]);
-		?>
-		<a id="advisor-list" class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
-		<div class="team-list">
-			<?php while ( $advisors->have_posts() ) : $advisors->the_post(); ?>
-				<div class="col-md-4 employee">
-					<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
-						<?php echo the_post_thumbnail( $size, $attr ); ?>
-						<h2><?php echo the_title(); ?></h2>
-						<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
-					</a>
-				</div><!--end team-list-->
-			<?php endwhile; ?>
-			<div class="clearfix"></div>
-		</div><!--end team-list-->
-		<?php wp_reset_query(); ?>
+			<!--=============================================-->
+			<!--==== LOOP THROUGH BOARD MEMBER CATEGORY =====-->
+			<!--=============================================-->
+			<?php 
+				$boards = new WP_Query( [
+				'post_type' => 'employee', 
+				'employee_category' => 'board-member',
+				'posts_per_page' => 20,
+				'orderby' => 'date',
+				'order' => 'DESC'
+				]);
+			?>
+			<a id="board-list" class="list-trigger" href="#">Board Members<i class="fa fa-plus-circle"></i></a>
+			<div class="team-list">
+				<?php while ( $boards->have_posts() ) : $boards->the_post(); ?>
+					<div class="col-sm-3">
+						<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
+							<?php echo the_post_thumbnail( $size, $attr ); ?>
+							<h2><?php echo the_title(); ?></h2>
+							<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
+						</a>
+					</div><!--end team-list-->
+				<?php endwhile; ?>
+				<div class="clearfix"></div>
+			</div><!--end team-list-->
+			<?php wp_reset_query(); ?>
+
+			<!--========================================-->
+			<!--==== LOOP THROUGH ADVISOR CATEGORY =====-->
+			<!--========================================-->
+			<?php 
+				$advisors = new WP_Query( [
+				'post_type' => 'employee', 
+				'employee_category' => 'advisor',
+				'posts_per_page' => 20,
+				'orderby' => 'date',
+				'order' => 'DESC'
+				]);
+			?>
+			<a id="advisor-list" class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
+			<div class="team-list">
+				<?php while ( $advisors->have_posts() ) : $advisors->the_post(); ?>
+					<div class="col-md-4 employee">
+						<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
+							<?php echo the_post_thumbnail( $size, $attr ); ?>
+							<h2><?php echo the_title(); ?></h2>
+							<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
+						</a>
+					</div><!--end team-list-->
+				<?php endwhile; ?>
+				<div class="clearfix"></div>
+			</div><!--end team-list-->
+			<?php wp_reset_query(); ?>
+
+		</div><!--end main-wrap-->
 
 	</div><!--end team-members-->
 
 	<?php while ( have_posts() ) : the_post(); ?>
-		<div class="news-events">
-			<?php while(have_rows('news')) : the_row(); ?>
-				<div class="col-md-4 event">
-					<h2><?php the_sub_field('news_headline'); ?></h2>
-					<div class="news-content">
-						<?php echo the_sub_field('news_content'); ?>
-					</div><!--end news-content-->
-					<a class="main-btn" href="<?php the_sub_field('news_link'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('news_link_text'); ?></a>
-				</div><!--end event-->
-			<?php endwhile; ?>
-			<div class="clearfix"></div>
+		<div class="news-events has-shadow">
+			<div class="main-wrap">
+				<?php while(have_rows('news')) : the_row(); ?>
+					<div class="col-md-4 event">
+						<h2><?php the_sub_field('news_headline'); ?></h2>
+						<div class="news-content">
+							<?php echo the_sub_field('news_content'); ?>
+						</div><!--end news-content-->
+						<a class="main-btn" href="<?php the_sub_field('news_link'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('news_link_text'); ?></a>
+					</div><!--end event-->
+				<?php endwhile; ?>
+				<div class="clearfix"></div>
+			</div><!--end main-wrap-->
 		</div><!--end news-events-->
 	<?php endwhile; ?>
 

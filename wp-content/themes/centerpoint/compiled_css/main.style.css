@@ -2084,6 +2084,7 @@ footer .fineprint a:hover {
 .news-events {
   text-align: center;
   padding: 50px 0;
+  background-color: #F2F0EB;
 }
 /* line 113, ../scss/smacss/_modules.scss */
 .news-events .event {
@@ -2122,13 +2123,17 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === TEAM MEMBERS ===== */
 /* ====================== */
+/* line 127, ../scss/smacss/_modules.scss */
+#team-members {
+  padding: 60px 0;
+}
 /* line 128, ../scss/smacss/_modules.scss */
 #team-members .list-trigger {
   display: block;
   width: 100%;
   color: #FFFFFF;
   text-align: center;
-  background-color: #25A549;
+  background-color: #28317D;
   padding: 5px 0;
   margin-bottom: 5px;
   font-weight: 300;
@@ -2338,9 +2343,9 @@ footer .fineprint a:hover {
 /* ====================== */
 /* line 190, ../scss/smacss/_modules.scss */
 .company-top {
-  margin-bottom: 60px;
   background-color: #F2F0EB;
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 50px;
 }
 /* line 191, ../scss/smacss/_modules.scss */
 .company-top p {
@@ -2380,17 +2385,21 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === VALUES ==== */
 /* ====================== */
+/* line 207, ../scss/smacss/_modules.scss */
+.values {
+  padding: 60px 0;
+}
 /* line 208, ../scss/smacss/_modules.scss */
-#values * {
+.values * {
   text-align: center;
 }
 /* line 209, ../scss/smacss/_modules.scss */
-#values h1 {
+.values h1 {
   color: #25A549;
   margin-bottom: 45px;
 }
 /* line 210, ../scss/smacss/_modules.scss */
-#values h2 {
+.values h2 {
   border-top: 1px solid #25A549;
   border-bottom: 1px solid #25A549;
   padding: 10px 0;
@@ -2403,7 +2412,7 @@ footer .fineprint a:hover {
   font-size: 20px;
 }
 /* line 211, ../scss/smacss/_modules.scss */
-#values p {
+.values p {
   max-width: 75%;
   margin: 0 auto;
   min-height: 160px;
@@ -2413,7 +2422,7 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === CONTACT ==== */
 /* ====================== */
-/* line 219, ../scss/smacss/_modules.scss */
+/* line 222, ../scss/smacss/_modules.scss */
 .contact .contact-content {
   background-image: url("../img/content-shadow-top-full.png");
   background-position: center -6px;
@@ -2421,48 +2430,48 @@ footer .fineprint a:hover {
   background-repeat: no-repeat;
   padding-top: 80px;
 }
-/* line 220, ../scss/smacss/_modules.scss */
+/* line 223, ../scss/smacss/_modules.scss */
 .contact .featured-image img {
   margin-bottom: 0px;
   display: block;
 }
-/* line 221, ../scss/smacss/_modules.scss */
+/* line 224, ../scss/smacss/_modules.scss */
 .contact .full-text h1 {
   line-height: 32px;
   margin-bottom: 0;
 }
-/* line 222, ../scss/smacss/_modules.scss */
+/* line 225, ../scss/smacss/_modules.scss */
 .contact h1, .contact h2 {
   color: #25A549;
 }
-/* line 223, ../scss/smacss/_modules.scss */
+/* line 226, ../scss/smacss/_modules.scss */
 .contact .form-fields {
   border-right: 1px solid #25A549;
   margin-bottom: 20px;
   padding-right: 30px;
 }
-/* line 224, ../scss/smacss/_modules.scss */
+/* line 227, ../scss/smacss/_modules.scss */
 .contact .form-fields h1 {
   text-transform: uppercase;
 }
-/* line 226, ../scss/smacss/_modules.scss */
+/* line 229, ../scss/smacss/_modules.scss */
 .contact .contact-info {
   padding-left: 30px;
 }
-/* line 227, ../scss/smacss/_modules.scss */
+/* line 230, ../scss/smacss/_modules.scss */
 .contact .contact-info a {
   color: #28317D;
   font-weight: bold;
 }
-/* line 228, ../scss/smacss/_modules.scss */
+/* line 231, ../scss/smacss/_modules.scss */
 .contact .contact-info a:hover {
   color: #25A549;
 }
-/* line 230, ../scss/smacss/_modules.scss */
+/* line 233, ../scss/smacss/_modules.scss */
 .contact .contact-info p {
   max-width: 80%;
 }
-/* line 232, ../scss/smacss/_modules.scss */
+/* line 235, ../scss/smacss/_modules.scss */
 .contact .info-block {
   margin-bottom: 30px;
 }
@@ -2470,7 +2479,7 @@ footer .fineprint a:hover {
 /* ================== */
 /* === FORM ======= */
 /* ================== */
-/* line 239, ../scss/smacss/_modules.scss */
+/* line 242, ../scss/smacss/_modules.scss */
 form {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   margin: 0;
@@ -2479,24 +2488,24 @@ form {
   vertical-align: baseline;
   margin-bottom: 30px;
 }
-/* line 240, ../scss/smacss/_modules.scss */
+/* line 243, ../scss/smacss/_modules.scss */
 form p {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 241, ../scss/smacss/_modules.scss */
+/* line 244, ../scss/smacss/_modules.scss */
 form p .small, form p small {
   font-size: 85%;
 }
-/* line 243, ../scss/smacss/_modules.scss */
+/* line 246, ../scss/smacss/_modules.scss */
 form .form-group {
   margin-bottom: 15px;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 244, ../scss/smacss/_modules.scss */
+/* line 247, ../scss/smacss/_modules.scss */
 form .form-control {
   display: block;
   width: 100%;
@@ -2515,17 +2524,17 @@ form .form-control {
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
-/* line 245, ../scss/smacss/_modules.scss */
+/* line 248, ../scss/smacss/_modules.scss */
 form label {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 246, ../scss/smacss/_modules.scss */
+/* line 249, ../scss/smacss/_modules.scss */
 form .required {
   color: red;
 }
-/* line 247, ../scss/smacss/_modules.scss */
+/* line 250, ../scss/smacss/_modules.scss */
 form .checkbox-inline, form .radio-inline {
   position: relative;
   display: inline-block;
@@ -2535,18 +2544,18 @@ form .checkbox-inline, form .radio-inline {
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 248, ../scss/smacss/_modules.scss */
+/* line 251, ../scss/smacss/_modules.scss */
 form .checkbox-inline input[type=checkbox] {
   position: absolute;
   margin-left: -16px;
 }
-/* line 249, ../scss/smacss/_modules.scss */
+/* line 252, ../scss/smacss/_modules.scss */
 form input[type=checkbox] {
   margin: 5px 0 0;
   margin-top: 1px\9;
   line-height: normal;
 }
-/* line 250, ../scss/smacss/_modules.scss */
+/* line 253, ../scss/smacss/_modules.scss */
 form button, form html input[type=button], form input[type=reset], form input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
@@ -2570,11 +2579,16 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   }
 
   /* line 7, ../scss/smacss/_states.scss */
+  h1.large {
+    font-size: 28px;
+  }
+
+  /* line 8, ../scss/smacss/_states.scss */
   .mobile-only {
     display: block;
   }
 
-  /* line 8, ../scss/smacss/_states.scss */
+  /* line 9, ../scss/smacss/_states.scss */
   .mobile-hide {
     display: none;
   }
@@ -2583,19 +2597,19 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* === HEADER ======= */
 /* ================== */
 @media (max-width: 1024px) {
-  /* line 17, ../scss/smacss/_states.scss */
+  /* line 18, ../scss/smacss/_states.scss */
   header svg {
     width: 250px;
     height: auto;
   }
 }
 @media (max-width: 968px) {
-  /* line 20, ../scss/smacss/_states.scss */
+  /* line 21, ../scss/smacss/_states.scss */
   header svg {
     width: 200px;
     height: auto;
   }
-  /* line 21, ../scss/smacss/_states.scss */
+  /* line 22, ../scss/smacss/_states.scss */
   header .menu-main-nav-container {
     display: none;
     position: absolute;
@@ -2606,15 +2620,15 @@ form button, form html input[type=button], form input[type=reset], form input[ty
     z-index: 1;
     padding: 20px;
   }
-  /* line 22, ../scss/smacss/_states.scss */
+  /* line 23, ../scss/smacss/_states.scss */
   header .menu-main-nav-container li {
     display: block;
   }
-  /* line 23, ../scss/smacss/_states.scss */
+  /* line 24, ../scss/smacss/_states.scss */
   header .menu-main-nav-container li:last-child a {
     padding: 10px 30px;
   }
-  /* line 24, ../scss/smacss/_states.scss */
+  /* line 25, ../scss/smacss/_states.scss */
   header .menu-main-nav-container li ul {
     position: relative;
     top: 0;
@@ -2622,25 +2636,25 @@ form button, form html input[type=button], form input[type=reset], form input[ty
     border: none;
     background-color: transparent;
   }
-  /* line 25, ../scss/smacss/_states.scss */
+  /* line 26, ../scss/smacss/_states.scss */
   header .menu-main-nav-container li ul li:last-child a {
     border-right: none;
     padding: 10px 20px;
   }
-  /* line 26, ../scss/smacss/_states.scss */
+  /* line 27, ../scss/smacss/_states.scss */
   header .menu-main-nav-container li ul a {
     border: none;
     font-size: 12px;
     color: #25A549;
     text-transform: none;
   }
-  /* line 29, ../scss/smacss/_states.scss */
+  /* line 30, ../scss/smacss/_states.scss */
   header .menu-main-nav-container a {
     text-align: center;
     padding: 10px 30px;
     border-right: none;
   }
-  /* line 31, ../scss/smacss/_states.scss */
+  /* line 32, ../scss/smacss/_states.scss */
   header .mobile-menu-trigger {
     display: block;
     float: right;
@@ -2656,7 +2670,7 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   }
 }
 @media (max-width: 767px) {
-  /* line 15, ../scss/smacss/_states.scss */
+  /* line 16, ../scss/smacss/_states.scss */
   header {
     border-bottom: 4px solid #25A549;
     height: 80px;
@@ -2670,126 +2684,130 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* === MODULES ====== */
 /* ================== */
 @media (max-width: 1024px) {
-  /* line 46, ../scss/smacss/_states.scss */
+  /* line 47, ../scss/smacss/_states.scss */
   .slider .slide-overlay {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 49, ../scss/smacss/_states.scss */
+  /* line 50, ../scss/smacss/_states.scss */
   .slider .control i {
     font-size: 50px;
   }
-  /* line 50, ../scss/smacss/_states.scss */
+  /* line 51, ../scss/smacss/_states.scss */
   .slider .control {
     width: 20px;
     height: 30px;
   }
-  /* line 51, ../scss/smacss/_states.scss */
+  /* line 52, ../scss/smacss/_states.scss */
   .slider .next {
     right: 8px;
   }
-  /* line 52, ../scss/smacss/_states.scss */
+  /* line 53, ../scss/smacss/_states.scss */
   .slider .prev {
     left: 8px;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 58, ../scss/smacss/_states.scss */
+  /* line 57, ../scss/smacss/_states.scss */
+  .full-text {
+    padding: 20px 0;
+  }
+  /* line 59, ../scss/smacss/_states.scss */
   .full-text p {
     max-width: 100%;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 64, ../scss/smacss/_states.scss */
+  /* line 65, ../scss/smacss/_states.scss */
   .three-col-icon .column {
     border-right: none;
     margin-bottom: 40px;
     border-bottom: 1px solid #8DC63F;
     padding-bottom: 40px;
   }
-  /* line 65, ../scss/smacss/_states.scss */
+  /* line 66, ../scss/smacss/_states.scss */
   .three-col-icon .column h2, .three-col-icon .column p {
     min-height: auto;
     max-width: 100%;
   }
-  /* line 66, ../scss/smacss/_states.scss */
+  /* line 67, ../scss/smacss/_states.scss */
   .three-col-icon .column:nth-child(n+4) {
     margin-bottom: 0px;
     border-bottom: none;
   }
-  /* line 67, ../scss/smacss/_states.scss */
+  /* line 68, ../scss/smacss/_states.scss */
   .three-col-icon .column img {
     max-width: 80px;
   }
 }
 
 @media (max-width: 968px) {
-  /* line 72, ../scss/smacss/_states.scss */
+  /* line 73, ../scss/smacss/_states.scss */
   .background-img-text {
     text-align: center;
   }
-  /* line 74, ../scss/smacss/_states.scss */
+  /* line 75, ../scss/smacss/_states.scss */
   .background-img-text .text {
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
   }
-  /* line 75, ../scss/smacss/_states.scss */
+  /* line 76, ../scss/smacss/_states.scss */
   .background-img-text .text p {
     max-width: 100%;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 80, ../scss/smacss/_states.scss */
+  /* line 81, ../scss/smacss/_states.scss */
   .twitter-feed {
     position: relative;
   }
-  /* line 82, ../scss/smacss/_states.scss */
+  /* line 83, ../scss/smacss/_states.scss */
   .twitter-feed .next {
     right: 10px;
   }
-  /* line 83, ../scss/smacss/_states.scss */
+  /* line 84, ../scss/smacss/_states.scss */
   .twitter-feed .prev {
     left: 10px;
   }
-  /* line 84, ../scss/smacss/_states.scss */
+  /* line 85, ../scss/smacss/_states.scss */
   .twitter-feed .main-wrap {
     position: initial;
   }
-  /* line 85, ../scss/smacss/_states.scss */
+  /* line 86, ../scss/smacss/_states.scss */
   .twitter-feed li p {
     max-width: 70%;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 91, ../scss/smacss/_states.scss */
+  /* line 92, ../scss/smacss/_states.scss */
   #team-members .list-trigger {
     font-size: 18px;
   }
-  /* line 93, ../scss/smacss/_states.scss */
+  /* line 94, ../scss/smacss/_states.scss */
   #team-members .team-list img {
     float: left;
     width: 35%;
     height: auto;
     margin-right: 20px;
   }
-  /* line 94, ../scss/smacss/_states.scss */
+  /* line 95, ../scss/smacss/_states.scss */
   #team-members .team-list .employee {
     padding: 0 0 30px;
     overflow: auto;
     margin-bottom: 30px;
     border-bottom: 1px solid #4A4746;
   }
-  /* line 95, ../scss/smacss/_states.scss */
+  /* line 96, ../scss/smacss/_states.scss */
   #team-members .team-list h2 {
     font-size: 16px;
   }
-  /* line 96, ../scss/smacss/_states.scss */
+  /* line 97, ../scss/smacss/_states.scss */
   #team-members .team-list p {
     font-size: 13px;
     line-height: 20px;
@@ -2797,18 +2815,18 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 }
 
 @media (max-width: 1024px) {
-  /* line 101, ../scss/smacss/_states.scss */
+  /* line 102, ../scss/smacss/_states.scss */
   #post-modal {
     width: 90vw;
     height: 90vh;
   }
 }
 @media (max-width: 767px) {
-  /* line 101, ../scss/smacss/_states.scss */
+  /* line 102, ../scss/smacss/_states.scss */
   #post-modal {
     padding: 30px;
   }
-  /* line 104, ../scss/smacss/_states.scss */
+  /* line 105, ../scss/smacss/_states.scss */
   #post-modal img {
     float: none;
     margin: 0 0 15px 0;
@@ -2816,54 +2834,67 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 }
 
 @media (max-width: 767px) {
-  /* line 108, ../scss/smacss/_states.scss */
-  .company-top {
-    text-align: center;
-  }
-  /* line 110, ../scss/smacss/_states.scss */
-  .company-top .jump-links {
+  /* line 109, ../scss/smacss/_states.scss */
+  .jump-links {
     padding-right: 0.9375rem;
-    margin-bottom: 30px;
     padding-bottom: 30px;
-    border-bottom: 1px solid #4A4746;
-    margin-bottom: 30px;
   }
   /* line 111, ../scss/smacss/_states.scss */
-  .company-top .jump-links nav {
+  .jump-links nav {
     overflow-x: scroll;
     white-space: nowrap;
   }
   /* line 112, ../scss/smacss/_states.scss */
-  .company-top .jump-links nav a {
+  .jump-links nav a {
     padding-right: 15px;
     font-size: 12px;
-  }
-  /* line 115, ../scss/smacss/_states.scss */
-  .company-top .quicklinks {
-    padding-bottom: 30px;
-    border-bottom: 1px solid #4A4746;
-    border-left: none;
+    padding: 7px;
+    font-size: 12px;
+    border-right: none;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 121, ../scss/smacss/_states.scss */
-  #values h1 {
+  /* line 117, ../scss/smacss/_states.scss */
+  .company-top {
+    text-align: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  /* line 119, ../scss/smacss/_states.scss */
+  .company-top .quicklinks {
+    border-left: none;
+  }
+  /* line 120, ../scss/smacss/_states.scss */
+  .company-top .main-content {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 124, ../scss/smacss/_states.scss */
+  .values {
+    padding: 30px 0 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  /* line 126, ../scss/smacss/_states.scss */
+  .values h1 {
     padding: 0 15px;
   }
-  /* line 122, ../scss/smacss/_states.scss */
-  #values h2, #values p {
+  /* line 127, ../scss/smacss/_states.scss */
+  .values h2, .values p {
     max-width: 100%;
   }
-  /* line 123, ../scss/smacss/_states.scss */
-  #values p {
+  /* line 128, ../scss/smacss/_states.scss */
+  .values p {
     min-height: initial;
     margin-bottom: 35px;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 129, ../scss/smacss/_states.scss */
+  /* line 134, ../scss/smacss/_states.scss */
   .inline-video .vid-info {
     text-align: center;
     margin-bottom: 20px;
@@ -2871,35 +2902,39 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 }
 
 @media (max-width: 767px) {
-  /* line 135, ../scss/smacss/_states.scss */
+  /* line 140, ../scss/smacss/_states.scss */
   .news-events .event {
     border-right: none;
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #4A4746;
   }
-  /* line 136, ../scss/smacss/_states.scss */
+  /* line 141, ../scss/smacss/_states.scss */
   .news-events p {
     max-width: 100%;
+  }
+  /* line 142, ../scss/smacss/_states.scss */
+  .news-events .news-content {
+    min-height: auto;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 142, ../scss/smacss/_states.scss */
+  /* line 148, ../scss/smacss/_states.scss */
   .contact .form-fields {
     border-right: none;
     margin-bottom: 60px;
     padding-right: 0.9375rem;
   }
-  /* line 143, ../scss/smacss/_states.scss */
+  /* line 149, ../scss/smacss/_states.scss */
   .contact .contact-content {
     padding-top: 30px;
   }
-  /* line 144, ../scss/smacss/_states.scss */
+  /* line 150, ../scss/smacss/_states.scss */
   .contact .contact-info {
     padding-left: 0.9375rem;
   }
-  /* line 145, ../scss/smacss/_states.scss */
+  /* line 151, ../scss/smacss/_states.scss */
   .contact .contact-info p {
     max-width: 100%;
   }
@@ -2909,18 +2944,18 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* === FOOTER ======= */
 /* ================== */
 @media (max-width: 968px) {
-  /* line 156, ../scss/smacss/_states.scss */
+  /* line 162, ../scss/smacss/_states.scss */
   footer .social a {
     width: 30px;
     height: 30px;
   }
-  /* line 157, ../scss/smacss/_states.scss */
+  /* line 163, ../scss/smacss/_states.scss */
   footer nav {
     margin-left: 0px;
     margin-top: 10px;
     width: 85%;
   }
-  /* line 158, ../scss/smacss/_states.scss */
+  /* line 164, ../scss/smacss/_states.scss */
   footer nav ul {
     top: auto;
     -moz-transform: none;
@@ -2928,13 +2963,13 @@ form button, form html input[type=button], form input[type=reset], form input[ty
     -webkit-transform: none;
     transform: none;
   }
-  /* line 159, ../scss/smacss/_states.scss */
+  /* line 165, ../scss/smacss/_states.scss */
   footer nav li {
     display: block;
     padding: 20px 0;
     border-bottom: 1px solid #FFFFFF;
   }
-  /* line 160, ../scss/smacss/_states.scss */
+  /* line 166, ../scss/smacss/_states.scss */
   footer nav li:last-of-type {
     border-bottom: none;
   }
