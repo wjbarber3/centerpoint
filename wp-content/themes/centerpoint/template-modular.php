@@ -2,8 +2,6 @@
 
 <?php get_header(); ?>
 
-<?php $theme = get_template_directory_uri(); ?>
-
 <?php if( have_rows('flex_content') ): ?>
     <?php while ( have_rows('flex_content') ) : the_row(); ?>
 
@@ -59,7 +57,7 @@
 	<?php endif; ?>
 	
 	<?php  if( get_row_layout() == 'video_or_image_with_info' ): ?>
-		<div class="inline-video">
+		<div class="inline-video has-shadow">
 			<div class="main-wrap">
 				<div class="col-md-6 vid-info">
 					<h1><?php the_sub_field('section_headline'); ?></h1>

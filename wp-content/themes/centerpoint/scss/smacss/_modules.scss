@@ -257,6 +257,82 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 }
 
 /* =========================== */
+/* === PRODUCT HEADER ======== */
+/* =========================== */
+
+.product-header{background-color:$cream;padding:40px 0;
+	.product-tagline{height:100px;border-right:2px solid $green;
+		h1{color:$green;font-size:36px;margin-left:30px;font-weight:100;@include vert-align(50%,-50%);}
+	}
+	.product-icon img{max-width:230px;height:auto;margin-left:50px;}
+}
+
+/* =========================== */
+/* === PRODUCT INFO ======== */
+/* =========================== */
+
+.product-info{padding:65px 0 50px;
+	h1{color:$green;margin-bottom:30px;}
+	p + p{margin-top:30px;}
+}
+
+/* =========================== */
+/* === PRODUCT BULLETS ======= */
+/* =========================== */
+
+.product-bullets{padding:65px 0 50px;background-color:$cream;
+	h1{color:$green;margin-bottom:30px;}
+	li{list-style:initial;list-style-position:inside;color:$green;
+		span{color:$grey;}
+		+ li{margin-top:20px;}
+	}
+}
+
+/* ================================ */
+/* === TWO COLUMN PROD INFO ======= */
+/* ================================ */
+
+.two-column-product-details{background-color:$green;text-align:center;padding:20px 0;
+	h1{color:$white;text-transform:uppercase;margin:20px 0;}
+	.info-container{background-color:$white;padding:40px 20px;border-radius:15px;
+		h2{border-top:2px solid $green;display:inline-block;width:auto;border-bottom:2px solid $green;padding:10px 0;margin:0 auto;color:$blue;font-family:"Georgia", serif;margin-bottom:30px;text-transform:uppercase;font-size:24px;}
+		img{max-width:90%;margin:0 auto 30px;}
+		h3{color:$green;font-size:20px;margin-bottom:15px;}
+		p{max-width:85%;margin:0 auto;}
+		.product{margin-bottom:50px;min-height:400px;}
+		a{color:$blue;
+			i{margin-left:5px;}
+		}
+		.hidden-content{display:none;}
+	}
+}
+
+/* ================================ */
+/* === PROD FULL WIDTH 2 COLUMN === */
+/* ================================ */
+
+.two-column-full{padding:60px 0;background-color:$cream;text-align:center;
+	img{max-width:100%;margin:0 auto 30px;}
+	h3{color:$green;font-size:24px;margin-bottom:15px;font-weight:800;}
+	p{max-width:85%;margin:0 auto;}
+	a{color:$blue;
+		i{margin-left:5px;}
+	}
+	.prod-info{margin-bottom:30px;}
+	.hidden-content{display:none;}
+}
+
+/* ================================ */
+/* === PROD BG IMAGE MODULE ======= */
+/* ================================ */
+
+.product-bg-image{background:url('../img/prod-bg.png') no-repeat;padding:60px 0;background-size:cover;text-align:center;
+	h3,p,a{color:$white;}
+	h3{font-weight:800;margin-bottom:15px;font-size:22px;}
+	a{font-weight:800}
+}
+
+/* =========================== */
 /* === SERVICES SLIDER ======= */
 /* =========================== */
 

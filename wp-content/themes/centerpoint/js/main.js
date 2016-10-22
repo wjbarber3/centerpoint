@@ -190,6 +190,26 @@ ServicesSlider = {
     }
 }
 
+Accordion = {
+    trigger: '.accordion-trigger',
+    hiddenContent: '.hidden-content',
+    init: function() {
+        jQuery(this.trigger).click(this.toggleContent.bind(this));
+    },
+    toggleContent: function(e) {
+        e.preventDefault();
+        var target = jQuery(e.target),
+            targetContent = target.siblings(this.hiddenContent);
+        target.toggleClass('toggled');
+        targetContent.slideToggle("fast");
+        if ( target.hasClass('toggled') ) {
+            target.html("Less<i class='fa fa-minus'></i>");
+        } else {
+            target.html("More<i class='fa fa-plus'></i>")
+        }
+    }
+}
+
 jQuery(document).ready(function() {
     Header.init();
     Slider.init();
@@ -198,6 +218,7 @@ jQuery(document).ready(function() {
     Team.init();
     AjaxPost.init();
     ServicesSlider.init();
+    Accordion.init();
 })
 
 var configProfile = {

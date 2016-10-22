@@ -114,6 +114,12 @@ header{
 	}
 }
 
+.two-column-product-details{
+	@include bp(mobile){
+		.info-container .product{min-height:auto;}
+	}
+}
+
 .company-top{
 	@include bp(mobile){text-align:center;margin-right:0;margin-left:0;
 		.quicklinks{border-left:none;}
@@ -141,6 +147,15 @@ header{
 		.event{border-right:none;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid $grey;}
 		p{max-width:100%;}
 		.news-content{min-height:auto;}
+	}
+}
+
+.product-header{
+	@include bp(mobile) {text-align:center;padding:20px 0;
+		.product-tagline{border-right:none;
+			h1{font-size:24px;margin-left:0px;line-height:32px;}
+		}
+		.product-icon img{margin-left:0px;max-width:50%;}
 	}
 }
 
