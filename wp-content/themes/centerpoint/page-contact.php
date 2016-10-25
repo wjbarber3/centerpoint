@@ -183,7 +183,7 @@ $thumb_url = $thumb_url_array[0];
 		
 		<div class="info-block">
 			<h2>Contact Office</h2>
-			<p>To contact the main office, call 202-836-7500. For product and sales information, contact us at 844.637.7100 or email <a href="mailto:learn@centerpointeducation.org">learn@centerpointeducation.org</a>.</p>
+			<p>To contact the main office, call 202-836-7500. For product and sales information, contact us at 844-637-7100 or email <a href="mailto:learn@centerpointeducation.org">learn@centerpointeducation.org</a>.</p>
 		</div><!--end info-block-->
 		<div class="info-block">
 			<h2>Headquarters</h2>

@@ -50,7 +50,7 @@
 
 .three-col-icon{background-color:$white;padding:40px 0;text-align:center;
 	h1{margin-bottom:45px;}
-	.column{border-right:1px solid $lt_green;text-align:center;
+	.column{border-right:2px solid $lt_green;text-align:center;
 		h2{max-width:75%;margin:0 auto 15px;;text-transform:uppercase;min-height:50px;}
 		&:nth-child(n+4){border-right:none;}
 		img{margin-bottom:10px;}
@@ -110,7 +110,7 @@
 /* ==================== */
 
 .news-events{text-align:center;padding:50px 0;background-color:$cream;
-	.event{border-right:1px solid $green;
+	.event{border-right:2px solid $green;
 		&:nth-child(3){border-right:none;}
 	}
 	h2{text-transform:uppercase;margin-bottom:20px;}
@@ -177,7 +177,7 @@
 		li{display:inline-block;
 			&:last-of-type a{padding-right:0px;border-right:none;}
 		}
-		a{padding:20px;color:$blue;font-size:16px;text-transform:uppercase;font-weight:800;display:block;border-right:1px solid $green;
+		a{padding:20px;color:$blue;font-size:16px;text-transform:uppercase;font-weight:800;display:block;border-right:2px solid $green;
 			&:hover{color:$green;}
 			&.current{color:$green;}
 		}
@@ -192,7 +192,7 @@
 	p{color:$grey;
 		+ p{margin-top:20px;}
 	}
-	.quicklinks{border-left:1px solid $green;padding-left:30px;
+	.quicklinks{border-left:2px solid $green;padding-left:30px;
 		h3{font-size:18px;color:$green;font-weight:300;margin-bottom:30px;}
 		li{margin-bottom:12px;}
 		a{color:$blue;font-weight:800;line-height:22px;
@@ -208,7 +208,7 @@
 .values{padding:60px 0;margin-left:0;margin-right:0;
 	*{text-align:center;}
 	h1{color:$green;margin-bottom:45px;}
-	h2{border-top:1px solid $green;border-bottom:1px solid $green;padding:10px 0;max-width:75%;margin:0 auto;color:$blue;font-family:"Georgia", serif;margin-bottom:20px;text-transform:uppercase;font-size:20px;}
+	h2{border-top:2px solid $green;border-bottom:2px solid $green;padding:10px 0;max-width:75%;margin:0 auto;color:$blue;font-family:"Georgia", serif;margin-bottom:20px;text-transform:uppercase;font-size:20px;}
 	p{max-width:75%;margin:0 auto;min-height:160px;margin-bottom:20px;}
 	&.green-background{background-color:$green;
 		h1{color:$white;}
@@ -222,12 +222,12 @@
 /* ====================== */
 
 .contact{
-	.contact-content{background-image:url('../img/content-shadow-top-full.png');background-position:center -6px;background-size:contain;background-repeat:no-repeat;padding-top:80px;}
+	.contact-content{background-image:url('../img/content-shadow-top-full.png');background-position:center -6px;background-size:contain;background-repeat:no-repeat;padding-top:60px;}
 	.featured-image img{margin-bottom:0px;display:block;}
 	.full-text h1{line-height:32px;margin-bottom:0;}
 	h1,h2{color:$green;}
-	.form-fields{border-right:1px solid $green;margin-bottom: 20px;padding-right:30px;
-		h1{text-transform:uppercase;}
+	.form-fields{border-right:2px solid $green;margin-bottom: 20px;padding-right:30px;
+		h1{text-transform:uppercase;margin-bottom:15px;font-size:20px;}
 	}
 	.contact-info{padding-left:30px;
 		a{color:$blue;font-weight:bold;

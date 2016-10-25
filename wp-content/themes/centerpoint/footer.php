@@ -18,7 +18,7 @@
 			</ul>	
 		</nav>
 		<div class="fineprint">
-			<p>CenterPoint Education Solutions <a href="">202.333.3333</a></p>
+			<p>CenterPoint Education Solutions 202-836-7500</p>
 			<p>Copyright 2016 CenterPoint. All Rights Reserved</p>
 		</div><!--end fineprint-->
 	</div><!--end main-wrap-->

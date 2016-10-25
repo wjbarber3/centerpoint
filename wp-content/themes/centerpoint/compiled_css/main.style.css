@@ -1443,7 +1443,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* === TYPOGRAPHY === */
 /* ================== */
 /* line 5, ../scss/smacss/_base.scss */
-h1, h2, h3, h4, p, a, li, input {
+h1, h2, h3, h4, p, a, li, input, label {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 
@@ -1912,7 +1912,7 @@ footer .fineprint a:hover {
 }
 /* line 53, ../scss/smacss/_modules.scss */
 .three-col-icon .column {
-  border-right: 1px solid #8DC63F;
+  border-right: 2px solid #8DC63F;
   text-align: center;
 }
 /* line 54, ../scss/smacss/_modules.scss */
@@ -2086,7 +2086,7 @@ footer .fineprint a:hover {
 }
 /* line 113, ../scss/smacss/_modules.scss */
 .news-events .event {
-  border-right: 1px solid #25A549;
+  border-right: 2px solid #25A549;
 }
 /* line 114, ../scss/smacss/_modules.scss */
 .news-events .event:nth-child(3) {
@@ -2329,7 +2329,7 @@ footer .fineprint a:hover {
   text-transform: uppercase;
   font-weight: 800;
   display: block;
-  border-right: 1px solid #25A549;
+  border-right: 2px solid #25A549;
 }
 /* line 181, ../scss/smacss/_modules.scss */
 .jump-links nav a:hover, .services-links nav a:hover {
@@ -2361,7 +2361,7 @@ footer .fineprint a:hover {
 }
 /* line 195, ../scss/smacss/_modules.scss */
 .company-top .quicklinks {
-  border-left: 1px solid #25A549;
+  border-left: 2px solid #25A549;
   padding-left: 30px;
 }
 /* line 196, ../scss/smacss/_modules.scss */
@@ -2406,8 +2406,8 @@ footer .fineprint a:hover {
 }
 /* line 211, ../scss/smacss/_modules.scss */
 .values h2 {
-  border-top: 1px solid #25A549;
-  border-bottom: 1px solid #25A549;
+  border-top: 2px solid #25A549;
+  border-bottom: 2px solid #25A549;
   padding: 10px 0;
   max-width: 75%;
   margin: 0 auto;
@@ -2452,7 +2452,7 @@ footer .fineprint a:hover {
   background-position: center -6px;
   background-size: contain;
   background-repeat: no-repeat;
-  padding-top: 80px;
+  padding-top: 60px;
 }
 /* line 226, ../scss/smacss/_modules.scss */
 .contact .featured-image img {
@@ -2470,13 +2470,15 @@ footer .fineprint a:hover {
 }
 /* line 229, ../scss/smacss/_modules.scss */
 .contact .form-fields {
-  border-right: 1px solid #25A549;
+  border-right: 2px solid #25A549;
   margin-bottom: 20px;
   padding-right: 30px;
 }
 /* line 230, ../scss/smacss/_modules.scss */
 .contact .form-fields h1 {
   text-transform: uppercase;
+  margin-bottom: 15px;
+  font-size: 20px;
 }
 /* line 232, ../scss/smacss/_modules.scss */
 .contact .contact-info {
