@@ -1530,5 +1530,71 @@ if(function_exists("register_field_group")) {
     ],
     'menu_order' => 0,
   ]);
+
+  register_field_group([
+    'id' => 'acf_assessment-services',
+    'title' => 'Assessment Services',
+    'fields' => [
+      [
+        'key' => 'field_581002cb09538',
+        'label' => 'Services',
+        'name' => 'services',
+        'type' => 'repeater',
+        'instructions' => 'Add a service to the list/slider of web assessment services.',
+        'sub_fields' => [
+          [
+            'key' => 'field_581002e609539',
+            'label' => 'Service Title',
+            'name' => 'service_title',
+            'type' => 'text',
+            'instructions' => 'Add the service title',
+            'required' => 1,
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => 'Title',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => '',
+          ],
+          [
+            'key' => 'field_581002f80953a',
+            'label' => 'Service Content',
+            'name' => 'service_content',
+            'type' => 'wysiwyg',
+            'instructions' => 'Add the content for the service',
+            'required' => 1,
+            'column_width' => '',
+            'default_value' => '',
+            'toolbar' => 'full',
+            'media_upload' => 'yes',
+          ],
+        ],
+        'row_min' => '',
+        'row_limit' => '',
+        'layout' => 'table',
+        'button_label' => 'Service',
+      ],
+    ],
+    'location' => [
+      [
+        [
+          'param' => 'page',
+          'operator' => '==',
+          'value' => '82',
+          'order_no' => 0,
+          'group_no' => 0,
+        ],
+      ],
+    ],
+    'options' => [
+      'position' => 'normal',
+      'layout' => 'no_box',
+      'hide_on_screen' => [
+      ],
+    ],
+    'menu_order' => 0,
+  ]);
+
 }
 

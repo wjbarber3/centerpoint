@@ -24,14 +24,18 @@ $thumb_url = $thumb_url_array[0];
 	</div><!--end full-text-->
 
 	<div class="services-links has-shadow">
-		<nav>
-			<li><a class="current" href="">Blueprint</a></li>
-			<li><a href="">Forms Design &amp; Development</a></li>
-			<li><a href="">Alignment</a></li>
-			<li><a href="">Data Analytics &amp; Reporting</a></li>
-			<li><a href="">Psychometric Services</a></li>
-			<div class="clearfix"></div>
-		</nav>
+		<div class="main-wrap">
+			<?php if(have_rows('services')): ?>
+				<nav>
+					<?php $i = 0; ?>
+					<?php while(have_rows('services')) : the_row(); ?>
+						<li><a href="#" <?php if($i == 0) { echo 'class="current"'; }; ?>><?php the_sub_field('service_title'); ?></a></li>
+						<?php $i ++; ?>
+					<?php endwhile; ?>
+					<div class="clearfix"></div>
+				</nav>
+			<?php endif; ?>
+		</div><!--end main-wrap-->
 	</div>
 
 	<div id="services-slider" class="has-shadow">
@@ -39,14 +43,26 @@ $thumb_url = $thumb_url_array[0];
 			<div class="title-area">
 				<a href="" class="service-arrow prev"><i class="fa fa-angle-left"></i></a>
 				<a href="" class="service-arrow next"><i class="fa fa-angle-right"></i></a>
-				<h2 class="title">BluePrint</h2>
+				<?php if(have_rows('services')): ?>
+					<?php $b = 0; ?>
+					<?php while(have_rows('services')) : the_row(); ?>
+						<?php if ($b == 0): ?>
+							<h2 class="title"><?php the_sub_field('service_title'); ?></h2>
+						<?php endif; ?>
+						<?php $b ++; ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
 			</div><!--end title-area-->
 			<div class="content-area">
-				<ul>
-					<li class="active">Text One</li>
-					<li>Text Two</li>
-					<li>Text Three</li>
-				</ul>
+				<?php if(have_rows('services')): ?>
+					<ul>
+						<?php $a = 0; ?>
+						<?php while(have_rows('services')) : the_row(); ?>
+							<li <?php if($a == 0) { echo 'class="active"'; }; ?>><?php the_sub_field('service_content'); ?></li>
+							<?php $a ++; ?>
+						<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
 			</div><!--end content-area-->
 		</div><!--end main-wrap-->
 	</div><!--end services-slider-->

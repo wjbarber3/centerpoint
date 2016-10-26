@@ -179,14 +179,62 @@ AjaxPost = {
 
 ServicesSlider = {
     servicesTrigger: '.services-links a',
+    serviceLinks: '.services-links li',
     servicesSlide: '.content-area li',
-    servicesTitle: '.title-area h2',
+    prevArrow: '.service-arrow.prev',
+    nextArrow: '.service-arrow.next',
+    slideTitle: '.title-area h2.title',
     init: function() {
-        jQuery(this.servicesTrigger).click(this.updateSlide);
+        jQuery(this.servicesTrigger).click(this.updateSlide.bind(this));
+        jQuery(this.prevArrow).click(this.prevSlide.bind(this));
+        jQuery(this.nextArrow).click(this.nextSlide.bind(this));
     },
     updateSlide: function(e) {
         e.preventDefault();
-        console.log('click');
+        var target = jQuery(e.target),
+            targetParent = target.parent(),
+            targetIndex = targetParent.index(this.serviceLinks),
+            targetText = target.text();
+        jQuery(this.servicesTrigger).removeClass("current");
+        target.addClass("current");
+        jQuery(this.slideTitle).text(targetText);
+        jQuery(this.servicesSlide).removeClass("active");
+        jQuery(this.servicesSlide).eq(targetIndex).addClass("active");
+    },
+    prevSlide: function(e) {
+        e.preventDefault();
+        var currentLink = jQuery('.services-links a.current'),
+            currentSlide = jQuery('.content-area li.active'),
+            nextTrigger = currentLink.parent().prev().find('a'),
+            nextSlide = currentSlide.prev(),
+            activeTitle = nextTrigger.text();
+        jQuery(this.servicesTrigger).removeClass("current");
+        nextTrigger.addClass("current");
+        jQuery(this.servicesSlide).removeClass("active");
+        nextSlide.addClass("active");
+        jQuery(this.slideTitle).text(activeTitle);
+    },
+    nextSlide: function(e) {
+        e.preventDefault();
+        var currentLink = jQuery('.services-links a.current'),
+            currentSlide = jQuery('.content-area li.active'),
+            currentParent = currentLink.parent(),
+            firstItem = jQuery(this.serviceLinks).first(),
+            lastItem = jQuery(this.serviceLinks).last(),
+            nextTrigger = currentParent.next().find('a'),
+            nextSlide = currentSlide.next(),
+            activeTitle = nextTrigger.text();
+        currentLink.removeClass("current");
+        nextTrigger.addClass("current");
+        jQuery(this.servicesSlide).removeClass("active");
+        nextSlide.addClass("active");
+        jQuery(this.slideTitle).text(activeTitle);
+        if ( currentParent != firstItem ) {
+            jQuery(this.prevArrow).css({
+                "opacity":"1",
+                "pointer-events":"auto"
+            });
+        }
     }
 }
 

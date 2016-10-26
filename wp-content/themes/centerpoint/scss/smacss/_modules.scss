@@ -184,6 +184,19 @@
 	}
 }
 
+/* =============================== */
+/* === SERVICE LINKS SPECIFIC ==== */
+/* =============================== */
+
+.services-links{
+	nav{height:85px;
+		li{max-width:15%;border-right:2px solid $green;height:100%;margin-left:-4px;
+			&:last-of-type a{padding-right:20px;}
+		}
+		a{display:table-cell;vertical-align:middle;font-size:14px;border:none;}
+	}
+}
+
 /* ====================== */
 /* === COMPANY TOP ==== */
 /* ====================== */
@@ -301,7 +314,7 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 		p{max-width:85%;margin:0 auto;}
 		.product{margin-bottom:50px;min-height:400px;}
 		a{color:$blue;
-			i{margin-left:5px;}
+			i{margin-left:5px;pointer-events:none;}
 		}
 		.hidden-content{display:none;}
 	}
@@ -339,7 +352,7 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 #services-slider{background-color:$green;padding:30px 0;
 	.title-area{position:relative;width:100%;text-align:center;margin-bottom:50px;
 		.service-arrow{position:absolute;top:0;bottom:0;margin:auto;color:#fff;font-size:42px;
-			&.prev{left:0;}
+			&.prev{left:0;opacity:.3;pointer-events:none;}
 			&.next{right:0;}
 		}
 	}
