@@ -1579,9 +1579,9 @@ if(function_exists("register_field_group")) {
     'location' => [
       [
         [
-          'param' => 'page',
+          'param' => 'page_template',
           'operator' => '==',
-          'value' => '82',
+          'value' => 'page-assessment-services.php',
           'order_no' => 0,
           'group_no' => 0,
         ],

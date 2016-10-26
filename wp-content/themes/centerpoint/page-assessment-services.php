@@ -1,4 +1,4 @@
-<?php /* Template Name: Company */ ?>
+<?php /* Template Name: Assessment Services */ ?>
 
 <?php get_header(); ?>
 
