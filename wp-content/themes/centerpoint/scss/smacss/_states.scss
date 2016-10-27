@@ -114,6 +114,10 @@ header{
 	}
 }
 
+.services-links{
+	@include bp(mobile){display:none;}
+}
+
 .two-column-product-details{
 	@include bp(mobile){
 		.info-container .product{min-height:auto;}

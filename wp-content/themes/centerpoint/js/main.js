@@ -194,36 +194,90 @@ ServicesSlider = {
         var target = jQuery(e.target),
             targetParent = target.parent(),
             targetIndex = targetParent.index(this.serviceLinks),
-            targetText = target.text();
+            neededIndex = targetIndex + 1,
+            targetText = target.text(),
+            triggerCount = jQuery(this.servicesTrigger).length;
+            console.log(neededIndex);
+            console.log(triggerCount);
         jQuery(this.servicesTrigger).removeClass("current");
         target.addClass("current");
         jQuery(this.slideTitle).text(targetText);
         jQuery(this.servicesSlide).removeClass("active");
         jQuery(this.servicesSlide).eq(targetIndex).addClass("active");
+        if ( neededIndex == triggerCount ) {
+            jQuery(this.nextArrow).css({
+                "opacity":".2",
+                "pointer-events":"none"
+            });
+        } else {
+            jQuery(this.nextArrow).css({
+                "opacity":"1",
+                "pointer-events":"auto"
+            });
+        }
+        if ( neededIndex > 1 ) {
+            jQuery(this.prevArrow).css({
+                "opacity":"1",
+                "pointer-events":"auto"
+            });
+        } else {
+            jQuery(this.prevArrow).css({
+                "opacity":".2",
+                "pointer-events":"none"
+            });
+        }
     },
     prevSlide: function(e) {
         e.preventDefault();
         var currentLink = jQuery('.services-links a.current'),
             currentSlide = jQuery('.content-area li.active'),
-            nextTrigger = currentLink.parent().prev().find('a'),
+            currentParent = currentLink.parent(),
+            nextParent = currentParent.prev(),
+            nextParentIndex = nextParent.index(this.serviceLinks),
+            neededIndex = nextParentIndex + 1,
+            firstItem = jQuery(this.serviceLinks).first(),
+            lastItem = jQuery(this.serviceLinks).last(),
+            nextTrigger = currentParent.prev().find('a'),
             nextSlide = currentSlide.prev(),
-            activeTitle = nextTrigger.text();
-        jQuery(this.servicesTrigger).removeClass("current");
+            activeTitle = nextTrigger.text(),
+            triggerCount = jQuery(this.servicesTrigger).length;
+        currentLink.removeClass("current");
         nextTrigger.addClass("current");
         jQuery(this.servicesSlide).removeClass("active");
         nextSlide.addClass("active");
         jQuery(this.slideTitle).text(activeTitle);
+        if ( neededIndex > 1 ) {
+            jQuery(this.prevArrow).css({
+                "opacity":"1",
+                "pointer-events":"auto"
+            });
+        } else {
+            jQuery(this.prevArrow).css({
+                "opacity":".2",
+                "pointer-events":"none"
+            });
+        };
+        if ( neededIndex != triggerCount ) {
+            jQuery(this.nextArrow).css({
+                "opacity":"1",
+                "pointer-events":"auto"
+            });
+        }
     },
     nextSlide: function(e) {
         e.preventDefault();
         var currentLink = jQuery('.services-links a.current'),
             currentSlide = jQuery('.content-area li.active'),
             currentParent = currentLink.parent(),
+            nextParent = currentParent.next(),
+            nextParentIndex = nextParent.index(this.serviceLinks),
+            neededIndex = nextParentIndex + 1,
             firstItem = jQuery(this.serviceLinks).first(),
             lastItem = jQuery(this.serviceLinks).last(),
             nextTrigger = currentParent.next().find('a'),
             nextSlide = currentSlide.next(),
-            activeTitle = nextTrigger.text();
+            activeTitle = nextTrigger.text(),
+            triggerCount = jQuery(this.servicesTrigger).length;
         currentLink.removeClass("current");
         nextTrigger.addClass("current");
         jQuery(this.servicesSlide).removeClass("active");
@@ -233,6 +287,17 @@ ServicesSlider = {
             jQuery(this.prevArrow).css({
                 "opacity":"1",
                 "pointer-events":"auto"
+            });
+        } else {
+            jQuery(this.prevArrow).css({
+                "opacity":".2",
+                "pointer-events":"none"
+            });
+        };
+        if ( neededIndex == triggerCount ) {
+            jQuery(this.nextArrow).css({
+                "opacity":".2",
+                "pointer-events":"none"
             });
         }
     }

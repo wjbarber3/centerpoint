@@ -2893,6 +2893,7 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   font-weight: 300;
   display: inline-block;
   margin-top: 10px;
+  line-height: 42px;
 }
 
 /* ================== */
@@ -3183,57 +3184,64 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 }
 
 @media (max-width: 767px) {
-  /* line 119, ../scss/smacss/_states.scss */
+  /* line 117, ../scss/smacss/_states.scss */
+  .services-links {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 123, ../scss/smacss/_states.scss */
   .two-column-product-details .info-container .product {
     min-height: auto;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 123, ../scss/smacss/_states.scss */
+  /* line 127, ../scss/smacss/_states.scss */
   .company-top {
     text-align: center;
     margin-right: 0;
     margin-left: 0;
   }
-  /* line 125, ../scss/smacss/_states.scss */
+  /* line 129, ../scss/smacss/_states.scss */
   .company-top .quicklinks {
     border-left: none;
   }
-  /* line 126, ../scss/smacss/_states.scss */
+  /* line 130, ../scss/smacss/_states.scss */
   .company-top .main-content {
     margin-bottom: 30px;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 130, ../scss/smacss/_states.scss */
+  /* line 134, ../scss/smacss/_states.scss */
   .values {
     padding: 30px 0 0;
     margin-right: 0;
     margin-left: 0;
   }
-  /* line 132, ../scss/smacss/_states.scss */
+  /* line 136, ../scss/smacss/_states.scss */
   .values h1 {
     padding: 0 15px;
   }
-  /* line 133, ../scss/smacss/_states.scss */
+  /* line 137, ../scss/smacss/_states.scss */
   .values h2, .values p {
     max-width: 100%;
   }
-  /* line 134, ../scss/smacss/_states.scss */
+  /* line 138, ../scss/smacss/_states.scss */
   .values p {
     min-height: initial;
     margin-bottom: 35px;
   }
-  /* line 135, ../scss/smacss/_states.scss */
+  /* line 139, ../scss/smacss/_states.scss */
   .values.green-background p {
     min-height: auto;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 141, ../scss/smacss/_states.scss */
+  /* line 145, ../scss/smacss/_states.scss */
   .inline-video .vid-info {
     text-align: center;
     margin-bottom: 20px;
@@ -3241,40 +3249,40 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 }
 
 @media (max-width: 767px) {
-  /* line 147, ../scss/smacss/_states.scss */
+  /* line 151, ../scss/smacss/_states.scss */
   .news-events .event {
     border-right: none;
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #4A4746;
   }
-  /* line 148, ../scss/smacss/_states.scss */
+  /* line 152, ../scss/smacss/_states.scss */
   .news-events p {
     max-width: 100%;
   }
-  /* line 149, ../scss/smacss/_states.scss */
+  /* line 153, ../scss/smacss/_states.scss */
   .news-events .news-content {
     min-height: auto;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 153, ../scss/smacss/_states.scss */
+  /* line 157, ../scss/smacss/_states.scss */
   .product-header {
     text-align: center;
     padding: 20px 0;
   }
-  /* line 155, ../scss/smacss/_states.scss */
+  /* line 159, ../scss/smacss/_states.scss */
   .product-header .product-tagline {
     border-right: none;
   }
-  /* line 156, ../scss/smacss/_states.scss */
+  /* line 160, ../scss/smacss/_states.scss */
   .product-header .product-tagline h1 {
     font-size: 24px;
     margin-left: 0px;
     line-height: 32px;
   }
-  /* line 158, ../scss/smacss/_states.scss */
+  /* line 162, ../scss/smacss/_states.scss */
   .product-header .product-icon img {
     margin-left: 0px;
     max-width: 50%;
@@ -3282,21 +3290,21 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 }
 
 @media (max-width: 767px) {
-  /* line 164, ../scss/smacss/_states.scss */
+  /* line 168, ../scss/smacss/_states.scss */
   .contact .form-fields {
     border-right: none;
     margin-bottom: 60px;
     padding-right: 0.9375rem;
   }
-  /* line 165, ../scss/smacss/_states.scss */
+  /* line 169, ../scss/smacss/_states.scss */
   .contact .contact-content {
     padding-top: 30px;
   }
-  /* line 166, ../scss/smacss/_states.scss */
+  /* line 170, ../scss/smacss/_states.scss */
   .contact .contact-info {
     padding-left: 0.9375rem;
   }
-  /* line 167, ../scss/smacss/_states.scss */
+  /* line 171, ../scss/smacss/_states.scss */
   .contact .contact-info p {
     max-width: 100%;
   }
@@ -3306,18 +3314,18 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* === FOOTER ======= */
 /* ================== */
 @media (max-width: 968px) {
-  /* line 178, ../scss/smacss/_states.scss */
+  /* line 182, ../scss/smacss/_states.scss */
   footer .social a {
     width: 30px;
     height: 30px;
   }
-  /* line 179, ../scss/smacss/_states.scss */
+  /* line 183, ../scss/smacss/_states.scss */
   footer nav {
     margin-left: 0px;
     margin-top: 10px;
     width: 85%;
   }
-  /* line 180, ../scss/smacss/_states.scss */
+  /* line 184, ../scss/smacss/_states.scss */
   footer nav ul {
     top: auto;
     -moz-transform: none;
@@ -3325,13 +3333,13 @@ form button, form html input[type=button], form input[type=reset], form input[ty
     -webkit-transform: none;
     transform: none;
   }
-  /* line 181, ../scss/smacss/_states.scss */
+  /* line 185, ../scss/smacss/_states.scss */
   footer nav li {
     display: block;
     padding: 20px 0;
     border-bottom: 1px solid #FFFFFF;
   }
-  /* line 182, ../scss/smacss/_states.scss */
+  /* line 186, ../scss/smacss/_states.scss */
   footer nav li:last-of-type {
     border-bottom: none;
   }
