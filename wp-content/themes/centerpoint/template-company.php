@@ -108,7 +108,7 @@ $thumb_url = $thumb_url_array[0];
 			<a id="team-list" class="list-trigger" href="#">Team<i class="fa fa-plus-circle"></i></a>
 			<div class="team-list">
 				<?php while ( $team->have_posts() ) : $team->the_post(); ?>
-					<div class="col-sm-3">
+					<div class="col-sm-3 employee">
 						<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
 							<?php echo the_post_thumbnail( $size, $attr ); ?>
 							<h2><?php echo the_title(); ?></h2>
@@ -135,7 +135,7 @@ $thumb_url = $thumb_url_array[0];
 			<a id="board-list" class="list-trigger" href="#">Board Members<i class="fa fa-plus-circle"></i></a>
 			<div class="team-list">
 				<?php while ( $boards->have_posts() ) : $boards->the_post(); ?>
-					<div class="col-sm-3">
+					<div class="col-sm-3 employee">
 						<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
 							<?php echo the_post_thumbnail( $size, $attr ); ?>
 							<h2><?php echo the_title(); ?></h2>
@@ -162,7 +162,7 @@ $thumb_url = $thumb_url_array[0];
 			<a id="advisor-list" class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
 			<div class="team-list">
 				<?php while ( $advisors->have_posts() ) : $advisors->the_post(); ?>
-					<div class="col-md-4 employee">
+					<div class="col-sm-3 employee">
 						<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
 							<?php echo the_post_thumbnail( $size, $attr ); ?>
 							<h2><?php echo the_title(); ?></h2>

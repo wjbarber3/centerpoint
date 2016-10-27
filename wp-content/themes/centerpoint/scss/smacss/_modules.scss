@@ -132,7 +132,7 @@
 		&:focus{outline:none;}
 	}
 	.team-list{display:none;margin-top:30px;
-		.employee{padding-right:50px;}
+		.employee{padding-right:50px;min-height:350px;}
 		h2{font-weight:800;color:$blue;margin:6px 0 4px;}
 		p{color:$blue;font-size:14px;line-height:22px;
 			span{color:$green;text-transform:uppercase;}

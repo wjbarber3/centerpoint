@@ -2165,6 +2165,7 @@ footer .fineprint a:hover {
 /* line 135, ../scss/smacss/_modules.scss */
 #team-members .team-list .employee {
   padding-right: 50px;
+  min-height: 350px;
 }
 /* line 136, ../scss/smacss/_modules.scss */
 #team-members .team-list h2 {
