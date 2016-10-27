@@ -3129,6 +3129,7 @@ form button, form html input[type=button], form input[type=reset], form input[ty
     overflow: auto;
     margin-bottom: 30px;
     border-bottom: 1px solid #4A4746;
+    min-height: auto;
   }
   /* line 96, ../scss/smacss/_states.scss */
   #team-members .team-list h2 {
