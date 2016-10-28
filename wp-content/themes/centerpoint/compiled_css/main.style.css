@@ -2639,12 +2639,6 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   font-size: 36px;
   margin-left: 30px;
   font-weight: 100;
-  position: relative;
-  top: 50%;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 /* line 276, ../scss/smacss/_modules.scss */
 .product-header .product-icon img {

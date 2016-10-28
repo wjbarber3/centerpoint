@@ -93,7 +93,9 @@ $thumb_url = $thumb_url_array[0];
 								<div class="news-content">
 									<?php echo the_sub_field('news_content'); ?>
 								</div><!--end news-content-->
-								<a class="main-btn" href="<?php the_sub_field('news_link'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('news_link_text'); ?></a>
+								<?php if ( get_sub_field('news_link_text') ): ?>
+									<a class="main-btn" href="<?php the_sub_field('news_link'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('news_link_text'); ?></a>
+								<?php endif; ?>
 							</div><!--end event-->
 						<?php endwhile; ?>
 						<div class="clearfix"></div>
