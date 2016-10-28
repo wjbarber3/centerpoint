@@ -148,7 +148,7 @@ header{
 
 .news-events{
 	@include bp(mobile){
-		.event{border-right:none;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid $grey;}
+		.event{border-right:none;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid $grey;min-height:auto;}
 		p{max-width:100%;}
 		.news-content{min-height:auto;}
 	}

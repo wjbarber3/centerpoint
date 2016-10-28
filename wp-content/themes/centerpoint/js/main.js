@@ -102,6 +102,9 @@ JumpLinks = {
     },
     jumpOpen: function(e) {
         e.preventDefault();
+        var target = jQuery(e.target);
+        jQuery(this.jumpTrigger).removeClass("current");
+        target.addClass("current");
         var target = jQuery(e.target),
             targetJump = target.attr("href"),
             matchingAccordion = jQuery(targetJump),

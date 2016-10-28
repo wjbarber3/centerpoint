@@ -110,7 +110,7 @@
 /* ==================== */
 
 .news-events{text-align:center;padding:50px 0;background-color:$cream;
-	.event{border-right:2px solid $green;
+	.event{border-right:2px solid $green;min-height:415px;
 		&:nth-child(3){border-right:none;}
 	}
 	h2{text-transform:uppercase;margin-bottom:20px;}
@@ -133,17 +133,13 @@
 	}
 	.team-list{display:none;margin-top:30px;
 		.employee{padding-right:50px;min-height:350px;}
-		h2{font-weight:800;color:$blue;margin:6px 0 4px;}
-		p{color:$blue;font-size:14px;line-height:22px;
-			span{color:$green;text-transform:uppercase;}
-		}
-		img{width:150px;height:200px;}
-		a{transition:none;
-			&:hover{opacity:.8;
-				p,h2{color:$green;}
-				span{text-decoration:underline;}
+		h2{font-weight:800;color:$green;margin:6px 0 4px;}
+		p{color:$dark_grey;font-size:14px;line-height:22px;
+			span{color:$blue;text-transform:uppercase;font-weight:800;
+				&:hover{color:$green;}
 			}
 		}
+		img{width:150px;height:200px;}
 	}
 }
 
@@ -151,7 +147,7 @@
 /* === AJAX MODALS ===== */
 /* ====================== */
 
-#post-modal{position:fixed;width:60vw;height:80vh;background:white;z-index:2;top:0;bottom:0;left:0;right:0;margin:auto;opacity:0;visibility:hidden;transition:all .2s ease-in-out;padding:45px;overflow-y:scroll;
+#post-modal{position:fixed;width:60vw;height:auto;background:white;z-index:2;top:50%;@include transform(translateY(-50%));left:0;right:0;margin:auto;opacity:0;visibility:hidden;transition:all .2s ease-in-out;padding:45px;overflow-y:scroll;
 	&.active{opacity:1;visibility:visible;}
 	.fa-close{position:absolute;top:15px;right:15px;font-size:16px;color:$white;border-radius:20px;background-color:$grey;transition:all .2s ease-in-out;width:20px;height:20px;text-align:center;line-height:20px;cursor:pointer;opacity:.9;
 		&:hover{@include transform(scale(1.2));opacity:1;}
@@ -218,7 +214,7 @@
 /* === VALUES ==== */
 /* ====================== */
 
-.values{padding:60px 0;margin-left:0;margin-right:0;
+.values{padding:60px 0 30px;margin-left:0;margin-right:0;background-color:$cream;
 	*{text-align:center;}
 	h1{color:$green;margin-bottom:45px;}
 	h2{border-top:2px solid $green;border-bottom:2px solid $green;padding:10px 0;max-width:75%;margin:0 auto;color:$blue;font-family:"Georgia", serif;margin-bottom:20px;text-transform:uppercase;font-size:20px;}
@@ -273,7 +269,7 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 /* === PRODUCT HEADER ======== */
 /* =========================== */
 
-.product-header{background-color:$cream;padding:40px 0;
+.product-header{background-color:$cream;padding:30px 0;
 	.product-tagline{height:100px;border-right:2px solid $green;
 		h1{color:$green;font-size:36px;margin-left:30px;font-weight:100;@include vert-align(50%,-50%);}
 	}
@@ -313,7 +309,7 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 		h3{color:$green;font-size:20px;margin-bottom:15px;}
 		p{max-width:85%;margin:0 auto;}
 		.product{margin-bottom:50px;min-height:400px;}
-		a{color:$blue;
+		a{color:$blue;font-weight:800;
 			i{margin-left:5px;pointer-events:none;}
 		}
 		.hidden-content{display:none;}
@@ -329,7 +325,7 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 	h3{color:$green;font-size:24px;margin-bottom:15px;font-weight:800;}
 	p{max-width:85%;margin:0 auto;}
 	a{color:$blue;
-		i{margin-left:5px;}
+		i{margin-left:5px;pointer-events:none;}
 	}
 	.prod-info{margin-bottom:30px;}
 	.hidden-content{display:none;}

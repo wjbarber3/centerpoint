@@ -1486,8 +1486,13 @@ a {
   text-decoration: none;
   transition: all .2s ease-in-out;
 }
-
 /* line 12, ../scss/smacss/_base.scss */
+a:hover {
+  color: #25A549;
+  text-decoration: none;
+}
+
+/* line 14, ../scss/smacss/_base.scss */
 strong {
   font-weight: bold;
 }
@@ -1495,22 +1500,22 @@ strong {
 /* ================== */
 /* === BUTTONS ====== */
 /* ================== */
-/* line 18, ../scss/smacss/_base.scss */
+/* line 20, ../scss/smacss/_base.scss */
 .main-btn {
   font-weight: 800;
   color: #28317D;
 }
-/* line 19, ../scss/smacss/_base.scss */
+/* line 21, ../scss/smacss/_base.scss */
 .main-btn:hover {
-  color: #8DC63F;
+  color: #25A549;
 }
-/* line 20, ../scss/smacss/_base.scss */
+/* line 22, ../scss/smacss/_base.scss */
 .main-btn:hover i.main-btn-icon {
-  color: #8DC63F;
-  border-color: #8DC63F;
+  color: #25A549;
+  border-color: #25A549;
 }
 
-/* line 23, ../scss/smacss/_base.scss */
+/* line 25, ../scss/smacss/_base.scss */
 i.main-btn-icon {
   text-align: center;
   color: #28317D;
@@ -1526,17 +1531,17 @@ i.main-btn-icon {
 /* ================== */
 /* === OTHER BASE === */
 /* ================== */
-/* line 29, ../scss/smacss/_base.scss */
+/* line 31, ../scss/smacss/_base.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 30, ../scss/smacss/_base.scss */
+/* line 32, ../scss/smacss/_base.scss */
 svg {
   fill: white;
 }
 
-/* line 31, ../scss/smacss/_base.scss */
+/* line 33, ../scss/smacss/_base.scss */
 .main-wrap {
   width: 1200px;
   position: relative;
@@ -1546,27 +1551,27 @@ svg {
   min-width: 55%;
 }
 
-/* line 33, ../scss/smacss/_base.scss */
+/* line 35, ../scss/smacss/_base.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 34, ../scss/smacss/_base.scss */
+/* line 36, ../scss/smacss/_base.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 36, ../scss/smacss/_base.scss */
+/* line 38, ../scss/smacss/_base.scss */
 .mobile-only {
   display: none;
 }
 
-/* line 37, ../scss/smacss/_base.scss */
+/* line 39, ../scss/smacss/_base.scss */
 .mobile-hide {
   display: block;
 }
 
-/* line 38, ../scss/smacss/_base.scss */
+/* line 40, ../scss/smacss/_base.scss */
 .has-shadow {
   background-image: url("../img/content-shadow-top-full.png");
   background-position: center -6px;
@@ -1631,7 +1636,7 @@ header .menu-main-nav-container li ul li {
 /* line 13, ../scss/smacss/_layout.scss */
 header .menu-main-nav-container li ul li:last-child a {
   padding: 20px;
-  border-right: 1px solid #28317D;
+  border-right: 2px solid #28317D;
 }
 /* line 15, ../scss/smacss/_layout.scss */
 header .menu-main-nav-container li ul a {
@@ -1652,7 +1657,7 @@ header .menu-main-nav-container a {
   font-weight: 700;
   color: #28317D;
   text-transform: uppercase;
-  border-right: 1px solid #8DC63F;
+  border-right: 2px solid #8DC63F;
 }
 /* line 20, ../scss/smacss/_layout.scss */
 header .menu-main-nav-container a:hover {
@@ -2087,6 +2092,7 @@ footer .fineprint a:hover {
 /* line 113, ../scss/smacss/_modules.scss */
 .news-events .event {
   border-right: 2px solid #25A549;
+  min-height: 415px;
 }
 /* line 114, ../scss/smacss/_modules.scss */
 .news-events .event:nth-child(3) {
@@ -2170,54 +2176,46 @@ footer .fineprint a:hover {
 /* line 136, ../scss/smacss/_modules.scss */
 #team-members .team-list h2 {
   font-weight: 800;
-  color: #28317D;
+  color: #25A549;
   margin: 6px 0 4px;
 }
 /* line 137, ../scss/smacss/_modules.scss */
 #team-members .team-list p {
-  color: #28317D;
+  color: #363636;
   font-size: 14px;
   line-height: 22px;
 }
 /* line 138, ../scss/smacss/_modules.scss */
 #team-members .team-list p span {
-  color: #25A549;
+  color: #28317D;
   text-transform: uppercase;
+  font-weight: 800;
 }
-/* line 140, ../scss/smacss/_modules.scss */
+/* line 139, ../scss/smacss/_modules.scss */
+#team-members .team-list p span:hover {
+  color: #25A549;
+}
+/* line 142, ../scss/smacss/_modules.scss */
 #team-members .team-list img {
   width: 150px;
   height: 200px;
-}
-/* line 141, ../scss/smacss/_modules.scss */
-#team-members .team-list a {
-  transition: none;
-}
-/* line 142, ../scss/smacss/_modules.scss */
-#team-members .team-list a:hover {
-  opacity: .8;
-}
-/* line 143, ../scss/smacss/_modules.scss */
-#team-members .team-list a:hover p, #team-members .team-list a:hover h2 {
-  color: #25A549;
-}
-/* line 144, ../scss/smacss/_modules.scss */
-#team-members .team-list a:hover span {
-  text-decoration: underline;
 }
 
 /* ====================== */
 /* === AJAX MODALS ===== */
 /* ====================== */
-/* line 154, ../scss/smacss/_modules.scss */
+/* line 150, ../scss/smacss/_modules.scss */
 #post-modal {
   position: fixed;
   width: 60vw;
-  height: 80vh;
+  height: auto;
   background: white;
   z-index: 2;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   left: 0;
   right: 0;
   margin: auto;
@@ -2227,12 +2225,12 @@ footer .fineprint a:hover {
   padding: 45px;
   overflow-y: scroll;
 }
-/* line 155, ../scss/smacss/_modules.scss */
+/* line 151, ../scss/smacss/_modules.scss */
 #post-modal.active {
   opacity: 1;
   visibility: visible;
 }
-/* line 156, ../scss/smacss/_modules.scss */
+/* line 152, ../scss/smacss/_modules.scss */
 #post-modal .fa-close {
   position: absolute;
   top: 15px;
@@ -2249,7 +2247,7 @@ footer .fineprint a:hover {
   cursor: pointer;
   opacity: .9;
 }
-/* line 157, ../scss/smacss/_modules.scss */
+/* line 153, ../scss/smacss/_modules.scss */
 #post-modal .fa-close:hover {
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -2257,14 +2255,14 @@ footer .fineprint a:hover {
   transform: scale(1.2);
   opacity: 1;
 }
-/* line 159, ../scss/smacss/_modules.scss */
+/* line 155, ../scss/smacss/_modules.scss */
 #post-modal img {
   float: right;
   margin: 0 0 30px 30px;
   width: 150px;
   height: 200px;
 }
-/* line 160, ../scss/smacss/_modules.scss */
+/* line 156, ../scss/smacss/_modules.scss */
 #post-modal h2 {
   text-transform: uppercase;
   font-size: 20px;
@@ -2272,12 +2270,12 @@ footer .fineprint a:hover {
   font-weight: 800;
   margin-bottom: 4px;
 }
-/* line 161, ../scss/smacss/_modules.scss */
+/* line 157, ../scss/smacss/_modules.scss */
 #post-modal p:first-of-type {
   font-size: 16px;
   margin-bottom: 10px;
 }
-/* line 162, ../scss/smacss/_modules.scss */
+/* line 158, ../scss/smacss/_modules.scss */
 #post-modal p + p {
   margin-top: 10px;
 }
@@ -2285,7 +2283,7 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === DARK OVERLAYS ==== */
 /* ====================== */
-/* line 169, ../scss/smacss/_modules.scss */
+/* line 165, ../scss/smacss/_modules.scss */
 #full-overlay {
   position: fixed;
   width: 100vw;
@@ -2303,26 +2301,26 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === JUMP LINKS ==== */
 /* ====================== */
-/* line 175, ../scss/smacss/_modules.scss */
+/* line 171, ../scss/smacss/_modules.scss */
 .jump-links, .services-links {
   width: 100%;
   text-align: center;
   padding: 30px 0;
 }
-/* line 176, ../scss/smacss/_modules.scss */
+/* line 172, ../scss/smacss/_modules.scss */
 .jump-links nav, .services-links nav {
   display: block;
 }
-/* line 177, ../scss/smacss/_modules.scss */
+/* line 173, ../scss/smacss/_modules.scss */
 .jump-links nav li, .services-links nav li {
   display: inline-block;
 }
-/* line 178, ../scss/smacss/_modules.scss */
+/* line 174, ../scss/smacss/_modules.scss */
 .jump-links nav li:last-of-type a, .services-links nav li:last-of-type a {
   padding-right: 0px;
   border-right: none;
 }
-/* line 180, ../scss/smacss/_modules.scss */
+/* line 176, ../scss/smacss/_modules.scss */
 .jump-links nav a, .services-links nav a {
   padding: 20px;
   color: #28317D;
@@ -2332,11 +2330,11 @@ footer .fineprint a:hover {
   display: block;
   border-right: 2px solid #25A549;
 }
-/* line 181, ../scss/smacss/_modules.scss */
+/* line 177, ../scss/smacss/_modules.scss */
 .jump-links nav a:hover, .services-links nav a:hover {
   color: #25A549;
 }
-/* line 182, ../scss/smacss/_modules.scss */
+/* line 178, ../scss/smacss/_modules.scss */
 .jump-links nav a.current, .services-links nav a.current {
   color: #25A549;
 }
@@ -2344,22 +2342,22 @@ footer .fineprint a:hover {
 /* =============================== */
 /* === SERVICE LINKS SPECIFIC ==== */
 /* =============================== */
-/* line 192, ../scss/smacss/_modules.scss */
+/* line 188, ../scss/smacss/_modules.scss */
 .services-links nav {
   height: 85px;
 }
-/* line 193, ../scss/smacss/_modules.scss */
+/* line 189, ../scss/smacss/_modules.scss */
 .services-links nav li {
   max-width: 15%;
   border-right: 2px solid #25A549;
   height: 100%;
   margin-left: -4px;
 }
-/* line 194, ../scss/smacss/_modules.scss */
+/* line 190, ../scss/smacss/_modules.scss */
 .services-links nav li:last-of-type a {
   padding-right: 20px;
 }
-/* line 196, ../scss/smacss/_modules.scss */
+/* line 192, ../scss/smacss/_modules.scss */
 .services-links nav a {
   display: table-cell;
   vertical-align: middle;
@@ -2370,7 +2368,7 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === COMPANY TOP ==== */
 /* ====================== */
-/* line 204, ../scss/smacss/_modules.scss */
+/* line 200, ../scss/smacss/_modules.scss */
 .company-top {
   background-color: #F2F0EB;
   padding-top: 60px;
@@ -2378,37 +2376,37 @@ footer .fineprint a:hover {
   margin-right: 0;
   margin-left: 0;
 }
-/* line 205, ../scss/smacss/_modules.scss */
+/* line 201, ../scss/smacss/_modules.scss */
 .company-top p {
   color: #4A4746;
 }
-/* line 206, ../scss/smacss/_modules.scss */
+/* line 202, ../scss/smacss/_modules.scss */
 .company-top p + p {
   margin-top: 20px;
 }
-/* line 208, ../scss/smacss/_modules.scss */
+/* line 204, ../scss/smacss/_modules.scss */
 .company-top .quicklinks {
   border-left: 2px solid #25A549;
   padding-left: 30px;
 }
-/* line 209, ../scss/smacss/_modules.scss */
+/* line 205, ../scss/smacss/_modules.scss */
 .company-top .quicklinks h3 {
   font-size: 18px;
   color: #25A549;
   font-weight: 300;
   margin-bottom: 30px;
 }
-/* line 210, ../scss/smacss/_modules.scss */
+/* line 206, ../scss/smacss/_modules.scss */
 .company-top .quicklinks li {
   margin-bottom: 12px;
 }
-/* line 211, ../scss/smacss/_modules.scss */
+/* line 207, ../scss/smacss/_modules.scss */
 .company-top .quicklinks a {
   color: #28317D;
   font-weight: 800;
   line-height: 22px;
 }
-/* line 212, ../scss/smacss/_modules.scss */
+/* line 208, ../scss/smacss/_modules.scss */
 .company-top .quicklinks a:hover {
   color: #25A549;
 }
@@ -2416,22 +2414,23 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === VALUES ==== */
 /* ====================== */
-/* line 221, ../scss/smacss/_modules.scss */
+/* line 217, ../scss/smacss/_modules.scss */
 .values {
-  padding: 60px 0;
+  padding: 60px 0 30px;
   margin-left: 0;
   margin-right: 0;
+  background-color: #F2F0EB;
 }
-/* line 222, ../scss/smacss/_modules.scss */
+/* line 218, ../scss/smacss/_modules.scss */
 .values * {
   text-align: center;
 }
-/* line 223, ../scss/smacss/_modules.scss */
+/* line 219, ../scss/smacss/_modules.scss */
 .values h1 {
   color: #25A549;
   margin-bottom: 45px;
 }
-/* line 224, ../scss/smacss/_modules.scss */
+/* line 220, ../scss/smacss/_modules.scss */
 .values h2 {
   border-top: 2px solid #25A549;
   border-bottom: 2px solid #25A549;
@@ -2444,27 +2443,27 @@ footer .fineprint a:hover {
   text-transform: uppercase;
   font-size: 20px;
 }
-/* line 225, ../scss/smacss/_modules.scss */
+/* line 221, ../scss/smacss/_modules.scss */
 .values p {
   max-width: 75%;
   margin: 0 auto;
   min-height: 160px;
   margin-bottom: 20px;
 }
-/* line 226, ../scss/smacss/_modules.scss */
+/* line 222, ../scss/smacss/_modules.scss */
 .values.green-background {
   background-color: #25A549;
 }
-/* line 227, ../scss/smacss/_modules.scss */
+/* line 223, ../scss/smacss/_modules.scss */
 .values.green-background h1 {
   color: #FFFFFF;
 }
-/* line 228, ../scss/smacss/_modules.scss */
+/* line 224, ../scss/smacss/_modules.scss */
 .values.green-background h2 {
   color: #FFFFFF;
   border-color: #28317D;
 }
-/* line 229, ../scss/smacss/_modules.scss */
+/* line 225, ../scss/smacss/_modules.scss */
 .values.green-background p {
   color: #FFFFFF;
   min-height: 100px;
@@ -2473,7 +2472,7 @@ footer .fineprint a:hover {
 /* ====================== */
 /* === CONTACT ==== */
 /* ====================== */
-/* line 238, ../scss/smacss/_modules.scss */
+/* line 234, ../scss/smacss/_modules.scss */
 .contact .contact-content {
   background-image: url("../img/content-shadow-top-full.png");
   background-position: center -6px;
@@ -2481,50 +2480,50 @@ footer .fineprint a:hover {
   background-repeat: no-repeat;
   padding-top: 60px;
 }
-/* line 239, ../scss/smacss/_modules.scss */
+/* line 235, ../scss/smacss/_modules.scss */
 .contact .featured-image img {
   margin-bottom: 0px;
   display: block;
 }
-/* line 240, ../scss/smacss/_modules.scss */
+/* line 236, ../scss/smacss/_modules.scss */
 .contact .full-text h1 {
   line-height: 32px;
   margin-bottom: 0;
 }
-/* line 241, ../scss/smacss/_modules.scss */
+/* line 237, ../scss/smacss/_modules.scss */
 .contact h1, .contact h2 {
   color: #25A549;
 }
-/* line 242, ../scss/smacss/_modules.scss */
+/* line 238, ../scss/smacss/_modules.scss */
 .contact .form-fields {
   border-right: 2px solid #25A549;
   margin-bottom: 20px;
   padding-right: 30px;
 }
-/* line 243, ../scss/smacss/_modules.scss */
+/* line 239, ../scss/smacss/_modules.scss */
 .contact .form-fields h1 {
   text-transform: uppercase;
   margin-bottom: 15px;
   font-size: 20px;
 }
-/* line 245, ../scss/smacss/_modules.scss */
+/* line 241, ../scss/smacss/_modules.scss */
 .contact .contact-info {
   padding-left: 30px;
 }
-/* line 246, ../scss/smacss/_modules.scss */
+/* line 242, ../scss/smacss/_modules.scss */
 .contact .contact-info a {
   color: #28317D;
   font-weight: bold;
 }
-/* line 247, ../scss/smacss/_modules.scss */
+/* line 243, ../scss/smacss/_modules.scss */
 .contact .contact-info a:hover {
   color: #25A549;
 }
-/* line 249, ../scss/smacss/_modules.scss */
+/* line 245, ../scss/smacss/_modules.scss */
 .contact .contact-info p {
   max-width: 80%;
 }
-/* line 251, ../scss/smacss/_modules.scss */
+/* line 247, ../scss/smacss/_modules.scss */
 .contact .info-block {
   margin-bottom: 30px;
 }
@@ -2532,7 +2531,7 @@ footer .fineprint a:hover {
 /* ================== */
 /* === FORM ======= */
 /* ================== */
-/* line 258, ../scss/smacss/_modules.scss */
+/* line 254, ../scss/smacss/_modules.scss */
 form {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   margin: 0;
@@ -2541,24 +2540,24 @@ form {
   vertical-align: baseline;
   margin-bottom: 30px;
 }
-/* line 259, ../scss/smacss/_modules.scss */
+/* line 255, ../scss/smacss/_modules.scss */
 form p {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 260, ../scss/smacss/_modules.scss */
+/* line 256, ../scss/smacss/_modules.scss */
 form p .small, form p small {
   font-size: 85%;
 }
-/* line 262, ../scss/smacss/_modules.scss */
+/* line 258, ../scss/smacss/_modules.scss */
 form .form-group {
   margin-bottom: 15px;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 263, ../scss/smacss/_modules.scss */
+/* line 259, ../scss/smacss/_modules.scss */
 form .form-control {
   display: block;
   width: 100%;
@@ -2577,17 +2576,17 @@ form .form-control {
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
-/* line 264, ../scss/smacss/_modules.scss */
+/* line 260, ../scss/smacss/_modules.scss */
 form label {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 22px;
 }
-/* line 265, ../scss/smacss/_modules.scss */
+/* line 261, ../scss/smacss/_modules.scss */
 form .required {
   color: red;
 }
-/* line 266, ../scss/smacss/_modules.scss */
+/* line 262, ../scss/smacss/_modules.scss */
 form .checkbox-inline, form .radio-inline {
   position: relative;
   display: inline-block;
@@ -2597,18 +2596,18 @@ form .checkbox-inline, form .radio-inline {
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 267, ../scss/smacss/_modules.scss */
+/* line 263, ../scss/smacss/_modules.scss */
 form .checkbox-inline input[type=checkbox] {
   position: absolute;
   margin-left: -16px;
 }
-/* line 268, ../scss/smacss/_modules.scss */
+/* line 264, ../scss/smacss/_modules.scss */
 form input[type=checkbox] {
   margin: 5px 0 0;
   margin-top: 1px\9;
   line-height: normal;
 }
-/* line 269, ../scss/smacss/_modules.scss */
+/* line 265, ../scss/smacss/_modules.scss */
 form button, form html input[type=button], form input[type=reset], form input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
@@ -2624,17 +2623,17 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === PRODUCT HEADER ======== */
 /* =========================== */
-/* line 276, ../scss/smacss/_modules.scss */
+/* line 272, ../scss/smacss/_modules.scss */
 .product-header {
   background-color: #F2F0EB;
-  padding: 40px 0;
+  padding: 30px 0;
 }
-/* line 277, ../scss/smacss/_modules.scss */
+/* line 273, ../scss/smacss/_modules.scss */
 .product-header .product-tagline {
   height: 100px;
   border-right: 2px solid #25A549;
 }
-/* line 278, ../scss/smacss/_modules.scss */
+/* line 274, ../scss/smacss/_modules.scss */
 .product-header .product-tagline h1 {
   color: #25A549;
   font-size: 36px;
@@ -2647,7 +2646,7 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 280, ../scss/smacss/_modules.scss */
+/* line 276, ../scss/smacss/_modules.scss */
 .product-header .product-icon img {
   max-width: 230px;
   height: auto;
@@ -2657,16 +2656,16 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === PRODUCT INFO ======== */
 /* =========================== */
-/* line 287, ../scss/smacss/_modules.scss */
+/* line 283, ../scss/smacss/_modules.scss */
 .product-info {
   padding: 65px 0 50px;
 }
-/* line 288, ../scss/smacss/_modules.scss */
+/* line 284, ../scss/smacss/_modules.scss */
 .product-info h1 {
   color: #25A549;
   margin-bottom: 30px;
 }
-/* line 289, ../scss/smacss/_modules.scss */
+/* line 285, ../scss/smacss/_modules.scss */
 .product-info p + p {
   margin-top: 30px;
 }
@@ -2674,27 +2673,27 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === PRODUCT BULLETS ======= */
 /* =========================== */
-/* line 296, ../scss/smacss/_modules.scss */
+/* line 292, ../scss/smacss/_modules.scss */
 .product-bullets {
   padding: 65px 0 50px;
   background-color: #F2F0EB;
 }
-/* line 297, ../scss/smacss/_modules.scss */
+/* line 293, ../scss/smacss/_modules.scss */
 .product-bullets h1 {
   color: #25A549;
   margin-bottom: 30px;
 }
-/* line 298, ../scss/smacss/_modules.scss */
+/* line 294, ../scss/smacss/_modules.scss */
 .product-bullets li {
   list-style: initial;
   list-style-position: inside;
   color: #25A549;
 }
-/* line 299, ../scss/smacss/_modules.scss */
+/* line 295, ../scss/smacss/_modules.scss */
 .product-bullets li span {
   color: #4A4746;
 }
-/* line 300, ../scss/smacss/_modules.scss */
+/* line 296, ../scss/smacss/_modules.scss */
 .product-bullets li + li {
   margin-top: 20px;
 }
@@ -2702,25 +2701,25 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* ================================ */
 /* === TWO COLUMN PROD INFO ======= */
 /* ================================ */
-/* line 308, ../scss/smacss/_modules.scss */
+/* line 304, ../scss/smacss/_modules.scss */
 .two-column-product-details {
   background-color: #25A549;
   text-align: center;
   padding: 20px 0;
 }
-/* line 309, ../scss/smacss/_modules.scss */
+/* line 305, ../scss/smacss/_modules.scss */
 .two-column-product-details h1 {
   color: #FFFFFF;
   text-transform: uppercase;
   margin: 20px 0;
 }
-/* line 310, ../scss/smacss/_modules.scss */
+/* line 306, ../scss/smacss/_modules.scss */
 .two-column-product-details .info-container {
   background-color: #FFFFFF;
   padding: 40px 20px;
   border-radius: 15px;
 }
-/* line 311, ../scss/smacss/_modules.scss */
+/* line 307, ../scss/smacss/_modules.scss */
 .two-column-product-details .info-container h2 {
   border-top: 2px solid #25A549;
   display: inline-block;
@@ -2734,37 +2733,38 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   text-transform: uppercase;
   font-size: 24px;
 }
-/* line 312, ../scss/smacss/_modules.scss */
+/* line 308, ../scss/smacss/_modules.scss */
 .two-column-product-details .info-container img {
   max-width: 90%;
   margin: 0 auto 30px;
 }
-/* line 313, ../scss/smacss/_modules.scss */
+/* line 309, ../scss/smacss/_modules.scss */
 .two-column-product-details .info-container h3 {
   color: #25A549;
   font-size: 20px;
   margin-bottom: 15px;
 }
-/* line 314, ../scss/smacss/_modules.scss */
+/* line 310, ../scss/smacss/_modules.scss */
 .two-column-product-details .info-container p {
   max-width: 85%;
   margin: 0 auto;
 }
-/* line 315, ../scss/smacss/_modules.scss */
+/* line 311, ../scss/smacss/_modules.scss */
 .two-column-product-details .info-container .product {
   margin-bottom: 50px;
   min-height: 400px;
 }
-/* line 316, ../scss/smacss/_modules.scss */
+/* line 312, ../scss/smacss/_modules.scss */
 .two-column-product-details .info-container a {
   color: #28317D;
+  font-weight: 800;
 }
-/* line 317, ../scss/smacss/_modules.scss */
+/* line 313, ../scss/smacss/_modules.scss */
 .two-column-product-details .info-container a i {
   margin-left: 5px;
   pointer-events: none;
 }
-/* line 319, ../scss/smacss/_modules.scss */
+/* line 315, ../scss/smacss/_modules.scss */
 .two-column-product-details .info-container .hidden-content {
   display: none;
 }
@@ -2772,42 +2772,43 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* ================================ */
 /* === PROD FULL WIDTH 2 COLUMN === */
 /* ================================ */
-/* line 327, ../scss/smacss/_modules.scss */
+/* line 323, ../scss/smacss/_modules.scss */
 .two-column-full {
   padding: 60px 0;
   background-color: #F2F0EB;
   text-align: center;
 }
-/* line 328, ../scss/smacss/_modules.scss */
+/* line 324, ../scss/smacss/_modules.scss */
 .two-column-full img {
   max-width: 100%;
   margin: 0 auto 30px;
 }
-/* line 329, ../scss/smacss/_modules.scss */
+/* line 325, ../scss/smacss/_modules.scss */
 .two-column-full h3 {
   color: #25A549;
   font-size: 24px;
   margin-bottom: 15px;
   font-weight: 800;
 }
-/* line 330, ../scss/smacss/_modules.scss */
+/* line 326, ../scss/smacss/_modules.scss */
 .two-column-full p {
   max-width: 85%;
   margin: 0 auto;
 }
-/* line 331, ../scss/smacss/_modules.scss */
+/* line 327, ../scss/smacss/_modules.scss */
 .two-column-full a {
   color: #28317D;
 }
-/* line 332, ../scss/smacss/_modules.scss */
+/* line 328, ../scss/smacss/_modules.scss */
 .two-column-full a i {
   margin-left: 5px;
+  pointer-events: none;
 }
-/* line 334, ../scss/smacss/_modules.scss */
+/* line 330, ../scss/smacss/_modules.scss */
 .two-column-full .prod-info {
   margin-bottom: 30px;
 }
-/* line 335, ../scss/smacss/_modules.scss */
+/* line 331, ../scss/smacss/_modules.scss */
 .two-column-full .hidden-content {
   display: none;
 }
@@ -2815,24 +2816,24 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* ================================ */
 /* === PROD BG IMAGE MODULE ======= */
 /* ================================ */
-/* line 342, ../scss/smacss/_modules.scss */
+/* line 338, ../scss/smacss/_modules.scss */
 .product-bg-image {
   background: url("../img/prod-bg.png") no-repeat;
   padding: 60px 0;
   background-size: cover;
   text-align: center;
 }
-/* line 343, ../scss/smacss/_modules.scss */
+/* line 339, ../scss/smacss/_modules.scss */
 .product-bg-image h3, .product-bg-image p, .product-bg-image a {
   color: #FFFFFF;
 }
-/* line 344, ../scss/smacss/_modules.scss */
+/* line 340, ../scss/smacss/_modules.scss */
 .product-bg-image h3 {
   font-weight: 800;
   margin-bottom: 15px;
   font-size: 22px;
 }
-/* line 345, ../scss/smacss/_modules.scss */
+/* line 341, ../scss/smacss/_modules.scss */
 .product-bg-image a {
   font-weight: 800;
 }
@@ -2840,19 +2841,19 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === SERVICES SLIDER ======= */
 /* =========================== */
-/* line 352, ../scss/smacss/_modules.scss */
+/* line 348, ../scss/smacss/_modules.scss */
 #services-slider {
   background-color: #25A549;
   padding: 30px 0;
 }
-/* line 353, ../scss/smacss/_modules.scss */
+/* line 349, ../scss/smacss/_modules.scss */
 #services-slider .title-area {
   position: relative;
   width: 100%;
   text-align: center;
   margin-bottom: 50px;
 }
-/* line 354, ../scss/smacss/_modules.scss */
+/* line 350, ../scss/smacss/_modules.scss */
 #services-slider .title-area .service-arrow {
   position: absolute;
   top: 0;
@@ -2861,32 +2862,32 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   color: #fff;
   font-size: 42px;
 }
-/* line 355, ../scss/smacss/_modules.scss */
+/* line 351, ../scss/smacss/_modules.scss */
 #services-slider .title-area .service-arrow.prev {
   left: 0;
   opacity: .3;
   pointer-events: none;
 }
-/* line 356, ../scss/smacss/_modules.scss */
+/* line 352, ../scss/smacss/_modules.scss */
 #services-slider .title-area .service-arrow.next {
   right: 0;
 }
-/* line 359, ../scss/smacss/_modules.scss */
+/* line 355, ../scss/smacss/_modules.scss */
 #services-slider .content-area {
   background-color: #FFFFFF;
   padding: 30px;
   min-height: 250px;
   border-radius: 8px;
 }
-/* line 360, ../scss/smacss/_modules.scss */
+/* line 356, ../scss/smacss/_modules.scss */
 #services-slider .content-area li {
   display: none;
 }
-/* line 361, ../scss/smacss/_modules.scss */
+/* line 357, ../scss/smacss/_modules.scss */
 #services-slider .content-area li.active {
   display: block;
 }
-/* line 364, ../scss/smacss/_modules.scss */
+/* line 360, ../scss/smacss/_modules.scss */
 #services-slider h2 {
   color: #fff;
   font-size: 36px;
@@ -3255,6 +3256,7 @@ form button, form html input[type=button], form input[type=reset], form input[ty
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #4A4746;
+    min-height: auto;
   }
   /* line 152, ../scss/smacss/_states.scss */
   .news-events p {

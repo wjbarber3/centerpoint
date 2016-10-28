@@ -12,9 +12,9 @@
 		</ul>
 		<nav>
 			<ul>
-				<li><a href="#">News</a></li>
+				<li><a href="/who-we-are#news-anchor">News</a></li>
 				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Contact Us</a></li>
+				<li><a href="/contact">Contact Us</a></li>
 			</ul>	
 		</nav>
 		<div class="fineprint">

@@ -109,11 +109,9 @@ $thumb_url = $thumb_url_array[0];
 			<div class="team-list">
 				<?php while ( $team->have_posts() ) : $team->the_post(); ?>
 					<div class="col-sm-3 employee">
-						<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
-							<?php echo the_post_thumbnail( $size, $attr ); ?>
-							<h2><?php echo the_title(); ?></h2>
-							<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
-						</a>
+						<?php echo the_post_thumbnail( $size, $attr ); ?>
+						<h2><?php echo the_title(); ?></h2>
+						<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
 					</div><!--end team-list-->
 				<?php endwhile; ?>
 				<div class="clearfix"></div>
@@ -136,11 +134,9 @@ $thumb_url = $thumb_url_array[0];
 			<div class="team-list">
 				<?php while ( $boards->have_posts() ) : $boards->the_post(); ?>
 					<div class="col-sm-3 employee">
-						<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
-							<?php echo the_post_thumbnail( $size, $attr ); ?>
-							<h2><?php echo the_title(); ?></h2>
-							<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
-						</a>
+						<?php echo the_post_thumbnail( $size, $attr ); ?>
+						<h2><?php echo the_title(); ?></h2>
+						<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
 					</div><!--end team-list-->
 				<?php endwhile; ?>
 				<div class="clearfix"></div>
@@ -163,11 +159,9 @@ $thumb_url = $thumb_url_array[0];
 			<div class="team-list">
 				<?php while ( $advisors->have_posts() ) : $advisors->the_post(); ?>
 					<div class="col-sm-3 employee">
-						<a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>">
-							<?php echo the_post_thumbnail( $size, $attr ); ?>
-							<h2><?php echo the_title(); ?></h2>
-							<p><?php echo the_field('employee_title'); ?><span> Read Bio <i class="fa fa-plus"></i></span></p>
-						</a>
+						<?php echo the_post_thumbnail( $size, $attr ); ?>
+						<h2><?php echo the_title(); ?></h2>
+						<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
 					</div><!--end team-list-->
 				<?php endwhile; ?>
 				<div class="clearfix"></div>
@@ -179,7 +173,7 @@ $thumb_url = $thumb_url_array[0];
 	</div><!--end team-members-->
 
 	<?php while ( have_posts() ) : the_post(); ?>
-		<div class="news-events has-shadow">
+		<div class="news-events has-shadow" id="news-anchor">
 			<div class="main-wrap">
 				<?php while(have_rows('news')) : the_row(); ?>
 					<div class="col-md-4 event">
