@@ -2,6 +2,18 @@
 
 <?php get_header(); ?>
 
+<?php
+$thumb_id = get_post_thumbnail_id();
+$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+$thumb_url = $thumb_url_array[0];
+?>
+
+<?php if(get_post_thumbnail_id()): ?> 
+	<div class="featured-image">
+		<img src="<?php echo $thumb_url; ?>">
+	</div><!--end featured-image-->
+<?php endif; ?>
+
 <?php if( have_rows('flex_content') ): ?>
     <?php while ( have_rows('flex_content') ) : the_row(); ?>
 
@@ -88,6 +100,26 @@
 				</div><!--end text-->
 			</div><!--end main-wrap-->
 		</div><!--end background-img-text-->
+	<?php endif; ?>
+
+	<?php  if( get_row_layout() == 'product_callouts' ): ?>
+		<div class="product-callout has-shadow">
+			<div class="main-wrap">
+				<?php if(have_rows('product_column')): ?>
+					<?php while(have_rows('product_column')) : the_row(); ?>
+						<div class="col-md-4 product-column">
+							<div class="inner">
+								<img class="product-icon" src="<?php echo get_sub_field('product_icon')['url']; ?>">
+								<img src="<?php echo get_sub_field('product_image')['url']; ?>">
+								<p><?php the_sub_field('callout_copy'); ?></p>
+								<a class="main-btn" href="<?php the_sub_field('product_link_url'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('product_link_text'); ?></a>
+							</div><!--end inner-->
+						</div><!--end product-column-->
+					<?php endwhile; ?>
+					<div class="clearfix"></div>
+				<?php endif; ?>
+			</div><!--end main-wrap-->
+		</div><!--end product-callout-->
 	<?php endif; ?>
 
 	<?php endwhile; ?><!--end the flex content 'while'-->

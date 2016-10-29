@@ -4,7 +4,7 @@
 
 @include bp(mobile){
 	h1{font-size:20px;line-height:28px;}
-	h1.large{font-size:28px;}
+	h1.large{font-size:28px;line-height:36px;}
 	.mobile-only{display:block;}
 	.mobile-hide{display:none;}
 }
@@ -160,6 +160,32 @@ header{
 			h1{font-size:24px;margin-left:0px;line-height:32px;}
 		}
 		.product-icon img{margin-left:0px;max-width:50%;}
+	}
+}
+
+.product-callout{
+	@include bp(mobile){
+		.product-column{min-height:auto;text-align:center;padding-bottom:30px;padding-top:30px;border-bottom:2px solid green;border-right:none;
+			&:first-child{padding-top:0px;}
+			&:nth-child(3){border-bottom:none;}
+		}
+	}
+}
+
+.what-we-do-content{
+	@include bp(mobile) {
+		.slide-container{padding-left:0px;margin-top:30px;}
+		.slide-triggers{padding-left:0.9375rem;border-right:none;display:none;background:$blue;padding-top:20px;padding-bottom:10px;
+			li{color:$white;
+				&.active{color:$white;}
+			}
+		}
+		.mobile-menu-trigger{display:block;display:block;padding:10px;background:$off_grey;
+			p{color:$blue;font-size:16px;display:inline-block;}
+			i{display:inline-block;float:right;font-size:20px;transition:all .2s ease-in-out;
+				&.flipped{@include transform(rotate(180deg));}
+			}
+		}
 	}
 }
 

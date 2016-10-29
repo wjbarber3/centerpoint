@@ -200,8 +200,6 @@ ServicesSlider = {
             neededIndex = targetIndex + 1,
             targetText = target.text(),
             triggerCount = jQuery(this.servicesTrigger).length;
-            console.log(neededIndex);
-            console.log(triggerCount);
         jQuery(this.servicesTrigger).removeClass("current");
         target.addClass("current");
         jQuery(this.slideTitle).text(targetText);
@@ -326,6 +324,30 @@ Accordion = {
     }
 }
 
+WhatWeDo = {
+    trigger: '.slide-triggers li',
+    slide: '.what-we-do-content .slide',
+    mobileTrigger: '.mobile-menu-trigger',
+    mobileMenu: '.what-we-do-content .slide-triggers',
+    menuArrow: '.mobile-menu-trigger i',
+    init: function() {
+        jQuery(this.trigger).click(this.showSlide.bind(this));
+        jQuery(this.mobileTrigger).click(this.toggleMenu.bind(this));
+    },
+    showSlide: function(e) {
+        var target = jQuery(e.target),
+            targetIndex = target.index(this.trigger);
+        jQuery(this.trigger).removeClass("active");
+        target.addClass("active");
+        jQuery(this.slide).hide();
+        jQuery(this.slide).eq(targetIndex).fadeIn();
+    },
+    toggleMenu: function() {
+        jQuery(this.mobileMenu).slideToggle();
+        jQuery(this.menuArrow).toggleClass("flipped");
+    }
+}
+
 jQuery(document).ready(function() {
     Header.init();
     Slider.init();
@@ -335,6 +357,7 @@ jQuery(document).ready(function() {
     AjaxPost.init();
     ServicesSlider.init();
     Accordion.init();
+    WhatWeDo.init();
 })
 
 var configProfile = {
