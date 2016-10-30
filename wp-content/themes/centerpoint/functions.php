@@ -1780,5 +1780,109 @@ if(function_exists("register_field_group")) {
     'menu_order' => 0,
   ]);
 
+  register_field_group([
+    'id' => 'acf_what-we-provide',
+    'title' => 'What We Provide',
+    'fields' => [
+      [
+        'key' => 'field_37ffcf1233589',
+        'label' => 'What We Provide Content',
+        'name' => 'what_we_provide_content',
+        'type' => 'repeater',
+        'instructions' => 'Add a section',
+        'sub_fields' => [
+          [
+            'key' => 'field_37ffcf1233590',
+            'label' => 'Headline',
+            'name' => 'headline',
+            'type' => 'text',
+            'instructions' => 'Add the headline to the news column. Max 30 chars.',
+            'required' => 1,
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => 'Headline',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => 30,
+          ],
+          [
+            'key' => 'field_37ffcf1233591',
+            'label' => 'Column Image',
+            'name' => 'column_image',
+            'type' => 'image',
+            'instructions' => 'Add the image',
+            'required' => 0,
+            'column_width' => '',
+            'save_format' => 'object',
+            'preview_size' => 'thumbnail',
+            'library' => 'all',
+          ],
+          [
+            'key' => 'field_37ffcf1233592',
+            'label' => 'Content',
+            'name' => 'content',
+            'type' => 'wysiwyg',
+            'instructions' => 'Add the content to the column.',
+            'required' => 1,
+            'column_width' => '',
+            'default_value' => '',
+            'toolbar' => 'full',
+            'media_upload' => 'no',
+          ],
+          [
+            'key' => 'field_37ffcf1233593',
+            'label' => 'Link',
+            'name' => 'link',
+            'type' => 'page_link',
+            'instructions' => 'Choose the destination of the link',
+            'column_width' => '',
+            'post_type' => [
+              0 => 'all',
+            ],
+            'allow_null' => 0,
+            'multiple' => 0,
+          ],
+          [
+            'key' => 'field_37ffcf1233594',
+            'label' => 'Link Text',
+            'name' => 'link_text',
+            'type' => 'text',
+            'instructions' => 'Add the text of the link. Max chars 40.',
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => 'Link Text',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => '',
+          ],
+        ],
+        'row_min' => '',
+        'row_limit' => '',
+        'layout' => 'table',
+        'button_label' => 'Add Row',
+      ],
+    ],
+    'location' => [
+      [
+        [
+          'param' => 'page',
+          'operator' => '==',
+          'value' => '86',
+          'order_no' => 0,
+          'group_no' => 0,
+        ],
+      ],
+    ],
+    'options' => [
+      'position' => 'normal',
+      'layout' => 'no_box',
+      'hide_on_screen' => [
+      ],
+    ],
+    'menu_order' => 0,
+  ]);
+
 }
 

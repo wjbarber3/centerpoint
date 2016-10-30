@@ -11,7 +11,7 @@ $thumb_url = $thumb_url_array[0];
 		<img src="<?php echo $thumb_url; ?>">
 	</div><!--end featured-image-->
 <?php endif; ?>
-
+	
 <div class="full-text">
 	<div class="main-wrap">
 		<h1 class="large"><?php the_title(); ?></h1>
