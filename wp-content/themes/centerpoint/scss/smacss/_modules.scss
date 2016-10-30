@@ -330,6 +330,9 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 	.prod-info{margin-bottom:30px;}
 	.hidden-content{display:none;}
 	&.what-we-do{background-color:$white;}
+	&.what-we-provide{background-color:$white;text-align:left;
+		p{max-width:90%;margin:0 0 20px;}
+	}
 }
 
 /* ================================ */

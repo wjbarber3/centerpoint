@@ -336,7 +336,7 @@ if(function_exists("register_field_group")) {
             'key' => 'field_57ffcf3383598',
             'label' => 'News Content',
             'name' => 'news_content',
-            'type' => 'wysiwyg',
+            'type' => ' ',
             'instructions' => 'Add the content to the news column.  Use the bold button for blue sub-headlines.',
             'required' => 1,
             'column_width' => '',

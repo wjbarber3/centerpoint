@@ -2815,28 +2815,38 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 .two-column-full.what-we-do {
   background-color: #FFFFFF;
 }
+/* line 333, ../scss/smacss/_modules.scss */
+.two-column-full.what-we-provide {
+  background-color: #FFFFFF;
+  text-align: left;
+}
+/* line 334, ../scss/smacss/_modules.scss */
+.two-column-full.what-we-provide p {
+  max-width: 90%;
+  margin: 0 0 20px;
+}
 
 /* ================================ */
 /* === PROD BG IMAGE MODULE ======= */
 /* ================================ */
-/* line 339, ../scss/smacss/_modules.scss */
+/* line 342, ../scss/smacss/_modules.scss */
 .product-bg-image {
   background: url("../img/prod-bg.png") no-repeat;
   padding: 60px 0;
   background-size: cover;
   text-align: center;
 }
-/* line 340, ../scss/smacss/_modules.scss */
+/* line 343, ../scss/smacss/_modules.scss */
 .product-bg-image h3, .product-bg-image p, .product-bg-image a {
   color: #FFFFFF;
 }
-/* line 341, ../scss/smacss/_modules.scss */
+/* line 344, ../scss/smacss/_modules.scss */
 .product-bg-image h3 {
   font-weight: 800;
   margin-bottom: 15px;
   font-size: 22px;
 }
-/* line 342, ../scss/smacss/_modules.scss */
+/* line 345, ../scss/smacss/_modules.scss */
 .product-bg-image a {
   font-weight: 800;
 }
@@ -2844,19 +2854,19 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === SERVICES SLIDER ======= */
 /* =========================== */
-/* line 349, ../scss/smacss/_modules.scss */
+/* line 352, ../scss/smacss/_modules.scss */
 #services-slider {
   background-color: #25A549;
   padding: 30px 0;
 }
-/* line 350, ../scss/smacss/_modules.scss */
+/* line 353, ../scss/smacss/_modules.scss */
 #services-slider .title-area {
   position: relative;
   width: 100%;
   text-align: center;
   margin-bottom: 50px;
 }
-/* line 351, ../scss/smacss/_modules.scss */
+/* line 354, ../scss/smacss/_modules.scss */
 #services-slider .title-area .service-arrow {
   position: absolute;
   top: 0;
@@ -2865,32 +2875,32 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   color: #fff;
   font-size: 42px;
 }
-/* line 352, ../scss/smacss/_modules.scss */
+/* line 355, ../scss/smacss/_modules.scss */
 #services-slider .title-area .service-arrow.prev {
   left: 0;
   opacity: .3;
   pointer-events: none;
 }
-/* line 353, ../scss/smacss/_modules.scss */
+/* line 356, ../scss/smacss/_modules.scss */
 #services-slider .title-area .service-arrow.next {
   right: 0;
 }
-/* line 356, ../scss/smacss/_modules.scss */
+/* line 359, ../scss/smacss/_modules.scss */
 #services-slider .content-area {
   background-color: #FFFFFF;
   padding: 30px;
   min-height: 250px;
   border-radius: 8px;
 }
-/* line 357, ../scss/smacss/_modules.scss */
+/* line 360, ../scss/smacss/_modules.scss */
 #services-slider .content-area li {
   display: none;
 }
-/* line 358, ../scss/smacss/_modules.scss */
+/* line 361, ../scss/smacss/_modules.scss */
 #services-slider .content-area li.active {
   display: block;
 }
-/* line 361, ../scss/smacss/_modules.scss */
+/* line 364, ../scss/smacss/_modules.scss */
 #services-slider h2 {
   color: #fff;
   font-size: 36px;
@@ -2903,35 +2913,35 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === PRODUCT CALLOUT ======= */
 /* =========================== */
-/* line 368, ../scss/smacss/_modules.scss */
+/* line 371, ../scss/smacss/_modules.scss */
 .product-callout {
   padding: 50px 0;
 }
-/* line 369, ../scss/smacss/_modules.scss */
+/* line 372, ../scss/smacss/_modules.scss */
 .product-callout .product-column {
   border-right: 2px solid #25A549;
   min-height: 500px;
 }
-/* line 370, ../scss/smacss/_modules.scss */
+/* line 373, ../scss/smacss/_modules.scss */
 .product-callout .product-column:nth-child(3) {
   border-right: none;
 }
-/* line 372, ../scss/smacss/_modules.scss */
+/* line 375, ../scss/smacss/_modules.scss */
 .product-callout .inner {
   padding: 0 30px;
 }
-/* line 373, ../scss/smacss/_modules.scss */
+/* line 376, ../scss/smacss/_modules.scss */
 .product-callout .product-icon {
   max-width: 60%;
 }
-/* line 374, ../scss/smacss/_modules.scss */
+/* line 377, ../scss/smacss/_modules.scss */
 .product-callout img {
   max-width: 85%;
   margin: 0 auto;
   display: block;
   margin-bottom: 30px;
 }
-/* line 375, ../scss/smacss/_modules.scss */
+/* line 378, ../scss/smacss/_modules.scss */
 .product-callout p {
   margin-bottom: 30px;
 }
@@ -2939,16 +2949,16 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === CONTENT AREA ======= */
 /* =========================== */
-/* line 382, ../scss/smacss/_modules.scss */
+/* line 385, ../scss/smacss/_modules.scss */
 .main-content-area {
   padding: 50px 0;
   color: #FFFFFF;
 }
-/* line 383, ../scss/smacss/_modules.scss */
+/* line 386, ../scss/smacss/_modules.scss */
 .main-content-area.blue-bg {
   background-color: #28317D;
 }
-/* line 384, ../scss/smacss/_modules.scss */
+/* line 387, ../scss/smacss/_modules.scss */
 .main-content-area p + p {
   margin-top: 20px;
 }
@@ -2956,16 +2966,16 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === WHAT WE DO CONTENT ==== */
 /* =========================== */
-/* line 391, ../scss/smacss/_modules.scss */
+/* line 394, ../scss/smacss/_modules.scss */
 .what-we-do-content {
   padding: 50px 0;
 }
-/* line 392, ../scss/smacss/_modules.scss */
+/* line 395, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-triggers {
   border-right: 2px solid #25A549;
   padding-left: 30px;
 }
-/* line 393, ../scss/smacss/_modules.scss */
+/* line 396, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-triggers li {
   margin-bottom: 12px;
   color: #28317D;
@@ -2974,34 +2984,34 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   font-size: 16px;
   cursor: pointer;
 }
-/* line 394, ../scss/smacss/_modules.scss */
+/* line 397, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-triggers li:hover, .what-we-do-content .slide-triggers li.active {
   color: #25A549;
 }
-/* line 397, ../scss/smacss/_modules.scss */
+/* line 400, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-container {
   padding-left: 30px;
 }
-/* line 398, ../scss/smacss/_modules.scss */
+/* line 401, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-container .slide {
   display: none;
 }
-/* line 399, ../scss/smacss/_modules.scss */
+/* line 402, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-container .slide:first-of-type {
   display: block;
 }
-/* line 400, ../scss/smacss/_modules.scss */
+/* line 403, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-container .slide h2 {
   color: #25A549;
   margin-bottom: 10px;
   font-size: 20px;
 }
-/* line 402, ../scss/smacss/_modules.scss */
+/* line 405, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-container .main-btn {
   margin-top: 10px;
   display: inline-block;
 }
-/* line 406, ../scss/smacss/_modules.scss */
+/* line 409, ../scss/smacss/_modules.scss */
 .what-we-do-content .mobile-menu-trigger {
   display: none;
 }

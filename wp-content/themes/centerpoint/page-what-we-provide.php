@@ -21,21 +21,25 @@ $thumb_url = $thumb_url_array[0];
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-	<div class="two-column-full what-we-do has-shadow">
-		<div class="main-wrap">
-			<div class="col-md-6 prod-info">
-				<img src="http://centerpoint-local.com/wp-content/uploads/2016/10/test-1.png" alt="">
-				<h3>Teaching &amp; Learning Solutions</h3>
-				<p>product description</p>
-			</div><!--end prod-info-->
-			<div class="col-md-6 prod-info">
-				<img src="http://centerpoint-local.com/wp-content/uploads/2016/10/test-1.png" alt="">
-				<h3>Assessment Services</h3>
-				<p>no hidden content here</p>
-			</div><!--end prod-info-->
-			<div class="clearfix"></div>
-		</div><!--end main-wrap-->
-	</div><!--end two-column-full-->
+	<?php if(have_rows('what_we_provide_content')): ?>
+
+		<div class="two-column-full what-we-provide has-shadow">
+			<div class="main-wrap">
+				<?php while(have_rows('what_we_provide_content')) : the_row(); ?>
+					<div class="col-md-6 prod-info">
+						<img src="<?php echo get_sub_field('column_image')['url']; ?>" alt="">
+						<h3><?php the_sub_field('headline'); ?></h3>
+						<?php echo the_sub_field('content'); ?>
+						<?php if ( get_sub_field('link_text') ): ?>
+							<a class="main-btn" href="<?php the_sub_field('link'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('link_text'); ?></a>
+						<?php endif; ?>
+					</div><!--end prod-info-->
+				<?php endwhile; ?>
+				<div class="clearfix"></div>
+			</div><!--end main-wrap-->
+		</div><!--end two-column-full-->
+
+	<?php endif; ?>
 
 <?php endwhile; ?>
 
