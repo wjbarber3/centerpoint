@@ -74,8 +74,8 @@ function employees_custom_post_type() {
     'all_items'          => __( 'All Employees' ),
     'view_item'          => __( 'View Employee' ),
     'search_items'       => __( 'Search Employees' ),
-    'not_found'          => __( 'No products found' ),
-    'not_found_in_trash' => __( 'No products found in the Trash' ), 
+    'not_found'          => __( 'No employees found' ),
+    'not_found_in_trash' => __( 'No employees found in the Trash' ), 
     'parent_item_colon'  => '',
     'menu_name'          => 'Employees',
  ];
@@ -84,41 +84,13 @@ function employees_custom_post_type() {
     'description'   => 'Holds our employee information',
     'public'        => true,
     'menu_position' => 5,
-    'supports'      => array( 'title', 'editor', 'thumbnail' ),
+    'supports'      => [ 'title', 'editor', 'thumbnail', 'order' ],
     'has_archive'   => true,
     'rewrite' => [ 'slug' => 'employee' ]
   ];
   register_post_type( 'employee', $args ); 
 }
 add_action( 'init', 'employees_custom_post_type' );
-
-function products_custom_post_type() {
-  $labels = [
-    'name'               => _x( 'Products', 'post type general name' ),
-    'singular_name'      => _x( 'Product', 'post type singular name' ),
-    'add_new'            => _x( 'Add New Product', '' ),
-    'add_new_item'       => __( 'Add New Product' ),
-    'edit_item'          => __( 'Edit Product' ),
-    'new_item'           => __( 'New Product' ),
-    'all_items'          => __( 'All Products' ),
-    'view_item'          => __( 'View Product' ),
-    'search_items'       => __( 'Search Products' ),
-    'not_found'          => __( 'No products found' ),
-    'not_found_in_trash' => __( 'No products found in the Trash' ), 
-    'parent_item_colon'  => '',
-    'menu_name'          => 'Products',
- ];
-  $args = [
-    'labels'        => $labels,
-    'description'   => 'Holds our product information',
-    'public'        => true,
-    'menu_position' => 5,
-    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-    'has_archive'   => true,
-  ];
-  register_post_type( 'product', $args ); 
-}
-add_action( 'init', 'products_custom_post_type' );
 
 //---------------------------------------//
 //---- REWRITE EMPLOYEE PERMALINKS -----//
@@ -156,7 +128,7 @@ function my_taxonomies_employee() {
     'search_items'      => __( 'Search Employee Categories' ),
     'all_items'         => __( 'All Employee Categories' ),
     'parent_item'       => __( 'Parent Employee Category' ),
-    'parent_item_colon' => __( 'Parent Product Category:' ),
+    'parent_item_colon' => __( 'Parent Employee Category:' ),
     'edit_item'         => __( 'Edit Employee Category' ), 
     'update_item'       => __( 'Update Employee Category' ),
     'add_new_item'      => __( 'Add New Employee Category' ),
@@ -409,6 +381,20 @@ if(function_exists("register_field_group")) {
         'instructions' => 'Add the position/title of the employee.',
         'required' => 1,
         'default_value' => '',
+        'placeholder' => 'Employee Title',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'html',
+        'maxlength' => '',
+      ],
+      [
+        'key' => 'field_57fd750d49776',
+        'label' => 'Employee Order',
+        'name' => 'employee_order',
+        'type' => 'text',
+        'instructions' => 'Add the position/title of the employee.',
+        'required' => 0,
+        'default_value' => '1',
         'placeholder' => 'Employee Title',
         'prepend' => '',
         'append' => '',
@@ -1879,6 +1865,7 @@ if(function_exists("register_field_group")) {
       'position' => 'normal',
       'layout' => 'no_box',
       'hide_on_screen' => [
+        0 => 'the_content'
       ],
     ],
     'menu_order' => 0,

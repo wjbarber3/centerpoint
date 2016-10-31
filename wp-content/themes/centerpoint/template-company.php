@@ -101,8 +101,9 @@ $thumb_url = $thumb_url_array[0];
 				'post_type' => 'employee', 
 				'employee_category' => 'team',
 				'posts_per_page' => 20,
-				'orderby' => 'date',
-				'order' => 'DESC'
+				'meta_key' => 'employee_order',
+				'orderby' => 'employee_order',
+				'order' => 'ASC'
 				]);
 			?>
 			<a id="team-list" class="list-trigger" href="#">Team<i class="fa fa-plus-circle"></i></a>
@@ -126,8 +127,9 @@ $thumb_url = $thumb_url_array[0];
 				'post_type' => 'employee', 
 				'employee_category' => 'board-member',
 				'posts_per_page' => 20,
-				'orderby' => 'date',
-				'order' => 'DESC'
+				'meta_key' => 'employee_order',
+				'orderby' => 'employee_order',
+				'order' => 'ASC'
 				]);
 			?>
 			<a id="board-list" class="list-trigger" href="#">Board Members<i class="fa fa-plus-circle"></i></a>
@@ -151,8 +153,9 @@ $thumb_url = $thumb_url_array[0];
 				'post_type' => 'employee', 
 				'employee_category' => 'advisor',
 				'posts_per_page' => 20,
-				'orderby' => 'date',
-				'order' => 'DESC'
+				'meta_key' => 'employee_order',
+				'orderby' => 'employee_order',
+				'order' => 'ASC'
 				]);
 			?>
 			<a id="advisor-list" class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
@@ -181,7 +184,9 @@ $thumb_url = $thumb_url_array[0];
 						<div class="news-content">
 							<?php echo the_sub_field('news_content'); ?>
 						</div><!--end news-content-->
-						<a class="main-btn" href="<?php the_sub_field('news_link'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('news_link_text'); ?></a>
+						<?php if ( get_sub_field('news_link_text') ): ?>
+							<a class="main-btn" href="<?php the_sub_field('news_link'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('news_link_text'); ?></a>
+						<?php endif; ?>
 					</div><!--end event-->
 				<?php endwhile; ?>
 				<div class="clearfix"></div>

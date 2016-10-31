@@ -10,13 +10,15 @@ header{height:100px;background-color:$white;border-bottom:10px solid $green;posi
 			&:last-child a{padding-right:0px;border-right:none;}
 			ul{display:none;position:absolute;top:19px;background-color:rgba($white, .9);padding:0;text-align:center;border:1px solid $blue;left:-5px;
 				li{width:100%;
-					&:last-child a{padding:20px;border-right:2px solid $blue;}
+					&:last-child a{padding:10px;border-right:1px solid $blue;}
 				}
-				a{border-right:none;padding:20px;padding:10px 20px;border:1px solid $blue;line-height:16px;}
+				a{border-right:none;padding:10px;border:1px solid $blue;line-height:16px;font-weight:300;text-align:left;}
 			}
 			&:hover ul{display:block;
+				li:hover ul{display:block;position:absolute;left:0px;top:-1px;right:-115px;left:100%;}
 				ul{display:none;}
 			}
+			&.has-children:after{content:"\f067";font-family:FontAwesome;position:absolute;right:10px;top:50%;transform:translateY(-50%);color:$blue;}
 		}
 		a{display:block;font-size:14px;padding:0 24px 5px;font-weight:700;color:$blue;text-transform:uppercase;border-right:2px solid $lt_green;
 			&:hover{color:$green;}

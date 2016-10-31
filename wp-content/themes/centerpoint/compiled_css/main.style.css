@@ -1635,26 +1635,46 @@ header .menu-main-nav-container li ul li {
 }
 /* line 13, ../scss/smacss/_layout.scss */
 header .menu-main-nav-container li ul li:last-child a {
-  padding: 20px;
-  border-right: 2px solid #28317D;
+  padding: 10px;
+  border-right: 1px solid #28317D;
 }
 /* line 15, ../scss/smacss/_layout.scss */
 header .menu-main-nav-container li ul a {
   border-right: none;
-  padding: 20px;
-  padding: 10px 20px;
+  padding: 10px;
   border: 1px solid #28317D;
   line-height: 16px;
+  font-weight: 300;
+  text-align: left;
 }
 /* line 17, ../scss/smacss/_layout.scss */
 header .menu-main-nav-container li:hover ul {
   display: block;
 }
 /* line 18, ../scss/smacss/_layout.scss */
+header .menu-main-nav-container li:hover ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: -1px;
+  right: -115px;
+  left: 100%;
+}
+/* line 19, ../scss/smacss/_layout.scss */
 header .menu-main-nav-container li:hover ul ul {
   display: none;
 }
 /* line 21, ../scss/smacss/_layout.scss */
+header .menu-main-nav-container li.has-children:after {
+  content: "\f067";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #28317D;
+}
+/* line 23, ../scss/smacss/_layout.scss */
 header .menu-main-nav-container a {
   display: block;
   font-size: 14px;
@@ -1664,11 +1684,11 @@ header .menu-main-nav-container a {
   text-transform: uppercase;
   border-right: 2px solid #8DC63F;
 }
-/* line 22, ../scss/smacss/_layout.scss */
+/* line 24, ../scss/smacss/_layout.scss */
 header .menu-main-nav-container a:hover {
   color: #25A549;
 }
-/* line 25, ../scss/smacss/_layout.scss */
+/* line 27, ../scss/smacss/_layout.scss */
 header .mobile-menu-trigger {
   display: none;
 }
@@ -1676,25 +1696,25 @@ header .mobile-menu-trigger {
 /* ================== */
 /* === FOOTER ======= */
 /* ================== */
-/* line 32, ../scss/smacss/_layout.scss */
+/* line 34, ../scss/smacss/_layout.scss */
 footer {
   background-color: #4A4746;
   padding: 30px 0;
 }
-/* line 33, ../scss/smacss/_layout.scss */
+/* line 35, ../scss/smacss/_layout.scss */
 footer .main-wrap {
   text-align: center;
 }
-/* line 34, ../scss/smacss/_layout.scss */
+/* line 36, ../scss/smacss/_layout.scss */
 footer .social {
   display: inline-block;
   width: auto;
 }
-/* line 35, ../scss/smacss/_layout.scss */
+/* line 37, ../scss/smacss/_layout.scss */
 footer .social li {
   display: inline-block;
 }
-/* line 36, ../scss/smacss/_layout.scss */
+/* line 38, ../scss/smacss/_layout.scss */
 footer .social a {
   display: block;
   width: 40px;
@@ -1704,7 +1724,7 @@ footer .social a {
   border-radius: 40px;
   margin-right: 10px;
 }
-/* line 37, ../scss/smacss/_layout.scss */
+/* line 39, ../scss/smacss/_layout.scss */
 footer .social a:hover {
   background-color: #FFFFFF;
   -moz-transform: translateY(-2px);
@@ -1712,11 +1732,11 @@ footer .social a:hover {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
-/* line 38, ../scss/smacss/_layout.scss */
+/* line 40, ../scss/smacss/_layout.scss */
 footer .social a:hover i {
   color: #8DC63F;
 }
-/* line 41, ../scss/smacss/_layout.scss */
+/* line 43, ../scss/smacss/_layout.scss */
 footer .social i {
   color: #FFFFFF;
   font-size: 20px;
@@ -1728,14 +1748,14 @@ footer .social i {
   transform: translateY(-50%);
   transition: all .2s ease-in-out;
 }
-/* line 43, ../scss/smacss/_layout.scss */
+/* line 45, ../scss/smacss/_layout.scss */
 footer nav {
   height: 40px;
   display: inline-block;
   width: auto;
   margin-left: 40px;
 }
-/* line 44, ../scss/smacss/_layout.scss */
+/* line 46, ../scss/smacss/_layout.scss */
 footer nav ul {
   position: relative;
   top: 50%;
@@ -1744,33 +1764,33 @@ footer nav ul {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 45, ../scss/smacss/_layout.scss */
+/* line 47, ../scss/smacss/_layout.scss */
 footer nav li {
   display: inline-block;
 }
-/* line 46, ../scss/smacss/_layout.scss */
+/* line 48, ../scss/smacss/_layout.scss */
 footer nav a {
   color: #FFFFFF;
   padding: 0 25px;
 }
-/* line 47, ../scss/smacss/_layout.scss */
+/* line 49, ../scss/smacss/_layout.scss */
 footer nav a:hover {
   color: #8DC63F;
 }
-/* line 50, ../scss/smacss/_layout.scss */
+/* line 52, ../scss/smacss/_layout.scss */
 footer .fineprint {
   color: #FFFFFF;
   margin-top: 25px;
 }
-/* line 51, ../scss/smacss/_layout.scss */
+/* line 53, ../scss/smacss/_layout.scss */
 footer .fineprint p:last-of-type {
   font-size: 10px;
 }
-/* line 52, ../scss/smacss/_layout.scss */
+/* line 54, ../scss/smacss/_layout.scss */
 footer .fineprint a {
   color: #FFFFFF;
 }
-/* line 53, ../scss/smacss/_layout.scss */
+/* line 55, ../scss/smacss/_layout.scss */
 footer .fineprint a:hover {
   color: #8DC63F;
 }
@@ -2825,28 +2845,42 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   max-width: 90%;
   margin: 0 0 20px;
 }
+/* line 335, ../scss/smacss/_modules.scss */
+.two-column-full.what-we-provide img {
+  max-width: 90%;
+  margin: 0 auto 30px;
+}
+/* line 336, ../scss/smacss/_modules.scss */
+.two-column-full.what-we-provide .prod-info {
+  padding: 0 30px;
+}
+/* line 337, ../scss/smacss/_modules.scss */
+.two-column-full.what-we-provide h3 {
+  text-align: center;
+  max-width: 90%;
+}
 
 /* ================================ */
 /* === PROD BG IMAGE MODULE ======= */
 /* ================================ */
-/* line 342, ../scss/smacss/_modules.scss */
+/* line 345, ../scss/smacss/_modules.scss */
 .product-bg-image {
   background: url("../img/prod-bg.png") no-repeat;
   padding: 60px 0;
   background-size: cover;
   text-align: center;
 }
-/* line 343, ../scss/smacss/_modules.scss */
+/* line 346, ../scss/smacss/_modules.scss */
 .product-bg-image h3, .product-bg-image p, .product-bg-image a {
   color: #FFFFFF;
 }
-/* line 344, ../scss/smacss/_modules.scss */
+/* line 347, ../scss/smacss/_modules.scss */
 .product-bg-image h3 {
   font-weight: 800;
   margin-bottom: 15px;
   font-size: 22px;
 }
-/* line 345, ../scss/smacss/_modules.scss */
+/* line 348, ../scss/smacss/_modules.scss */
 .product-bg-image a {
   font-weight: 800;
 }
@@ -2854,19 +2888,19 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === SERVICES SLIDER ======= */
 /* =========================== */
-/* line 352, ../scss/smacss/_modules.scss */
+/* line 355, ../scss/smacss/_modules.scss */
 #services-slider {
   background-color: #25A549;
   padding: 30px 0;
 }
-/* line 353, ../scss/smacss/_modules.scss */
+/* line 356, ../scss/smacss/_modules.scss */
 #services-slider .title-area {
   position: relative;
   width: 100%;
   text-align: center;
   margin-bottom: 50px;
 }
-/* line 354, ../scss/smacss/_modules.scss */
+/* line 357, ../scss/smacss/_modules.scss */
 #services-slider .title-area .service-arrow {
   position: absolute;
   top: 0;
@@ -2875,32 +2909,32 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   color: #fff;
   font-size: 42px;
 }
-/* line 355, ../scss/smacss/_modules.scss */
+/* line 358, ../scss/smacss/_modules.scss */
 #services-slider .title-area .service-arrow.prev {
   left: 0;
   opacity: .3;
   pointer-events: none;
 }
-/* line 356, ../scss/smacss/_modules.scss */
+/* line 359, ../scss/smacss/_modules.scss */
 #services-slider .title-area .service-arrow.next {
   right: 0;
 }
-/* line 359, ../scss/smacss/_modules.scss */
+/* line 362, ../scss/smacss/_modules.scss */
 #services-slider .content-area {
   background-color: #FFFFFF;
   padding: 30px;
   min-height: 250px;
   border-radius: 8px;
 }
-/* line 360, ../scss/smacss/_modules.scss */
+/* line 363, ../scss/smacss/_modules.scss */
 #services-slider .content-area li {
   display: none;
 }
-/* line 361, ../scss/smacss/_modules.scss */
+/* line 364, ../scss/smacss/_modules.scss */
 #services-slider .content-area li.active {
   display: block;
 }
-/* line 364, ../scss/smacss/_modules.scss */
+/* line 367, ../scss/smacss/_modules.scss */
 #services-slider h2 {
   color: #fff;
   font-size: 36px;
@@ -2913,35 +2947,35 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === PRODUCT CALLOUT ======= */
 /* =========================== */
-/* line 371, ../scss/smacss/_modules.scss */
+/* line 374, ../scss/smacss/_modules.scss */
 .product-callout {
   padding: 50px 0;
 }
-/* line 372, ../scss/smacss/_modules.scss */
+/* line 375, ../scss/smacss/_modules.scss */
 .product-callout .product-column {
   border-right: 2px solid #25A549;
   min-height: 500px;
 }
-/* line 373, ../scss/smacss/_modules.scss */
+/* line 376, ../scss/smacss/_modules.scss */
 .product-callout .product-column:nth-child(3) {
   border-right: none;
 }
-/* line 375, ../scss/smacss/_modules.scss */
+/* line 378, ../scss/smacss/_modules.scss */
 .product-callout .inner {
   padding: 0 30px;
 }
-/* line 376, ../scss/smacss/_modules.scss */
+/* line 379, ../scss/smacss/_modules.scss */
 .product-callout .product-icon {
   max-width: 60%;
 }
-/* line 377, ../scss/smacss/_modules.scss */
+/* line 380, ../scss/smacss/_modules.scss */
 .product-callout img {
   max-width: 85%;
   margin: 0 auto;
   display: block;
   margin-bottom: 30px;
 }
-/* line 378, ../scss/smacss/_modules.scss */
+/* line 381, ../scss/smacss/_modules.scss */
 .product-callout p {
   margin-bottom: 30px;
 }
@@ -2949,16 +2983,16 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === CONTENT AREA ======= */
 /* =========================== */
-/* line 385, ../scss/smacss/_modules.scss */
+/* line 388, ../scss/smacss/_modules.scss */
 .main-content-area {
   padding: 50px 0;
   color: #FFFFFF;
 }
-/* line 386, ../scss/smacss/_modules.scss */
+/* line 389, ../scss/smacss/_modules.scss */
 .main-content-area.blue-bg {
   background-color: #28317D;
 }
-/* line 387, ../scss/smacss/_modules.scss */
+/* line 390, ../scss/smacss/_modules.scss */
 .main-content-area p + p {
   margin-top: 20px;
 }
@@ -2966,16 +3000,16 @@ form button, form html input[type=button], form input[type=reset], form input[ty
 /* =========================== */
 /* === WHAT WE DO CONTENT ==== */
 /* =========================== */
-/* line 394, ../scss/smacss/_modules.scss */
+/* line 397, ../scss/smacss/_modules.scss */
 .what-we-do-content {
   padding: 50px 0;
 }
-/* line 395, ../scss/smacss/_modules.scss */
+/* line 398, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-triggers {
   border-right: 2px solid #25A549;
   padding-left: 30px;
 }
-/* line 396, ../scss/smacss/_modules.scss */
+/* line 399, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-triggers li {
   margin-bottom: 12px;
   color: #28317D;
@@ -2984,34 +3018,34 @@ form button, form html input[type=button], form input[type=reset], form input[ty
   font-size: 16px;
   cursor: pointer;
 }
-/* line 397, ../scss/smacss/_modules.scss */
+/* line 400, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-triggers li:hover, .what-we-do-content .slide-triggers li.active {
   color: #25A549;
 }
-/* line 400, ../scss/smacss/_modules.scss */
+/* line 403, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-container {
   padding-left: 30px;
 }
-/* line 401, ../scss/smacss/_modules.scss */
+/* line 404, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-container .slide {
   display: none;
 }
-/* line 402, ../scss/smacss/_modules.scss */
+/* line 405, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-container .slide:first-of-type {
   display: block;
 }
-/* line 403, ../scss/smacss/_modules.scss */
+/* line 406, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-container .slide h2 {
   color: #25A549;
   margin-bottom: 10px;
   font-size: 20px;
 }
-/* line 405, ../scss/smacss/_modules.scss */
+/* line 408, ../scss/smacss/_modules.scss */
 .what-we-do-content .slide-container .main-btn {
   margin-top: 10px;
   display: inline-block;
 }
-/* line 409, ../scss/smacss/_modules.scss */
+/* line 412, ../scss/smacss/_modules.scss */
 .what-we-do-content .mobile-menu-trigger {
   display: none;
 }
@@ -3096,6 +3130,7 @@ form button, form html input[type=button], form input[type=reset], form input[ty
     font-size: 12px;
     color: #25A549;
     text-transform: none;
+    text-align: center;
   }
   /* line 30, ../scss/smacss/_states.scss */
   header .menu-main-nav-container a {
