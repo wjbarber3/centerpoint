@@ -9,6 +9,7 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 **/.sass-cache
 **/.sass-cache/*
+wp-content/themes/centerpoint/scss/.sass-cache/*
 sitemap.xml
 *.log
 wp-content/cache/
