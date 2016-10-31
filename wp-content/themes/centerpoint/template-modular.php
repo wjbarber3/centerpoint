@@ -126,7 +126,7 @@ $thumb_url = $thumb_url_array[0];
 <?php endif; ?><!--end the flex content 'if'-->
 
 <?php if( get_field('twitter_feed')): ?>
-	<div class="twitter-feed">
+	<div id="twitter-feed">
 		<i class="fa fa-twitter icon-head"></i>
 		<div class="main-wrap">
 			<a href="#" class="control next"><i class="fa fa-angle-right"></i></a>

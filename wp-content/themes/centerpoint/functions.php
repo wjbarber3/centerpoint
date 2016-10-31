@@ -15,7 +15,7 @@ function centerpoint_scripts() {
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/compiled_css/main.style.css' , false, filemtime( get_template_directory() . '/compiled_css/main.style.css' ), 'screen' );
 	wp_enqueue_style( 'font_awesome', get_template_directory_uri() . '/font-awesome/font-awesome.min.css' , false, filemtime( get_template_directory() . '/font-awesome/font-awesome.min.css' ), 'screen' );
   wp_enqueue_script( 'twitterFetcher', get_template_directory_uri() . '/js/twitterFetcher_min.js', array('jquery'), filemtime( get_template_directory() . '/js/twitterFetcher_min.js' ), false );
-	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array('jquery'), filemtime( get_template_directory() . '/js/main.js' ), false );
+	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.min.js', array('jquery'), filemtime( get_template_directory() . '/js/main.min.js' ), false );
 }
 add_action( 'wp_enqueue_scripts', 'centerpoint_scripts' );	
 

@@ -75,26 +75,26 @@
     |
     */
     Feed = {
-        tweet: '.twitter-feed ul li',
-        tweetWrap: '.twitter-feed ul',
-        prevTrigger: ".twitter-feed a.prev",
-        nextTrigger: ".twitter-feed a.next",
-        control: ".twitter-feed a.control",
+        tweet: '#twitter-feed ul li',
+        tweetWrap: '#twitter-feed ul',
+        prevTrigger: "#twitter-feed a.prev",
+        nextTrigger: "#twitter-feed a.next",
+        control: "#twitter-feed a.control",
         init: function() {
             $(this.nextTrigger).click(this.slideRight.bind(this));
             $(this.prevTrigger).click(this.slideLeft.bind(this));
         },
         slideRight: function(e) {
             e.preventDefault();
-            $(".twitter-feed ul li.active").removeClass("active").next().addClass("active");
+            $("#twitter-feed ul li.active").removeClass("active").next().addClass("active");
             $(this.tweetWrap).removeClass("no-transition");
             $(this.tweet).first().clone().appendTo(this.tweetWrap);
             $(this.tweetWrap).css("marginLeft", "-100vw");
             $(this.control).css("pointer-events", "none");
             setTimeout(function(){
-                $(".twitter-feed ul").addClass("no-transition");
-                $(".twitter-feed ul li").first().remove();
-                $(".twitter-feed ul").css("marginLeft", "0px");
+                $("#twitter-feed ul").addClass("no-transition");
+                $("#twitter-feed ul li").first().remove();
+                $("#twitter-feed ul").css("marginLeft", "0px");
                 $("a.control").css("pointer-events", "auto");
             }, 300);
         },
@@ -106,12 +106,12 @@
             $(this.tweetWrap).css("marginLeft", "-100vw");
             $(this.control).css("pointer-events", "none");
             setTimeout(function () {
-                $('.twitter-feed ul').removeClass("no-transition");
-                $('.twitter-feed ul').css("marginLeft", "0px");
+                $('#twitter-feed ul').removeClass("no-transition");
+                $('#twitter-feed ul').css("marginLeft", "0px");
             }, 10);
             setTimeout(function(){
-                $('.twitter-feed ul').addClass('no-transition');
-                $('.twitter-feed ul li').last().remove();
+                $('#twitter-feed ul').addClass('no-transition');
+                $('#twitter-feed ul li').last().remove();
                 $('a.control').css('pointer-events', 'auto');
             }, 300);
 
@@ -289,8 +289,6 @@
                 nextParent = currentParent.prev(),
                 nextParentIndex = nextParent.index(this.serviceLinks),
                 neededIndex = nextParentIndex + 1,
-                firstItem = $(this.serviceLinks).first(),
-                lastItem = $(this.serviceLinks).last(),
                 nextTrigger = currentParent.prev().find('a'),
                 nextSlide = currentSlide.prev(),
                 activeTitle = nextTrigger.text(),
@@ -327,7 +325,6 @@
                 nextParentIndex = nextParent.index(this.serviceLinks),
                 neededIndex = nextParentIndex + 1,
                 firstItem = $(this.serviceLinks).first(),
-                lastItem = $(this.serviceLinks).last(),
                 nextTrigger = currentParent.next().find('a'),
                 nextSlide = currentSlide.next(),
                 activeTitle = nextTrigger.text(),
@@ -415,18 +412,6 @@
         }
     }
 
-    $(document).ready(function() {
-        Header.init();
-        Slider.init();
-        Feed.init();
-        JumpLinks.init();
-        Team.init();
-        AjaxPost.init();
-        ServicesSlider.init();
-        Accordion.init();
-        WhatWeDo.init();
-    })
-
     /*
     |--------------------------------------------------------------------------
     | Twitter Fetcher
@@ -446,6 +431,20 @@
       "showRetweet": false,
       "showInteraction": false
     };
-    twitterFetcher.fetch(configProfile);
+
+    $(document).ready(function() {
+        Header.init();
+        Slider.init();
+        JumpLinks.init();
+        Team.init();
+        AjaxPost.init();
+        ServicesSlider.init();
+        Accordion.init();
+        WhatWeDo.init();
+        if($('#twitter-feed').length) {
+            twitterFetcher.fetch(configProfile);
+            Feed.init();
+        }
+    })
 
 })(jQuery);
