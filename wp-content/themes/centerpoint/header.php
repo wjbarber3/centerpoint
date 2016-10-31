@@ -15,6 +15,8 @@
 
 <body <?php body_class( $class ); ?> >
 
+<a href="#" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
 <?php include_once("svg/svg-defs.svg"); ?>
 
 <header>

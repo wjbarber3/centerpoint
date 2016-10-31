@@ -414,6 +414,38 @@
 
     /*
     |--------------------------------------------------------------------------
+    | Back To Top Arrow
+    |--------------------------------------------------------------------------
+    | Object for back-to-top functionality
+    |
+    */
+    BackToTop = {
+        trigger: '#back-to-top',
+        scrollDuration: 300,
+        offset: 500,
+        init: function() {
+            $(this.trigger).click(this.scrollUp.bind(this));
+            $(window).scroll(this.controlTrigger.bind(this));
+        },
+        scrollUp: function(e) {
+            e.preventDefault();
+            $('body,html').animate({
+                scrollTop: 0 ,
+                }, this.scrollDuration
+            );
+        },
+        controlTrigger: function() {
+            console.log("scroll");
+            if ( $(window).scrollTop() > this.offset ) {
+                $(this.trigger).addClass("visible");
+            } else {
+                $(this.trigger).removeClass("visible");
+            }
+        }
+    }
+
+    /*
+    |--------------------------------------------------------------------------
     | Twitter Fetcher
     |--------------------------------------------------------------------------
     | Customizations to the Twitter Feed pulled in with twitterFetcher.js
@@ -441,6 +473,7 @@
         ServicesSlider.init();
         Accordion.init();
         WhatWeDo.init();
+        BackToTop.init();
         if($('#twitter-feed').length) {
             twitterFetcher.fetch(configProfile);
             Feed.init();

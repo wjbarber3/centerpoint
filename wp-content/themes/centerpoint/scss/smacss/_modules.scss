@@ -84,6 +84,15 @@
 	p{max-width:80%;margin-bottom:20px;}
 }
 
+/* ================================ */
+/* === BACK TO TOP BUTTON ===== */
+/* ================================ */
+
+#back-to-top{position:fixed;bottom:15px;right:-40px;width:40px;text-align:center;height:40px;background-color:rgba($blue, .8);
+	i{color:$white;@include vert-align(50%,-50%);font-size:24px;}
+	&.visible{@include transform(translateX(-55px));}
+}
+
 /* ====================== */
 /* === TWITTER FEED ===== */
 /* ====================== */
