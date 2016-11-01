@@ -56,7 +56,7 @@ $thumb_url = $thumb_url_array[0];
 					<ul>
 						<?php $a = 0; ?>
 						<?php while(have_rows('services')) : the_row(); ?>
-							<li <?php if($a == 0) { echo 'class="active"'; }; ?>><?php the_sub_field('service_content'); ?></li>
+							<li class="content<?php if($a == 0) { echo ' active'; }; ?>"><?php the_sub_field('service_content'); ?></li>
 							<?php $a ++; ?>
 						<?php endwhile; ?>
 					</ul>

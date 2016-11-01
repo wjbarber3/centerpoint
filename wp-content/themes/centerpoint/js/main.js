@@ -236,7 +236,7 @@
     ServicesSlider = {
         servicesTrigger: '.services-links a',
         serviceLinks: '.services-links li',
-        servicesSlide: '.content-area li',
+        servicesSlide: '.content-area li.content',
         prevArrow: '.service-arrow.prev',
         nextArrow: '.service-arrow.next',
         slideTitle: '.title-area h2.title',
@@ -435,7 +435,6 @@
             );
         },
         controlTrigger: function() {
-            console.log("scroll");
             if ( $(window).scrollTop() > this.offset ) {
                 $(this.trigger).addClass("visible");
             } else {

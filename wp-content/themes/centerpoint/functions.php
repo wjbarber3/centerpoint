@@ -17,7 +17,7 @@ function centerpoint_scripts() {
   wp_enqueue_script( 'twitterFetcher', get_template_directory_uri() . '/js/twitterFetcher_min.js', array('jquery'), filemtime( get_template_directory() . '/js/twitterFetcher_min.js' ), false );
 	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.min.js', array('jquery'), filemtime( get_template_directory() . '/js/main.min.js' ), false );
 }
-add_action( 'wp_enqueue_scripts', 'centerpoint_scripts' );	
+add_action( 'wp_enqueue_scripts', 'centerpoint_scripts' );
 
 //---------------------------------------------------//
 //---- PAGE SLUG BODY CLASS -------------------------//
@@ -1657,7 +1657,7 @@ if(function_exists("register_field_group")) {
         [
           'param' => 'page',
           'operator' => '==',
-          'value' => '82',
+          'value' => '132',
           'order_no' => 0,
           'group_no' => 0,
         ],

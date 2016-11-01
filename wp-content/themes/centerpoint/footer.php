@@ -13,7 +13,7 @@
 		<nav>
 			<ul>
 				<li><a href="/who-we-are#news-anchor">News</a></li>
-				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="/privacy-policy">Privacy Policy</a></li>
 				<li><a href="/contact">Contact Us</a></li>
 			</ul>	
 		</nav>
