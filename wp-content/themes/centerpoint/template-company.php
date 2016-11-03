@@ -26,7 +26,7 @@ $thumb_url = $thumb_url_array[0];
 
 		<div class="jump-links has-shadow">
 			<nav>
-				<li><a href="#">About Us</a></li>
+				<li><a href="#about-us">About Us</a></li>
 				<li><a href="#team-list">Team</a></li>
 				<li><a href="#board-list">Board Members</a></li>
 				<li><a href="#advisor-list">Advisors</a></li>
@@ -34,7 +34,7 @@ $thumb_url = $thumb_url_array[0];
 			</nav>
 		</div>
 	
-		<div class="company-top row has-shadow">
+		<div id="about-us" class="company-top row has-shadow">
 			<div class="main-wrap">
 				<div class="col-sm-8 main-content">
 					<?php echo the_content(); ?>
@@ -57,7 +57,7 @@ $thumb_url = $thumb_url_array[0];
 
 		<!-- ACF VALUES -->
 		<?php if(have_rows('guiding_principles')): ?>
-			<div class="values row has-shadow green-background">
+			<div class="values row has-shadow blue-background">
 				<div class="main-wrap">
 					<h1 class="large">CenterPoint Guiding Principles</h1>
 					<?php while(have_rows('guiding_principles')) : the_row(); ?>
@@ -109,7 +109,7 @@ $thumb_url = $thumb_url_array[0];
 			<a id="team-list" class="list-trigger" href="#">Team<i class="fa fa-plus-circle"></i></a>
 			<div class="team-list">
 				<?php while ( $team->have_posts() ) : $team->the_post(); ?>
-					<div class="col-sm-3 employee">
+					<div class="col-md-3 employee">
 						<?php echo the_post_thumbnail( $size, $attr ); ?>
 						<h2><?php echo the_title(); ?></h2>
 						<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
@@ -133,9 +133,9 @@ $thumb_url = $thumb_url_array[0];
 				]);
 			?>
 			<a id="board-list" class="list-trigger" href="#">Board Members<i class="fa fa-plus-circle"></i></a>
-			<div class="team-list">
+			<div class="team-list board-members">
 				<?php while ( $boards->have_posts() ) : $boards->the_post(); ?>
-					<div class="col-sm-3 employee">
+					<div class="col-md-3 employee">
 						<?php echo the_post_thumbnail( $size, $attr ); ?>
 						<h2><?php echo the_title(); ?></h2>
 						<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
@@ -161,7 +161,7 @@ $thumb_url = $thumb_url_array[0];
 			<a id="advisor-list" class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
 			<div class="team-list">
 				<?php while ( $advisors->have_posts() ) : $advisors->the_post(); ?>
-					<div class="col-sm-3 employee">
+					<div class="col-md-3 employee">
 						<?php echo the_post_thumbnail( $size, $attr ); ?>
 						<h2><?php echo the_title(); ?></h2>
 						<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>

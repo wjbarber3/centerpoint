@@ -3,7 +3,7 @@
 <html <?php language_attributes(); ?> >
 
 <head>
-    <title><?php wp_title(); ?></title>
+    <title>CenterPoint - <?php the_title(); ?></title>
     <meta http-equiv="X-UA-compatible" content="IE=edge" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

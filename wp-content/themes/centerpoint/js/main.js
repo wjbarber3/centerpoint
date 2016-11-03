@@ -171,19 +171,21 @@
                 clickedTrigger = target.closest(this.listTrigger);
                 siblingList = clickedTrigger.next();
             if (clickedTrigger.hasClass("open")) {
-                siblingList.slideUp("fast");
+                siblingList.slideUp(300);
                 clickedTrigger.removeClass("open");
             } else {
                 clickedTrigger.addClass("open");
                 $(this.listTrigger).not(clickedTrigger).removeClass("open");
-                $(this.teamList).not(siblingList).slideUp("fast");
-                siblingList.slideDown("fast");
+                $(this.teamList).not(siblingList).slideUp(300);
+                siblingList.slideDown(300);
                 $("a.list-trigger.open i").addClass("fa-minus-circle");
             }
-            var offset = target.offset().top-20;
-            $("html, body").animate({
-                scrollTop: offset
-            }, 500);
+            setTimeout(function(){
+                var offset = target.offset().top-50;
+                $("html, body").animate({
+                    scrollTop: offset
+                }, 400);
+            }, 300);
         }
     }
 
@@ -451,7 +453,7 @@
     |
     */
     var configProfile = {
-      "profile": {"screenName": 'PARCCPlace'},
+      "profile": {"screenName": 'centerpointed'},
       "domId": 'twitter-feed-list',
       "maxTweets": 5,
       "enableLinks": true, 

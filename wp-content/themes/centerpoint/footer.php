@@ -3,12 +3,12 @@
 <footer>
 	<div class="main-wrap row">
 		<ul class="social">
-			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			<li><a href="#"><i class="fa fa-youtube"></i></a></li>
-			<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-			<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-			<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+			<li><a href="https://twitter.com/centerpointed" target="_blank"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="https://www.facebook.com/CenterPointEd/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="https://www.youtube.com/channel/UC_06rIdVeAJhhEueRAgxA1Q" target="_blank"><i class="fa fa-youtube"></i></a></li>
+			<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+			<li><a href="https://www.instagram.com/centerpointed/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+			<li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
 		</ul>
 		<nav>
 			<ul>

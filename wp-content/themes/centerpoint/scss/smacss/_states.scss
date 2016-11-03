@@ -7,6 +7,7 @@
 	h1.large{font-size:28px;line-height:36px;}
 	.mobile-only{display:block;}
 	.mobile-hide{display:none;}
+	li{list-style-position: outside !important;}
 }
 
 /* ================== */
@@ -19,24 +20,32 @@ header{
 	}
 	@include bp(sm-tablet){
 		svg{width:200px;height:auto;}
-		.menu-main-nav-container{display:none;position:absolute;top:80px;transform:none;background:white;right:-5%;z-index:1;padding:20px;
+		.menu-main-nav-container{display:none;position:absolute;top:100px;transform:none;background:white;right:-5%;z-index:1;padding:20px;
 			li{display:block;
 				&:last-child a{padding:10px 30px;}
 				ul{position:relative;top:0;display:block;border:none;background-color:transparent;
 					li:last-child a{border-right:none;padding:10px 20px;}
 					a{border:none;font-size:12px;color:$green;text-transform:none;text-align:center;}
+					ul{display:block;}
+				}
+				&.has-children:after{content:"";}
+				&:hover{
+					li:hover ul{display:block !important;
+						li{display:block;}
+					}
+					ul{display:block !important;
+						ul{display:block !important;}
+					}
 				}
 			}
 			a{text-align:center;padding:10px 30px;border-right:none;}
 		}
 		.mobile-menu-trigger{display:block;float:right;@include vert-align(50%,-50%);font-size:28px;color:$blue;cursor:pointer;}
 	}
-	@include bp(mobile){border-bottom:4px solid #25A549;height:80px;}
+	@include bp(mobile){border-bottom:4px solid #25A549;height:80px;
+		.menu-main-nav-container{top:80px;}
+	}
 }
-
-/* ================== */
-/* === LAYOUT ======= */
-/* ================== */
 
 /* ================== */
 /* === MODULES ====== */
@@ -57,6 +66,8 @@ header{
 .full-text{
 	@include bp(mobile){padding:20px 0;
 		p{max-width:100%;}
+		h1{line-height:34px;margin-bottom:0px;}
+		h1 + p{margin-top:15px;}
 	}
 }
 
@@ -88,6 +99,9 @@ header{
 }
 
 #team-members{
+	@include bp(sm-tablet){
+		.team-list .employee{min-height:400px;}
+	}
 	@include bp(mobile){
 		.list-trigger{font-size:18px;}
 		.team-list{
@@ -95,6 +109,7 @@ header{
 			.employee{padding:0 0 30px;overflow:auto;margin-bottom:30px;border-bottom:1px solid $grey;min-height:auto;}
 			h2{font-size:16px;}
 			p{font-size:13px;line-height:20px;}
+			&.board-members .employee{min-height:auto;}
 		}
 	}
 }
@@ -107,26 +122,39 @@ header{
 }
 
 .jump-links, .services-links{
-	@include bp(mobile){padding-right:0.9375rem;padding-bottom:30px;
-		nav{overflow-x:scroll;white-space:nowrap;
+	@include bp(mobile){padding-right:0.9375rem;padding-bottom:10px;padding-top:10px;
+		nav{overflow:hidden;overflow-x:scroll;white-space:nowrap;
 			a{padding-right:15px;font-size:12px;padding:7px;font-size:12px;border-right:none;}
 		}
 	}
 }
 
 .services-links{
-	@include bp(mobile){display:none;}
+	@include bp(medium) {
+		nav a{font-size:12px;}
+	}
+	@include bp(sm-tablet){display:none;}
+}
+
+#services-slider{
+	@include bp(mobile){
+		h2{font-size:24px;line-height:32px;}
+	}
 }
 
 .two-column-product-details{
 	@include bp(mobile){
-		.info-container .product{min-height:auto;}
+		.info-container{
+			p{max-width: 100%;}
+			.product{min-height:auto;}
+		}
+		h1{font-size:24px;line-height:32px}
 	}
 }
 
 .company-top{
 	@include bp(mobile){text-align:center;margin-right:0;margin-left:0;
-		.quicklinks{border-left:none;}
+		.quicklinks{border-left:none;padding-left:.9375rem;}
 		.main-content{margin-bottom:30px;}
 	}
 }
@@ -136,8 +164,12 @@ header{
 		h1{padding:0 15px;}
 		h2,p{max-width:100%;}
 		p{min-height:initial;margin-bottom:35px;}
-		&.green-background p{min-height:auto;}
+		&.blue-background p{min-height:auto;}
 	}
+}
+
+.main-content-area{
+	@include bp(mobile){padding:30px 0;}
 }
 
 .inline-video{
@@ -156,10 +188,22 @@ header{
 
 .product-header{
 	@include bp(mobile) {text-align:center;padding:20px 0;
-		.product-tagline{border-right:none;
+		.product-tagline{border-right:none;height:auto;margin-bottom:15px;
 			h1{font-size:24px;margin-left:0px;line-height:32px;}
 		}
 		.product-icon img{margin-left:0px;max-width:50%;}
+	}
+}
+
+.product-bullets{
+	@include bp(mobile){padding:30px 0;
+		li{margin-left:20px;}
+	}
+}
+
+.product-info{
+	@include bp(mobile) {padding:30px 0;
+		h1{margin-bottom:15px;}
 	}
 }
 
@@ -169,6 +213,7 @@ header{
 			&:first-child{padding-top:0px;}
 			&:nth-child(3){border-bottom:none;}
 		}
+		.inner{padding:0px;}
 	}
 }
 

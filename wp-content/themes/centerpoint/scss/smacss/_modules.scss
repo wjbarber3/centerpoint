@@ -62,10 +62,7 @@
 /* === INLINE VIDEO ===== */
 /* ============================ */
 
-.inline-video{padding:40px 0;background-color:$green;
-	.main-btn:hover{color:$blue;
-		i{color:$blue;border-color:$blue;}
-	}
+.inline-video{padding:40px 0;background-color:$blue;
 	h1,h2,p,a,i{color:$white;}
 	i{border-color:$white;}
 	h1{margin-bottom:4px;}
@@ -88,7 +85,7 @@
 /* === BACK TO TOP BUTTON ===== */
 /* ================================ */
 
-#back-to-top{position:fixed;bottom:15px;right:-40px;width:40px;text-align:center;height:40px;background-color:rgba($blue, .8);
+#back-to-top{position:fixed;bottom:15px;right:-40px;width:40px;text-align:center;height:40px;background-color:rgba($blue, .8);z-index:10;
 	i{color:$white;@include vert-align(50%,-50%);font-size:24px;}
 	&.visible{@include transform(translateX(-55px));}
 }
@@ -126,7 +123,9 @@
 	strong{font-weight:bold;color:$blue;}
 	p{margin-top:0px;max-width:90%;margin:0 auto;}
 	.main-btn{display:block;margin-top:20px;}
-	.news-content{min-height:200px;}
+	.news-content{min-height:200px;
+		img{max-width:80%;height:auto;}
+	}
 }
 
 /* ====================== */
@@ -149,6 +148,7 @@
 			}
 		}
 		img{width:150px;height:200px;}
+		&.board-members .employee{min-height:400px;}
 	}
 }
 
@@ -157,7 +157,7 @@
 /* ====================== */
 
 #post-modal{position:fixed;width:60vw;height:auto;background:white;z-index:2;top:50%;@include transform(translateY(-50%));left:0;right:0;margin:auto;opacity:0;visibility:hidden;transition:all .2s ease-in-out;padding:45px;overflow-y:scroll;
-	&.active{opacity:1;visibility:visible;}
+	&.active{opacity:1;visibility:visible;z-index:11;}
 	.fa-close{position:absolute;top:15px;right:15px;font-size:16px;color:$white;border-radius:20px;background-color:$grey;transition:all .2s ease-in-out;width:20px;height:20px;text-align:center;line-height:20px;cursor:pointer;opacity:.9;
 		&:hover{@include transform(scale(1.2));opacity:1;}
 	}
@@ -228,9 +228,9 @@
 	h1{color:$green;margin-bottom:45px;}
 	h2{border-top:2px solid $green;border-bottom:2px solid $green;padding:10px 0;max-width:75%;margin:0 auto;color:$blue;font-family:"Georgia", serif;margin-bottom:20px;text-transform:uppercase;font-size:20px;}
 	p{max-width:75%;margin:0 auto;min-height:160px;margin-bottom:20px;}
-	&.green-background{background-color:$green;
+	&.blue-background{background-color:$blue;
 		h1{color:$white;}
-		h2{color:$white;border-color:$blue;}
+		h2{color:$white;border-color:$white;}
 		p{color:$white;min-height:100px;}
 	}
 }
@@ -317,7 +317,9 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 		img{max-width:90%;margin:0 auto 30px;}
 		h3{color:$green;font-size:20px;margin-bottom:15px;}
 		p{max-width:85%;margin:0 auto;}
-		.product{margin-bottom:50px;min-height:400px;}
+		.product{margin-bottom:50px;min-height:400px;
+			&:nth-child(odd){clear:both;}
+		}
 		a{color:$blue;font-weight:800;
 			i{margin-left:5px;pointer-events:none;}
 		}
@@ -330,13 +332,16 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 /* ================================ */
 
 .two-column-full{padding:60px 0;background-color:$cream;text-align:center;
-	img{max-width:100%;margin:0 auto 30px;}
+	img{max-width:90%;margin:0 auto 30px;}
 	h3{color:$green;font-size:24px;margin-bottom:15px;font-weight:800;}
 	p{max-width:85%;margin:0 auto;}
 	a{color:$blue;
 		i{margin-left:5px;pointer-events:none;}
 	}
-	.prod-info{margin-bottom:30px;}
+	.prod-info{margin-bottom:30px;
+		ul, ol{margin:15px 0 15px 30px;}
+		ul li,ol li{list-style:initial;list-style-position:inside;}
+	}
 	.hidden-content{display:none;}
 	&.what-we-do{background-color:$white;}
 	&.what-we-provide{background-color:$white;text-align:left;
@@ -368,7 +373,7 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 			&.next{right:0;}
 		}
 	}
-	.content-area{background-color:$white;padding:30px;min-height:250px;border-radius:8px;
+	.content-area{background-color:$white;padding:30px;	border-radius:8px;
 		li.content{display:none;
 			&.active{display:block;}
 			ul, ol{margin:15px 0 15px 30px;}
@@ -431,10 +436,10 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 		.slide{display:none;
 			&:first-of-type{display:block;}
 			h2{color:$green;margin-bottom:10px;font-size:20px;}
+			ul, ol{margin:15px 0 15px 30px;}
+			ul li,ol li{list-style:initial;}
 		}
 		.main-btn{margin-top:10px;display:inline-block;}
-		// ul:not(.slide-container){list-style-type:circle;margin:10px 0 10px 10px;}
-		// li:not(.slide){list-style:circle inside;}
 	}
 	.mobile-menu-trigger{display:none;}
 }
