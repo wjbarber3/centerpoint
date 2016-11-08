@@ -392,7 +392,7 @@ if(function_exists("register_field_group")) {
         'label' => 'Employee Order',
         'name' => 'employee_order',
         'type' => 'text',
-        'instructions' => 'Add the position/title of the employee.',
+        'instructions' => 'Use this field to order the employees per category. Use double digits for proper ordering.  For example, for postion "5", use "05"',
         'required' => 0,
         'default_value' => '1',
         'placeholder' => 'Employee Title',
