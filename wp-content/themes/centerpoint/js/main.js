@@ -33,11 +33,22 @@
         nextTrigger: ".slider a.next",
         control: ".slider a.control",
         init: function() {
-            $(this.nextTrigger).click(this.moveRight.bind(this));
-            $(this.prevTrigger).click(this.moveLeft.bind(this));
+            var self = this;
+            $(this.nextTrigger).click(function(e) {
+                e.preventDefault();
+                clearInterval(autoSlide);
+                self.moveRight();
+            });
+            $(this.prevTrigger).click(function(e) {
+                e.preventDefault();
+                clearInterval(autoSlide);
+                self.moveLeft();
+            });
+            var autoSlide = setInterval(function(){
+                self.moveRight();
+            }, 4000);
         },
-        moveRight: function(e) {
-            e.preventDefault();
+        moveRight: function() {
             $(this.slideWrap).removeClass("no-transition");
             $(this.slide).first().clone().appendTo(this.slideWrap);
             $(this.slideWrap).css("marginLeft", "-100vw");
@@ -49,8 +60,7 @@
                 $("a.control").css("pointer-events", "auto");
             }, 500);
         },
-        moveLeft: function(e) {
-            e.preventDefault();
+        moveLeft: function() {
             $(this.slideWrap).addClass('no-transition');
             $(this.slide).last().clone().prependTo(this.slideWrap);
             $(this.slideWrap).css("marginLeft", "-100vw");
@@ -453,7 +463,7 @@
     |
     */
     var configProfile = {
-      "profile": {"screenName": 'centerpointed'},
+      "profile": {"screenName": 'PARCCPlace'},
       "domId": 'twitter-feed-list',
       "maxTweets": 5,
       "enableLinks": true, 

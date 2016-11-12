@@ -29,7 +29,8 @@ $thumb_url = $thumb_url_array[0];
 				<li><a href="#about-us">About Us</a></li>
 				<li><a href="#team-list">Team</a></li>
 				<li><a href="#board-list">Board Members</a></li>
-				<li><a href="#advisor-list">Advisors</a></li>
+				<!-- Commenting this out for now, will likely return -->
+				<!-- <li><a href="#advisor-list">Advisors</a></li> -->
 				<div class="clearfix"></div>
 			</nav>
 		</div>
@@ -97,9 +98,17 @@ $thumb_url = $thumb_url_array[0];
 			<!--==== LOOP THROUGH TEAM CATEGORY =====-->
 			<!--=====================================-->
 			<?php 
-				$team = new WP_Query( [
+				$teamLeadership = new WP_Query( [
 				'post_type' => 'employee', 
-				'employee_category' => 'team',
+				'employee_category' => 'executive_leadership',
+				'posts_per_page' => 50,
+				'meta_key' => 'employee_order',
+				'orderby' => 'employee_order',
+				'order' => 'ASC'
+				]);
+				$teamExpert = new WP_Query( [
+				'post_type' => 'employee', 
+				'employee_category' => 'key_experts',
 				'posts_per_page' => 50,
 				'meta_key' => 'employee_order',
 				'orderby' => 'employee_order',
@@ -108,16 +117,31 @@ $thumb_url = $thumb_url_array[0];
 			?>
 			<a id="team-list" class="list-trigger" href="#">Team<i class="fa fa-plus-circle"></i></a>
 			<div class="team-list">
-				<?php while ( $team->have_posts() ) : $team->the_post(); ?>
-					<div class="col-md-3 employee">
-						<?php echo the_post_thumbnail( $size, $attr ); ?>
-						<h2><?php echo the_title(); ?></h2>
-						<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
-					</div><!--end team-list-->
-				<?php endwhile; ?>
-				<div class="clearfix"></div>
+				<?php if ($teamLeadership->have_posts() ): ?>
+					<h1 class="large">Executive Leadership</h1>
+					<?php while ( $teamLeadership->have_posts() ) : $teamLeadership->the_post(); ?>
+						<div class="col-md-3 employee">
+							<?php echo the_post_thumbnail( $size, $attr ); ?>
+							<h2><?php echo the_title(); ?></h2>
+							<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
+						</div><!--end team-list-->
+					<?php endwhile; ?>
+					<div class="clearfix"></div>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
+				<?php if ($teamExpert->have_posts() ): ?>
+					<h1 class="large">Key Experts</h1>
+					<?php while ( $teamExpert->have_posts() ) : $teamExpert->the_post(); ?>
+						<div class="col-md-3 employee">
+							<?php echo the_post_thumbnail( $size, $attr ); ?>
+							<h2><?php echo the_title(); ?></h2>
+							<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
+						</div><!--end team-list-->
+					<?php endwhile; ?>
+					<div class="clearfix"></div>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
 			</div><!--end team-list-->
-			<?php wp_reset_query(); ?>
 
 			<!--=============================================-->
 			<!--==== LOOP THROUGH BOARD MEMBER CATEGORY =====-->
@@ -148,28 +172,31 @@ $thumb_url = $thumb_url_array[0];
 			<!--========================================-->
 			<!--==== LOOP THROUGH ADVISOR CATEGORY =====-->
 			<!--========================================-->
+
+			<!-- Commenting out until advisors have been approved for page -->
+
 			<?php 
-				$advisors = new WP_Query( [
-				'post_type' => 'employee', 
-				'employee_category' => 'advisor',
-				'posts_per_page' => 50,
-				'meta_key' => 'employee_order',
-				'orderby' => 'employee_order',
-				'order' => 'ASC'
-				]);
+				// $advisors = new WP_Query( [
+				// 'post_type' => 'employee', 
+				// 'employee_category' => 'advisor',
+				// 'posts_per_page' => 50,
+				// 'meta_key' => 'employee_order',
+				// 'orderby' => 'employee_order',
+				// 'order' => 'ASC'
+				// ]);
 			?>
-			<a id="advisor-list" class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
+			<!-- <a id="advisor-list" class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
 			<div class="team-list">
-				<?php while ( $advisors->have_posts() ) : $advisors->the_post(); ?>
+				<?php // while ( $advisors->have_posts() ) : $advisors->the_post(); ?>
 					<div class="col-md-3 employee">
-						<?php echo the_post_thumbnail( $size, $attr ); ?>
-						<h2><?php echo the_title(); ?></h2>
-						<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
-					</div><!--end team-list-->
-				<?php endwhile; ?>
+						<?php // echo the_post_thumbnail( $size, $attr ); ?>
+						<h2><?php // echo the_title(); ?></h2>
+						<p><?php // echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php // echo the_ID(); ?>" href="<?php // echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
+					</div>
+				<?php // endwhile; ?>
 				<div class="clearfix"></div>
-			</div><!--end team-list-->
-			<?php wp_reset_query(); ?>
+			</div> -->
+			<?php // wp_reset_query(); ?>
 
 		</div><!--end main-wrap-->
 

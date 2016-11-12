@@ -52,13 +52,6 @@ function add_custom_dashboard_widget() {
 }
 add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
 
-
-//---------------------------------------------------//
-//---- 'FIELD LABEL' VISIBILITY FOR GRAVITY FORMS ----//
-//---------------------------------------------------//
-
-// add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
-
 //---------------------------------------------------//
 //---- REGISTER CUSTOM POST TYPES ------------------//
 //--------------------------------------------------//
@@ -394,7 +387,7 @@ if(function_exists("register_field_group")) {
         'type' => 'text',
         'instructions' => 'Use this field to order the employees per category. Use double digits for proper ordering.  For example, for postion "5", use "05"',
         'required' => 0,
-        'default_value' => '1',
+        'default_value' => '01',
         'placeholder' => 'Employee Title',
         'prepend' => '',
         'append' => '',
