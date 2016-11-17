@@ -6,12 +6,13 @@ h1,h2,h3,h4,p,a,li,input,label{font-family:Tahoma, Verdana, Segoe, sans-serif;}
 h1{font-size:26px;line-height:32px;font-weight:700;color:$blue;}
 h1.large{font-size:32px;font-weight:300;line-height:42px;}
 h2{font-size:18px;line-height:24px;font-weight:300;}
-p,li{font-size:14px;line-height:22px;font-weight:300;}
+p,li{font-size:15px;line-height:22px;font-weight:300;}
 ul,ol,li{list-style:none;}
 a{text-decoration:none;transition:all .2s ease-in-out;
 	&:hover{color:$green;text-decoration:none;}
 }
 strong{font-weight:bold;}
+sup {vertical-align:super;font-size:8px;}
 
 /* ================== */
 /* === BUTTONS ====== */

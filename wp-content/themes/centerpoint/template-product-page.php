@@ -60,24 +60,25 @@ $thumb_url = $thumb_url_array[0];
 			<div class="two-column-product-details">
 				<div class="main-wrap">
 					<h1 class="large"><?php the_sub_field('headline'); ?></h1>
-					
 						<div class="info-container">
-							<h2><?php the_sub_field('subheadline'); ?></h2>
+							<h2 class="section-trigger"><?php the_sub_field('subheadline'); ?><i class="fa fa-plus"></i></h2>
 							<div class="clearfix"></div>
-							<?php if(have_rows('product')): ?>
-								<?php while(have_rows('product')) : the_row(); ?>
-									<div class="col-md-6 product">
-										<img src="<?php echo get_sub_field('product_image')['url']; ?>" alt="">
-										<h3><?php the_sub_field('product_name'); ?></h3>
-										<p><?php the_sub_field('product_description'); ?></p>
-										<?php if( get_sub_field('add_hidden_content')): ?>
-											<p class="hidden-content"><?php the_sub_field('hidden_content'); ?></p>
-											<a class="accordion-trigger" href="#">More<i class="fa fa-plus"></i></a>
-										<?php endif; ?>
-									</div><!--end product-->
-								<?php endwhile; ?>
-							<div class="clearfix"></div>
-							<?php endif; ?>
+							<div class="hidden-container">
+								<?php if(have_rows('product')): ?>
+									<?php while(have_rows('product')) : the_row(); ?>
+										<div class="col-md-6 product">
+											<img src="<?php echo get_sub_field('product_image')['url']; ?>" alt="">
+											<h3><?php the_sub_field('product_name'); ?></h3>
+											<p><?php the_sub_field('product_description'); ?></p>
+											<?php if( get_sub_field('add_hidden_content')): ?>
+												<p class="hidden-content"><?php the_sub_field('hidden_content'); ?></p>
+												<a class="accordion-trigger" href="#">More<i class="fa fa-plus"></i></a>
+											<?php endif; ?>
+										</div><!--end product-->
+									<?php endwhile; ?>
+								<div class="clearfix"></div>
+								<?php endif; ?>
+							</div><!--end hidden-container-->
 						</div><!--end info-container-->
 				</div><!--end main-wrap-->
 			</div><!--end two-column-product-details-->

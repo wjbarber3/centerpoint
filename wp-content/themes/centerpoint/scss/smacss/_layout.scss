@@ -3,7 +3,7 @@
 /* ================== */
 
 header{height:100px;background-color:$white;border-bottom:10px solid $green;position:relative;z-index:1;
-	svg,.menu-main-nav-container{@include vert-align(50%,-50%);}
+	.logo,.menu-main-nav-container{@include vert-align(50%,-50%);display:inline-block;}
 	svg:hover{opacity:.8;}
 	.menu-main-nav-container{float:right;
 		li{display:inline-block;height:100%;position:relative;

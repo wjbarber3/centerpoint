@@ -69,7 +69,7 @@ $thumb_url = $thumb_url_array[0];
 	<?php endif; ?>
 	
 	<?php  if( get_row_layout() == 'video_or_image_with_info' ): ?>
-		<div class="inline-video has-shadow">
+		<div id="<?php the_sub_field('section_id'); ?>" class="inline-video has-shadow">
 			<div class="main-wrap">
 				<div class="col-md-6 vid-info">
 					<h1><?php the_sub_field('section_headline'); ?></h1>
@@ -109,8 +109,10 @@ $thumb_url = $thumb_url_array[0];
 					<?php while(have_rows('product_column')) : the_row(); ?>
 						<div class="col-md-4 product-column">
 							<div class="inner">
-								<img class="product-icon" src="<?php echo get_sub_field('product_icon')['url']; ?>">
-								<img src="<?php echo get_sub_field('product_image')['url']; ?>">
+								<div class="icon-wrap">
+									<a href="<?php the_sub_field('product_link_url'); ?>"><img class="product-icon" src="<?php echo get_sub_field('product_icon')['url']; ?>"></a>
+								</div><!--end icon-wrap-->
+								<a href="<?php the_sub_field('product_link_url'); ?>"><img src="<?php echo get_sub_field('product_image')['url']; ?>"></a>
 								<p><?php the_sub_field('callout_copy'); ?></p>
 								<a class="main-btn" href="<?php the_sub_field('product_link_url'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('product_link_text'); ?></a>
 							</div><!--end inner-->

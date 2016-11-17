@@ -395,6 +395,33 @@
 
     /*
     |--------------------------------------------------------------------------
+    | Container Toggles
+    |--------------------------------------------------------------------------
+    | Functionality for toggling product page sections
+    |
+    */
+    ProductToggle = {
+        trigger: '.section-trigger',
+        hiddenContainer: '.hidden-container',
+        init: function() {
+            $(this.trigger).click(this.toggleContent.bind(this));
+        },
+        toggleContent: function(e) {
+            e.preventDefault();
+            var target = $(e.target),
+                targetContent = target.siblings(this.hiddenContainer);
+            target.toggleClass('toggled');
+            targetContent.slideToggle("fast");
+            if ( target.hasClass('toggled') ) {
+                target.children('i').addClass("fa-minus");
+            } else {
+                target.children('i').removeClass("fa-minus");
+            }
+        }
+    }
+
+    /*
+    |--------------------------------------------------------------------------
     | What We DO
     |--------------------------------------------------------------------------
     | This object houses funcationality on the 'what we do' page
@@ -485,6 +512,7 @@
         Accordion.init();
         WhatWeDo.init();
         BackToTop.init();
+        ProductToggle.init();
         if($('#twitter-feed').length) {
             twitterFetcher.fetch(configProfile);
             Feed.init();

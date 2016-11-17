@@ -67,6 +67,7 @@ header{
 
 .three-col-icon{
 	@include bp(mobile){
+		h1{max-width:90%;margin:0 auto 45px;}
 		.column{border-right:none;margin-bottom:40px;border-bottom:1px solid $lt_green;padding-bottom:40px;
 			h2,p{min-height:auto;max-width:100%;}
 			&:nth-child(n+4){margin-bottom:0px;border-bottom:none;}
@@ -132,7 +133,8 @@ header{
 
 #services-slider{
 	@include bp(mobile){
-		h2{font-size:24px;line-height:32px;}
+		.title-area{margin-bottom:30px;}
+		h2{font-size:24px;line-height:32px;max-width:80%;}
 	}
 }
 

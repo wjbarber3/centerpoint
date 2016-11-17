@@ -28,6 +28,7 @@ $thumb_url = $thumb_url_array[0];
 			<input type=hidden name="oid" value="00D61000000db8f">
 			<input type=hidden name="retURL" value="http://www.centerpointeducation.org">
 			<input type=hidden id="lead_source" name="lead_source" value="Website">
+			<input type=hidden id="country_code" name="country_code" value="US">
 			 
 			<!-- ======================================================================== -->
 			<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
@@ -55,15 +56,6 @@ $thumb_url = $thumb_url_array[0];
 			    <label for="company">School or District<span class="required">*</span></label>
 			    <input type="text" class="form-control" id="company" name="company" placeholder="">
 			 </div>
-			
-			<div class="form-group">
-				<label for="country_code">Country</label>
-				<select class="form-control" id="country_code" name="country_code">
-					<option value="">--None--</option>
-					<option value="NZ">NZ</option>
-					<option value="US">US</option>
-				</select>
-			</div>
 			
 			<div class="form-group">
 				<label for="state_code">State/Province<span class="required">*</span></label>
@@ -147,22 +139,22 @@ $thumb_url = $thumb_url_array[0];
 				<p>I would like to learn more about:</p>
 					<div class="checkbox">
 				       <label for="00N6100000GnsnB">
-				         <input id="00N6100000GnsnB" name="00N6100000GnsnB" type="checkbox" value="1"> Diagnostic Assessments: Previ Learn
+				         <input id="00N6100000GnsnB" name="00N6100000GnsnB" type="checkbox" value="Diagnostic Assessments: Previ Learn"> Diagnostic Assessments: Previ Learn
 				       </label>
 				    </div>
 				    <div class="checkbox">
 				       <label for="00N6100000GnsnG">
-				         <input id="00N6100000GnsnG" name="00N6100000GnsnG" type="checkbox" value="1"> Professional Learning: Previ ProEd
+				         <input id="00N6100000GnsnG" name="00N6100000GnsnG" type="checkbox" value="Professional Learning: Previ ProEd"> Professional Learning: Previ ProEd
 				       </label>
 				    </div>
 				    <div class="checkbox">
 				       <label for="00N6100000GnsnL">
-				         <input id="00N6100000GnsnL" name="00N6100000GnsnL" type="checkbox" value="1"> Instructional Resources: Previ PLC
+				         <input id="00N6100000GnsnL" name="00N6100000GnsnL" type="checkbox" value="Instructional Resources: Previ PLC"> Instructional Resources: Previ PLC
 				       </label>
 				    </div>
 				    <div class="checkbox">
 				       <label for="00N6100000GnsnQ">
-				         <input id="00N6100000GnsnQ" name="00N6100000GnsnQ" type="checkbox" value="1"> Custom Assessment Services
+				         <input id="00N6100000GnsnQ" name="00N6100000GnsnQ" type="checkbox" value="Custom Assessment Services"> Custom Assessment Services
 				       </label>
 				    </div>
 			</div>
@@ -181,21 +173,11 @@ $thumb_url = $thumb_url_array[0];
 
 	<div class="contact-info col-md-6">
 		
-		<div class="info-block">
-			<h2>Contact Office</h2>
-			<p>To contact the main office, call 202-836-7500. For product and sales information, contact us at 844-637-7100 or email <a href="mailto:learn@centerpointeducation.org">learn@centerpointeducation.org</a>.</p>
-		</div><!--end info-block-->
-		<div class="info-block">
-			<h2>Headquarters</h2>
-			<p>1747 Pennsylvania Avenue NW</p>
-			<p>6th Floor</p>
-			<p>Washington, DC 20006</p>
-		</div><!--end info-block-->
-		<div class="info-block">
-			<h2>Media Inquiries</h2>
-			<p>Phone: 202-836-7500</p>
-			<p>Email: <a href="mailto:media@centerpointeducation.org">media@centerpointeducation.org</a></p>
-		</div><!--end info-block-->
+		<?php while ( have_posts() ) : the_post(); ?>
+
+			<?php echo the_content(); ?>
+
+		<?php endwhile; ?>
 
 	</div><!--end contact-info-->
 

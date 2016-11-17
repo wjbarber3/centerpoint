@@ -59,6 +59,7 @@ $thumb_url = $thumb_url_array[0];
 							<li class="content<?php if($a == 0) { echo ' active'; }; ?>"><?php the_sub_field('service_content'); ?></li>
 							<?php $a ++; ?>
 						<?php endwhile; ?>
+						<a class="main-btn" href="/contact"><i class="main-btn-icon fa fa-chevron-right"></i>Contact Us</a>
 					</ul>
 				<?php endif; ?>
 			</div><!--end content-area-->

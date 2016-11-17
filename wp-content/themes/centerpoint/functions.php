@@ -816,6 +816,21 @@ if(function_exists("register_field_group")) {
             'max' => '',
             'sub_fields' => [
               [
+                'key' => 'field_57fea14231e93',
+                'label' => 'Section ID',
+                'name' => 'section_id',
+                'type' => 'text',
+                'instructions' => 'Add an id to the section in case you need to link to it with an anchor',
+                'required' => 0,
+                'column_width' => '',
+                'default_value' => '',
+                'placeholder' => 'ID',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'html',
+                'maxlength' => 40,
+              ],
+              [
                 'key' => 'field_57fea14231e99',
                 'label' => 'Section Headline',
                 'name' => 'section_headline',
