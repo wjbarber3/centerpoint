@@ -19,10 +19,18 @@ $thumb_url = $thumb_url_array[0];
 			<h1 class="large"><?php the_title(); ?></h1>
 		</div><!--end main-wrap-->
 	</div><!--end full-text-->
-
+	
 	<div class="main-content-area blue-bg has-shadow">
 		<div class="main-wrap">
-			<?php echo the_content(); ?>
+			<h2><?php the_field('intro_headline'); ?></h2>
+			<?php if(have_rows('intro_column_content')): ?>
+				<?php while(have_rows('intro_column_content')) : the_row(); ?>
+						<div class="col-md-4">
+							<?php the_sub_field('intro_column'); ?>
+						</div><!--end column-->
+				<?php endwhile; ?>
+				<div class="clearfix"></div>
+			<?php endif; ?>
 		</div><!--end main-wrap-->
 	</div><!--end content-->
 	

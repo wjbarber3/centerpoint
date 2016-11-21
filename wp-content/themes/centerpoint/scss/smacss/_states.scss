@@ -46,14 +46,26 @@ header{
 /* ================== */
 
 .slider{
-	@include bp(tablet){
-		.slide-overlay{display:none;}
+	@include bp(large){
+		.slide-overlay{max-width:40%;
+			h1{font-size:20px;line-height:26px;}
+		}
 	}
-	@include bp(mobile){
+	@include bp(tablet){
+		.slide-overlay{max-width:50%;height:230px;
+			img{margin-bottom:0px;}
+			h1{font-size:18px;}
+			p{font-size:12px;line-height:15px;}
+		}
+	}
+	@include bp(mobile){border-bottom:4px solid $blue;
 		.control i{font-size:50px;}
-		.control{width:20px;height:30px;}
+		.control{width:20px;height:30px;top:38px;bottom:initial;}
 		.next{right:8px;}
 		.prev{left:8px;}
+		.slide-overlay{position:relative;width:100%;margin:auto;max-width:100%;left:initial;height:auto;text-align:center;
+			img{margin:0 auto 10px;}
+		}
 	}
 }
 

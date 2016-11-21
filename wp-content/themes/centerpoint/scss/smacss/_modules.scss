@@ -64,8 +64,9 @@
 
 .inline-video{padding:40px 0;background-color:$blue;
 	h1,h2,p,a,i{color:$white;}
+	h2{text-align:center;}
 	i{border-color:$white;}
-	h1{margin-bottom:4px;}
+	h1{margin-bottom:4px;text-align:center;}
 	h2,p{margin-bottom:15px;}
 	.vid iframe{width:100%;}
 	.vid-info{padding-top:20px;padding-bottom:20px;}
@@ -301,8 +302,7 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 
 .product-bullets{padding:65px 0 50px;background-color:$cream;
 	h1{color:$green;margin-bottom:30px;}
-	li{list-style:initial;list-style-position:inside;color:$green;
-		span{color:$grey;}
+	li{list-style:initial;list-style-position:inside;color:$grey;
 		+ li{margin-top:20px;}
 	}
 }
@@ -313,9 +313,9 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 
 .two-column-product-details{background-color:$green;text-align:center;padding:20px 0;
 	h1{color:$white;text-transform:uppercase;margin:20px 0;}
-	.hidden-container{display:none;}
 	.section-trigger{cursor:pointer;
-		i{font-size:18px;margin-left:6px;}
+		i{font-size:18px;margin-left:6px;pointer-events:none;}
+		+ .hidden-container{display:none;}
 	}
 	.info-container{background-color:$white;padding:40px 20px;border-radius:15px;
 		h2{border-top:2px solid $green;display:inline-block;width:auto;border-bottom:2px solid $green;padding:10px 0;margin:0 auto;color:$blue;font-family:"Georgia", serif;margin-bottom:30px;text-transform:uppercase;font-size:24px;}
@@ -336,18 +336,19 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 /* === PROD FULL WIDTH 2 COLUMN === */
 /* ================================ */
 
-.two-column-full{padding:60px 0;background-color:$cream;text-align:center;
+.two-column-full{padding:60px 0;background-color:$cream;text-align:left;
 	img{max-width:90%;margin:0 auto 30px;}
 	h3{color:$green;font-size:24px;margin-bottom:15px;font-weight:800;}
-	p{max-width:85%;margin:0 auto;}
-	a{color:$blue;
+	p{max-width:85%;}
+	a{color:$blue;font-weight:bold;
+		&:hover{color:$green;}
 		i{margin-left:5px;pointer-events:none;}
 	}
 	.prod-info{margin-bottom:30px;
 		ul, ol{margin:15px 0 15px 30px;}
 		ul li,ol li{list-style:initial;list-style-position:inside;}
 	}
-	.hidden-content{display:none;margin:20px auto;text-align:left;}
+	.hidden-content{display:none;margin:20px 0;text-align:left;}
 	&.what-we-do{background-color:$white;}
 	&.what-we-provide{background-color:$white;text-align:left;
 		p{max-width:90%;margin:0 0 20px;}
@@ -409,8 +410,8 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 /* =========================== */
 
 .main-content-area{padding:50px 0;color:$white;
+	h2{text-align:center;font-weight:bold;max-width:85%;margin:0 auto 30px;}
 	&.blue-bg{background-color:$blue;}
-	p+p{margin-top:20px;}
 }
 
 /* =========================== */
@@ -445,6 +446,9 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 			h2{color:$green;margin-bottom:10px;font-size:20px;}
 			ul, ol{margin:15px 0 15px 30px;}
 			ul li,ol li{list-style:initial;}
+		}
+		a{color:$blue;font-weight:bold;
+			&:hover{color:$green;}
 		}
 		.main-btn{margin-top:10px;display:inline-block;}
 	}

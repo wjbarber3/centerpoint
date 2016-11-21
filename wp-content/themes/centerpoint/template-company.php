@@ -29,8 +29,7 @@ $thumb_url = $thumb_url_array[0];
 				<li><a href="#about-us">About Us</a></li>
 				<li><a href="#team-list">Team</a></li>
 				<li><a href="#board-list">Board Members</a></li>
-				<!-- Commenting this out for now, will likely return -->
-				<!-- <li><a href="#advisor-list">Advisors</a></li> -->
+				<li><a href="#advisor-list">Advisors</a></li>
 				<div class="clearfix"></div>
 			</nav>
 		</div>
@@ -173,30 +172,28 @@ $thumb_url = $thumb_url_array[0];
 			<!--==== LOOP THROUGH ADVISOR CATEGORY =====-->
 			<!--========================================-->
 
-			<!-- Commenting out until advisors have been approved for page -->
-
 			<?php 
-				// $advisors = new WP_Query( [
-				// 'post_type' => 'employee', 
-				// 'employee_category' => 'advisor',
-				// 'posts_per_page' => 50,
-				// 'meta_key' => 'employee_order',
-				// 'orderby' => 'employee_order',
-				// 'order' => 'ASC'
-				// ]);
+				$advisors = new WP_Query( [
+				'post_type' => 'employee', 
+				'employee_category' => 'advisor',
+				'posts_per_page' => 50,
+				'meta_key' => 'employee_order',
+				'orderby' => 'employee_order',
+				'order' => 'ASC'
+				]);
 			?>
-			<!-- <a id="advisor-list" class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
+			<a id="advisor-list" class="list-trigger" href="#">Advisors<i class="fa fa-plus-circle"></i></a>
 			<div class="team-list">
-				<?php // while ( $advisors->have_posts() ) : $advisors->the_post(); ?>
+				<?php while ( $advisors->have_posts() ) : $advisors->the_post(); ?>
 					<div class="col-md-3 employee">
-						<?php // echo the_post_thumbnail( $size, $attr ); ?>
-						<h2><?php // echo the_title(); ?></h2>
-						<p><?php // echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php // echo the_ID(); ?>" href="<?php // echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
-					</div>
-				<?php // endwhile; ?>
+						<?php echo the_post_thumbnail( $size, $attr ); ?>
+						<h2><?php echo the_title(); ?></h2>
+						<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php // echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
+					</div><!--end employee-->
+				<?php endwhile; ?>
 				<div class="clearfix"></div>
-			</div> -->
-			<?php // wp_reset_query(); ?>
+			</div><!--end team-list-->
+			<?php wp_reset_query(); ?>
 
 		</div><!--end main-wrap-->
 

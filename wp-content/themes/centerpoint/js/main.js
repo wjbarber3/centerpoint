@@ -46,7 +46,7 @@
             });
             var autoSlide = setInterval(function(){
                 self.moveRight();
-            }, 4000);
+            }, 8000);
         },
         moveRight: function() {
             $(this.slideWrap).removeClass("no-transition");

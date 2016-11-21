@@ -71,20 +71,23 @@ $thumb_url = $thumb_url_array[0];
 	<?php  if( get_row_layout() == 'video_or_image_with_info' ): ?>
 		<div id="<?php the_sub_field('section_id'); ?>" class="inline-video has-shadow">
 			<div class="main-wrap">
-				<div class="col-md-6 vid-info">
+				<div class="<?php if(get_sub_field('video_or_image') == 'none') { echo 'col-md-12'; } else { echo 'col-md-6'; } ?> vid-info">
 					<h1><?php the_sub_field('section_headline'); ?></h1>
 					<h2><?php the_sub_field('section_subheadline'); ?></h2>
 					<p><?php the_sub_field('section_copy'); ?></p>
-					<a class="main-btn" href="<?php the_sub_field('link_page'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('section_link_text'); ?></a>
+					<?php if(get_sub_field('section_link_text')): ?>
+						<a class="main-btn" href="<?php the_sub_field('link_url'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('section_link_text'); ?></a>
+					<?php endif; ?>
 				</div><!--end vid-info-->
-				<div class="col-md-6 vid">
-					<?php if(get_sub_field('video_or_image') == 'video') {
-						the_sub_field('video_link');
-					} else {
-						the_sub_field('section_image');
-					}
-					?>
-				</div><!--end vid-->
+				<?php if(get_sub_field('video_or_image') == 'video' || get_sub_field('video_or_image') == 'image'): ?>
+					<div class="col-md-6 vid">
+						<?php if(get_sub_field('video_or_image') == 'video') {
+							the_sub_field('video_link');
+						} else {
+							the_sub_field('section_image');
+						} ?>
+					</div><!--end vid-->
+				<?php endif; ?>
 				<div class="clearfix"></div>
 			</div><!--end main-wrap-->
 		</div><!--end inline-video-->

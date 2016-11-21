@@ -48,7 +48,7 @@ $thumb_url = $thumb_url_array[0];
 					<?php if(have_rows('bullet_points')): ?>
 						<ul>
 							<?php while(have_rows('bullet_points')) : the_row(); ?>
-								<li><span><?php the_sub_field('bullet_point_text'); ?></span></li>
+								<li><?php the_sub_field('bullet_point_text'); ?></li>
 							<?php endwhile; ?>
 						</ul>
 					<?php endif; ?>
@@ -61,8 +61,10 @@ $thumb_url = $thumb_url_array[0];
 				<div class="main-wrap">
 					<h1 class="large"><?php the_sub_field('headline'); ?></h1>
 						<div class="info-container">
-							<h2 class="section-trigger"><?php the_sub_field('subheadline'); ?><i class="fa fa-plus"></i></h2>
-							<div class="clearfix"></div>
+							<?php if( get_sub_field('subheadline') ): ?>
+								<h2 class="section-trigger"><?php the_sub_field('subheadline'); ?><i class="fa fa-plus"></i></h2>
+							<?php endif; ?>
+							<!-- <div class="clearfix"></div> -->
 							<div class="hidden-container">
 								<?php if(have_rows('product')): ?>
 									<?php while(have_rows('product')) : the_row(); ?>

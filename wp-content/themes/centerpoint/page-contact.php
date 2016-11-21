@@ -116,7 +116,7 @@ $thumb_url = $thumb_url_array[0];
 			</div>
 			 
 			<div class="form-group">
-			    <label for="email">Email</label>
+			    <label for="email">Email<span class="required">*</span></label>
 			    <input type="email" class="form-control" id="email" name="email" placeholder="">
 			</div>
 
