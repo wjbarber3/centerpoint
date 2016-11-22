@@ -1619,6 +1619,21 @@ if(function_exists("register_field_group")) {
         'instructions' => 'Add a service to the list/slider of web assessment services.',
         'sub_fields' => [
           [
+            'key' => 'field_581002e609533',
+            'label' => 'Service ID',
+            'name' => 'service_id',
+            'type' => 'text',
+            'instructions' => 'This id will be used for manipulating the active states of the slider.  To do this the id added here should be added into the url as a query string',
+            'required' => 1,
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => 'ID',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => '',
+          ],
+          [
             'key' => 'field_581002e609539',
             'label' => 'Service Title',
             'name' => 'service_title',

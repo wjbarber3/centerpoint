@@ -188,7 +188,7 @@ $thumb_url = $thumb_url_array[0];
 					<div class="col-md-3 employee">
 						<?php echo the_post_thumbnail( $size, $attr ); ?>
 						<h2><?php echo the_title(); ?></h2>
-						<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php // echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
+						<p><?php echo the_field('employee_title'); ?><br><a class="post-trigger" data-id="<?php echo the_ID(); ?>" href="<?php echo the_permalink(); ?>"><span> Read Bio <i class="fa fa-plus"></i></span></a></p>
 					</div><!--end employee-->
 				<?php endwhile; ?>
 				<div class="clearfix"></div>

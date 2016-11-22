@@ -368,6 +368,57 @@
 
     /*
     |--------------------------------------------------------------------------
+    | Assessment Services Query String
+    |--------------------------------------------------------------------------
+    | This object holds functionality highlighting the proper assessment service
+    | based on url query
+    |
+    */
+    ServicesUrl = {
+        serviceQuery: window.location.search,
+        slideListItem: '#services-list li.content',
+        serviceLinks: '.services-links nav li',
+        prevArrow: '.service-arrow.prev',
+        nextArrow: '.service-arrow.next',
+        init: function() {
+            $(window).load(this.selectQuery.bind(this));
+        },
+        selectQuery: function() {
+            if(this.serviceQuery.length) {
+                var slide = window.location.search.slice(1),
+                    activeSlide = $("#" + slide),
+                    activeIndex = activeSlide.index(this.slideListItem),
+                    triggerLength = $(this.serviceLinks).length;
+                    indexAbs = activeIndex + 1
+
+                    console.log(triggerLength);
+                    console.log(activeIndex);
+
+
+                $(this.slideListItem).removeClass("active");
+                activeSlide.addClass("active");
+                $(this.serviceLinks).find("a").removeClass("current");
+                $(this.serviceLinks).eq(activeIndex).find("a").addClass("current");
+                var activeText = $(this.serviceLinks).eq(activeIndex).find("a").text();
+                $('h2.title').text(activeText);
+                if ( indexAbs == triggerLength ) {
+                    $(this.nextArrow).css({
+                        "opacity":".2",
+                        "pointer-events":"none"
+                    });
+                }
+                if ( activeIndex > 0 ) {
+                    $(this.prevArrow).css({
+                        "opacity":"1",
+                        "pointer-events":"auto"
+                    });
+                }
+            }
+        }
+    }
+
+    /*
+    |--------------------------------------------------------------------------
     | Accordions
     |--------------------------------------------------------------------------
     | Basic accordion functionality throughout the site
@@ -516,6 +567,9 @@
         if($('#twitter-feed').length) {
             twitterFetcher.fetch(configProfile);
             Feed.init();
+        }
+        if ( window.location.pathname == '/what-we-provide/assessment-services') {
+            ServicesUrl.init();
         }
     })
 

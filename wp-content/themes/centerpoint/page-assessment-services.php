@@ -34,7 +34,7 @@ $thumb_url = $thumb_url_array[0];
 				</nav>
 			<?php endif; ?>
 		</div><!--end main-wrap-->
-	</div>
+	</div><!--end services-links-->
 
 	<div id="services-slider" class="has-shadow">
 		<div class="main-wrap">
@@ -53,10 +53,10 @@ $thumb_url = $thumb_url_array[0];
 			</div><!--end title-area-->
 			<div class="content-area">
 				<?php if(have_rows('services')): ?>
-					<ul>
+					<ul id="services-list">
 						<?php $a = 0; ?>
 						<?php while(have_rows('services')) : the_row(); ?>
-							<li class="content<?php if($a == 0) { echo ' active'; }; ?>"><?php the_sub_field('service_content'); ?></li>
+							<li id="<?php the_sub_field('service_id'); ?>" class="content<?php if($a == 0) { echo ' active'; }; ?>"><?php the_sub_field('service_content'); ?></li>
 							<?php $a ++; ?>
 						<?php endwhile; ?>
 						<a class="main-btn" href="/contact"><i class="main-btn-icon fa fa-chevron-right"></i>Contact Us</a>
