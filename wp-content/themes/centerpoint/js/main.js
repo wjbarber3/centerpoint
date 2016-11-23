@@ -393,6 +393,7 @@
 
                     console.log(triggerLength);
                     console.log(activeIndex);
+                    console.log(indexAbs);
 
 
                 $(this.slideListItem).removeClass("active");

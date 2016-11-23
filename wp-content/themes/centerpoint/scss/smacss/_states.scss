@@ -155,8 +155,15 @@ header{
 		.info-container{
 			p{max-width: 100%;}
 			.product{min-height:auto;}
+			.hidden-content,h3,.accordion-trigger{max-width:100%;}
 		}
 		h1{font-size:24px;line-height:32px}
+	}
+}
+
+.two-column-full{
+	@include bp(mobile){
+		.hidden-content{max-width:100%;}
 	}
 }
 

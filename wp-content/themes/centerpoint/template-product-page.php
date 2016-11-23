@@ -73,7 +73,7 @@ $thumb_url = $thumb_url_array[0];
 											<h3><?php the_sub_field('product_name'); ?></h3>
 											<p><?php the_sub_field('product_description'); ?></p>
 											<?php if( get_sub_field('add_hidden_content')): ?>
-												<p class="hidden-content"><?php the_sub_field('hidden_content'); ?></p>
+												<div class="hidden-content"><?php the_sub_field('hidden_content'); ?></div>
 												<a class="accordion-trigger" href="#">More<i class="fa fa-plus"></i></a>
 											<?php endif; ?>
 										</div><!--end product-->
@@ -96,8 +96,14 @@ $thumb_url = $thumb_url_array[0];
 								<div class="news-content">
 									<?php echo the_sub_field('news_content'); ?>
 								</div><!--end news-content-->
-								<?php if ( get_sub_field('news_link_text') ): ?>
-									<a class="main-btn" href="<?php the_sub_field('news_link'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('news_link_text'); ?></a>
+								<?php if( get_sub_field('page_or_file') == 'page' ): ?>
+									<?php if ( get_sub_field('news_link_text') ): ?>
+										<a class="main-btn" href="<?php the_sub_field('news_link'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('news_link_text'); ?></a>
+									<?php endif; ?>
+								<?php endif; ?>
+								<?php if( get_sub_field('page_or_file') == 'file' ): ?>
+									<?php $file = get_sub_field('news_file'); ?>
+									<a class="main-btn" href="<?php echo $file['url']; ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('news_link_text'); ?></a>
 								<?php endif; ?>
 							</div><!--end event-->
 						<?php endwhile; ?>
@@ -126,7 +132,7 @@ $thumb_url = $thumb_url_array[0];
 								<h3><?php the_sub_field('product_name'); ?></h3>
 								<p><?php the_sub_field('product_description'); ?></p>
 								<?php if( get_sub_field('add_hidden_content')): ?>
-									<p class="hidden-content"><?php the_sub_field('hidden_content'); ?></p>
+									<div class="hidden-content"><?php the_sub_field('hidden_content'); ?></div>
 									<a class="accordion-trigger" href="#">More<i class="fa fa-plus"></i></a>
 								<?php endif; ?>
 							</div><!--end prod-info-->

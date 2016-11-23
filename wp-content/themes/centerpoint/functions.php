@@ -687,7 +687,7 @@ if(function_exists("register_field_group")) {
                     'name' => 'link_text',
                     'type' => 'text',
                     'instructions' => 'Add the text of the link',
-                    'required' => 1,
+                    'required' => 0,
                     'column_width' => '',
                     'default_value' => '',
                     'placeholder' => 'Link Text',
@@ -702,7 +702,7 @@ if(function_exists("register_field_group")) {
                     'name' => 'link_url',
                     'type' => 'page_link',
                     'instructions' => 'Add the page to link to.',
-                    'required' => 1,
+                    'required' => 0,
                     'column_width' => '',
                     'post_type' => [
                       0 => 'all',
@@ -1331,7 +1331,7 @@ if(function_exists("register_field_group")) {
                     'key' => 'field_580ba99bd4732',
                     'label' => 'Hidden Content',
                     'name' => 'hidden_content',
-                    'type' => 'textarea',
+                    'type' => 'wysiwyg',
                     'instructions' => 'Add the drop-down content that can be expanded.',
                     'required' => 1,
                     'conditional_logic' => [
@@ -1368,7 +1368,7 @@ if(function_exists("register_field_group")) {
             'max' => '',
             'sub_fields' => [
               [
-                'key' => 'field_580baa2fd47213',
+                'key' => 'field_5835203bf3fde',
                 'label' => 'News Column',
                 'name' => 'news_column',
                 'type' => 'repeater',
@@ -1377,7 +1377,7 @@ if(function_exists("register_field_group")) {
                 'column_width' => '',
                 'sub_fields' => [
                   [
-                    'key' => 'field_580baa2fd4734',
+                    'key' => 'field_5835204ef3fdf',
                     'label' => 'News Headline',
                     'name' => 'news_headline',
                     'type' => 'text',
@@ -1392,7 +1392,7 @@ if(function_exists("register_field_group")) {
                     'maxlength' => 30,
                   ],
                   [
-                    'key' => 'field_580baa52d4735',
+                    'key' => 'field_58352076f3fe0',
                     'label' => 'News Content',
                     'name' => 'news_content',
                     'type' => 'wysiwyg',
@@ -1404,20 +1404,68 @@ if(function_exists("register_field_group")) {
                     'media_upload' => 'yes',
                   ],
                   [
-                    'key' => 'field_580baa6ad4736',
+                    'key' => 'field_5835209bf3fe1',
+                    'label' => 'Page or File',
+                    'name' => 'page_or_file',
+                    'type' => 'radio',
+                    'instructions' => 'Select if the link will go to a file or a page',
+                    'column_width' => '',
+                    'choices' => [
+                      'page' => 'Page',
+                      'file' => 'File',
+                    ],
+                    'other_choice' => 0,
+                    'save_other_choice' => 0,
+                    'default_value' => '',
+                    'layout' => 'vertical',
+                  ],
+                  [
+                    'key' => 'field_583520e6f3fe2',
                     'label' => 'News Link',
                     'name' => 'news_link',
                     'type' => 'page_link',
                     'instructions' => 'Choose the destination of the link',
+                    'conditional_logic' => [
+                      'status' => 1,
+                      'rules' => [
+                        [
+                          'field' => 'field_5835209bf3fe1',
+                          'operator' => '==',
+                          'value' => 'page',
+                        ],
+                      ],
+                      'allorany' => 'all',
+                    ],
                     'column_width' => '',
                     'post_type' => [
                       0 => 'all',
                     ],
-                    'allow_null' => 0,
-                    'multiple' => 0,
+                    'allow_null' => 1,
+                    'multiple' => 1,
                   ],
                   [
-                    'key' => 'field_580baa85d4737',
+                    'key' => 'field_5835211cf3fe3',
+                    'label' => 'News File',
+                    'name' => 'news_file',
+                    'type' => 'file',
+                    'instructions' => 'Add the file that the link will go to.',
+                    'conditional_logic' => [
+                      'status' => 1,
+                      'rules' => [
+                        [
+                          'field' => 'field_5835209bf3fe1',
+                          'operator' => '==',
+                          'value' => 'file',
+                        ],
+                      ],
+                      'allorany' => 'all',
+                    ],
+                    'column_width' => '',
+                    'save_format' => 'object',
+                    'library' => 'all',
+                  ],
+                  [
+                    'key' => 'field_58352140f3fe4',
                     'label' => 'News Link Text',
                     'name' => 'news_link_text',
                     'type' => 'text',
@@ -1431,6 +1479,10 @@ if(function_exists("register_field_group")) {
                     'maxlength' => 40,
                   ],
                 ],
+                'row_min' => '',
+                'row_limit' => '',
+                'layout' => 'table',
+                'button_label' => 'Add Row',
               ],
             ],
           ],
@@ -1552,7 +1604,7 @@ if(function_exists("register_field_group")) {
                     'key' => 'field_580babbcd4741',
                     'label' => 'Hidden Content',
                     'name' => 'hidden_content',
-                    'type' => 'textarea',
+                    'type' => 'wysiwyg',
                     'instructions' => 'Add the hidden content text',
                     'conditional_logic' => [
                       'status' => 1,

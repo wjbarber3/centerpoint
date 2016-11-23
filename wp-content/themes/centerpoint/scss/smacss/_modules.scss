@@ -317,18 +317,23 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 		i{font-size:18px;margin-left:6px;pointer-events:none;}
 		+ .hidden-container{display:none;}
 	}
+	.accordion-trigger{display:block;margin-top:10px;}
 	.info-container{background-color:$white;padding:40px 20px;border-radius:15px;
 		h2{border-top:2px solid $green;display:inline-block;width:auto;border-bottom:2px solid $green;padding:10px 0;margin:0 auto;color:$blue;font-family:"Georgia", serif;margin-bottom:30px;text-transform:uppercase;font-size:24px;}
 		img{max-width:90%;margin:0 auto 30px;}
-		h3{color:$green;font-size:20px;margin-bottom:15px;}
+		h3{color:$green;font-size:20px;margin:0 auto 15px;}
 		p{max-width:85%;margin:0 auto;}
-		.product{margin-bottom:50px;min-height:400px;
+		.product{min-height:400px;margin-bottom:50px;
 			&:nth-child(odd){clear:both;}
 		}
+		ul, ol{margin:15px 0 15px 30px;text-align:left;}
+		ul li,ol li{list-style:initial;}
 		a{color:$blue;font-weight:800;
 			i{margin-left:5px;pointer-events:none;}
 		}
-		.hidden-content{display:none;}
+		.hidden-content{display:none;margin:5px auto 0;max-width:85%;
+			p{max-width:100%;}
+		}
 	}
 }
 
@@ -344,11 +349,12 @@ form {font-family: Tahoma, Verdana, Segoe, sans-serif;margin: 0;padding: 0;borde
 		&:hover{color:$green;}
 		i{margin-left:5px;pointer-events:none;}
 	}
+	.accordion-trigger{margin-top:5px;display:block;}
 	.prod-info{margin-bottom:30px;
 		ul, ol{margin:15px 0 15px 30px;}
-		ul li,ol li{list-style:initial;list-style-position:inside;}
+		ul li,ol li{list-style:initial;}
 	}
-	.hidden-content{display:none;margin:20px 0;text-align:left;}
+	.hidden-content{display:none;text-align:left;max-width:85%;}
 	&.what-we-do{background-color:$white;}
 	&.what-we-provide{background-color:$white;text-align:left;
 		p{max-width:90%;margin:0 0 20px;}

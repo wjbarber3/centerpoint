@@ -20,8 +20,8 @@
 			</ul>	
 		</nav>
 		<div class="fineprint">
-			<p>CenterPoint Education Solutions <sup>&copy;</sup>&nbsp; 202.836.7500</p>
-			<p>Copyright 2016 CenterPoint. All Rights Reserved</p>
+			<p>CenterPoint Education Solutions™ 202.836.7500</p>
+			<p>© CenterPoint 2016, All Rights Reserved</p>
 		</div><!--end fineprint-->
 	</div><!--end main-wrap-->
 </footer>

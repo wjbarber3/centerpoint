@@ -59,7 +59,9 @@ $thumb_url = $thumb_url_array[0];
 							<img src="<?php echo get_sub_field('icon')['url']; ?>" width="90">
 							<h2><?php the_sub_field('column_headline'); ?></h1>
 							<p><?php the_sub_field('column_copy'); ?></p>
-							<a class="main-btn" href="<?php the_sub_field('link_url'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('link_text'); ?></a>
+							<?php if ( get_sub_field('link_text') ): ?>
+								<a class="main-btn" href="<?php the_sub_field('link_url'); ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('link_text'); ?></a>
+							<?php endif; ?>
 						</div><!--end column-->
 					<?php endwhile; ?>
 				<?php endif; ?>
