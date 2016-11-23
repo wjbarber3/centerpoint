@@ -103,7 +103,7 @@ $thumb_url = $thumb_url_array[0];
 								<?php endif; ?>
 								<?php if( get_sub_field('page_or_file') == 'file' ): ?>
 									<?php $file = get_sub_field('news_file'); ?>
-									<a class="main-btn" href="<?php echo $file['url']; ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('news_link_text'); ?></a>
+									<a class="main-btn" target="_blank" href="<?php echo $file['url']; ?>"><i class="main-btn-icon fa fa-chevron-right"></i><?php the_sub_field('news_link_text'); ?></a>
 								<?php endif; ?>
 							</div><!--end event-->
 						<?php endwhile; ?>
