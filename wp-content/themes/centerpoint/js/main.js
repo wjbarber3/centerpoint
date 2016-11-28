@@ -388,14 +388,8 @@
                 var slide = window.location.search.slice(1),
                     activeSlide = $("#" + slide),
                     activeIndex = activeSlide.index(this.slideListItem),
-                    triggerLength = $(this.serviceLinks).length;
-                    indexAbs = activeIndex + 1
-
-                    console.log(triggerLength);
-                    console.log(activeIndex);
-                    console.log(indexAbs);
-
-
+                    triggerLength = $(this.serviceLinks).length,
+                    indexAbs = activeIndex + 1;
                 $(this.slideListItem).removeClass("active");
                 activeSlide.addClass("active");
                 $(this.serviceLinks).find("a").removeClass("current");
